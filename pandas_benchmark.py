@@ -158,14 +158,14 @@ def bench(q):
 	f.flush()
 
 
-bench(1)
-bench(2)
-bench(3)
-bench(4)
-bench(5)
+# bench(1)
+# bench(2)
+# bench(3)
+# bench(4)
+# bench(5)
 bench(6)
-bench(7)
-bench(8)
-bench(9)
-bench(10)
+# bench(7)
+# bench(8)
+# bench(9)
+# bench(10)
 
