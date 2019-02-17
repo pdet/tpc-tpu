@@ -12,16 +12,10 @@ def q6():
   discount = tf.placeholder(dtype=tf.float64, shape=(None,))
   quantity = tf.placeholder(dtype=tf.float64, shape=(None,))
   extendedprice = tf.placeholder(dtype=tf.float64, shape=(None,))
-  aux = tf.constant([0.05],dtype=tf.float64)
-  filter_3 = tf.greater_equal(discount,aux)
-  aux = tf.constant([0.07],dtype=tf.float64)
-  filter_4 = tf.less_equal(discount,aux)
-  aux = tf.constant([24],dtype=tf.float64)
-  filter_5 = tf.less_equal(quantity,aux)
-  complete_filter = tf.logical_and(filter_shipdate,tf.logical_and(filter_3,tf.logical_and(filter_4,filter_5)))
-  extendedprice = tf.boolean_mask(extendedprice,complete_filter)
-  quantity = tf.boolean_mask(quantity,complete_filter)
-  c = tf.multiply(extendedprice, quantity)
+  complete_filter = tf.logical_and(tf.greater_equal(discount,0.05),tf.logical_and(tf.less_equal(discount,0.07),tf.logical_and(tf.less(quantity,24),filter_shipdate)))
+  a = tf.boolean_mask(extendedprice,complete_filter)
+  b = tf.boolean_mask(quantity,complete_filter)
+  c = tf.multiply(tf.boolean_mask(extendedprice,complete_filter), tf.boolean_mask(discount,complete_filter))
   d = tf.reduce_sum(c)
   with tf.Session() as sess:
     # Tensorflow does not support filters on strings
@@ -33,6 +27,7 @@ def q6():
         quantity: lineitem['l_quantity'],
         extendedprice: lineitem['l_extendedprice']
       })
+    print res
   return res
 
 n = 5

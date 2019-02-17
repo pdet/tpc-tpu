@@ -83,6 +83,7 @@ def q6():
 		(lineitem.l_discount <= 0.07) & 
 		(lineitem.l_quantity < 24)][["l_extendedprice", "l_discount"]]
 	res = (l.l_extendedprice * l.l_discount).sum()
+	print(res)
 	return res
 
 
