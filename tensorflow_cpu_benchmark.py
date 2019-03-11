@@ -5,7 +5,7 @@ import tensorflow as tf
 from tensorflow.python.client import timeline
 
 
-os.chdir('tpctpu')
+os.chdir('tpch1')
 
 lineitem = np.genfromtxt("lineitem.tbl",delimiter='|', names=["l_orderkey","l_partkey","l_suppkey","l_linenumber","l_quantity","l_extendedprice","l_discount","l_tax","l_returnflag","l_linestatus","l_shipdate","l_commitdate","l_receiptdate","l_shipinstruct","l_shipmode","l_comment"],dtype=['int32','int32','int32','int32','float32','float32','float32','float32','S1','S1','S10','S10','S10','S25','S10','S44'])
 

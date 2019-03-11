@@ -1,0 +1,17 @@
+Hyper Results
+SF-01
+1: elapsed":0.0347412,"parsing-time":9.9488e-05,"compilation-time":0.0286938,"execution-time":0.0055152,"time-to-schedule":0.000127703,"lock-acquisition-time":1.182e-06,"peak-transaction-memory-mb":3.47214,"peak-result-buffer-memory-mb":0.187653,"peak-result-buffer-disk-mb":0,"result-size-mb":0.00125694
+
+6: "elapsed":0.0356566,"parsing-time":2.8138e-05,"compilation-time":0.0344967,"execution-time":0.000803315,"time-to-schedule":9.055e-05,"lock-acquisition-time":1.077e-06,"peak-transaction-memory-mb":0.969696,"peak-result-buffer-memory-mb":0.187653,"peak-result-buffer-disk-mb":0,"result-size-mb":0.00052166
+
+SF-1
+1:"elapsed":0.0501269,"parsing-time":7.6199e-05,"compilation-time":0.0287176,"execution-time":0.0210265,"time-to-schedule":8.1392e-05,"lock-acquisition-time":1.009e-06,"peak-transaction-memory-mb":3.47214,"peak-result-buffer-memory-mb":0.187653,"peak-result-buffer-disk-mb":0,"result-size-mb":0.00127697
+6:elapsed":0.0372908,"parsing-time":3.9103e-05,"compilation-time":0.0350186,"execution-time":0.0019405,"time-to-schedule":7.6472e-05,"lock-acquisition-time":8.8e-07,"peak-transaction-memory-mb":0.969696,"peak-result-buffer-memory-mb":0.187653,"peak-result-buffer-disk-mb":0,"result-size-mb":0.000522614
+
+SF-10
+1:"elapsed":0.293123,"parsing-time":0.00010944,"compilation-time":0.0374577,"execution-time":0.255134,"time-to-schedule":9.8157e-05,"lock-acquisition-time":1.547e-06,"peak-transaction-memory-mb":3.47214,"peak-result-buffer-memory-mb":0.156372,"peak-result-buffer-disk-mb":0,"result-size-mb":0.00130844
+6:"elapsed":0.0492768,"parsing-time":3.5575e-05,"compilation-time":0.0347551,"execution-time":0.0141995,"time-to-schedule":4.6861e-05,"lock-acquisition-time":8.77e-07,"peak-transaction-memory-mb":1.01077,"peak-result-buffer-memory-mb":0.187653,"peak-result-buffer-disk-mb":0,"result-size-mb":0.000523567
+
+SF-100 [Numeric-Overflow]
+1:
+6:
