@@ -27,9 +27,11 @@ def q1():
         (lineitem['l_shipdate'] <= '1998-09-01')]
     df['disc_price'] = udf_disc_price(df['l_extendedprice'], df['l_discount'])
     df['charge'] = udf_charge(df['l_extendedprice'], df['l_discount'], df['l_tax'])
-    return df.groupby(['l_returnflag', 'l_linestatus']) \
+    res = df.groupby(['l_returnflag', 'l_linestatus']) \
         .agg({'l_quantity': 'sum', 'l_extendedprice': 'sum', 'disc_price': 'sum', 'charge': 'sum',
               'l_quantity': 'mean', 'l_extendedprice': 'mean', 'l_discount': 'mean', 'l_shipdate': 'count'})
+    print(res)
+    return res
 
 
 def q6():
@@ -58,5 +60,5 @@ def bench(q):
     f.flush()
 
 
-# bench(1)
-bench(6)
+bench(1)
+# bench(6)
