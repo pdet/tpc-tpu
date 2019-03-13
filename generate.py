@@ -14,4 +14,4 @@ def generate_tpch(sf=1):
 		os.system("sed 's/.$//' ${FILE} > ${FILE}.tmp".replace("${FILE}", f))
 		os.system('mv ${FILE}.tmp ${FILE}'.replace("${FILE}", f))
 
-generate_tpch(1)
+generate_tpch(0.1)
