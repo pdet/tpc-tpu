@@ -47,45 +47,46 @@ l_linestatus[l_linestatus == "O"] = "1"
 l_linestatus[l_linestatus == "F"] = "2"
 l_linestatus = l_linestatus.astype(np.float32, copy=False)
 
-
-def q1_computation(shipdate, returnflag, linestatus, quantity, extendedprice, discount, tax):
+# TPUs don't suport tf.unique. Hence the groups need to be hard-coded.
+def q1_computation(shipdate,returnflag,linestatus,quantity,extendedprice,discount,tax):
     zeros = tf.zeros_like(discount)
     ones = tf.ones_like(discount)
-    minus_one = tf.constant(-1.0, dtype=tf.float32)
-    #Performing the groups
-    returnflag_groups_tensors,idx = tf.unique(returnflag)
-    linestatus_groups_tensors,idx = tf.unique(linestatus)
-    aux = tf.zeros_like(returnflag_groups_tensors)
-    returnflag_groups = tf.stack([aux,returnflag_groups_tensors], axis=1)
-    aux = tf.zeros_like(linestatus_groups_tensors)
-    linestatus_groups = tf.stack([aux,linestatus_groups_tensors], axis=1)
-    returnflag_groups = tf.unstack(returnflag_groups_tensors,3) # This needs to be hardcoded :-(
-    linestatus_groups = tf.unstack(linestatus_groups_tensors,2) # This needs to be hardcoded :-(
-    group_filters = []
+    minus_one = tf.constant(-1.0,dtype=tf.float32)
+    two = tf.constant(2.0,dtype=tf.float32)
+    three = tf.constant(3.0,dtype=tf.float32)
+
+    R = tf.cast(tf.where(tf.equal(returnflag,ones),ones,zeros),tf.bool)
+    N = tf.cast(tf.where(tf.equal(returnflag,two),ones,zeros),tf.bool)
+    A = tf.cast(tf.where(tf.equal(returnflag,three),ones,zeros),tf.bool)
+
+    O = tf.cast(tf.where(tf.equal(linestatus,ones),ones,zeros),tf.bool)
+    F = tf.cast(tf.where(tf.equal(linestatus,two),ones,zeros),tf.bool)
     shipdate = tf.less_equal(shipdate, 19980901)
-    for returnflag_group in returnflag_groups:
-        for linestatus_group in linestatus_groups:
-            returnflag_aux = tf.cast(tf.where(tf.equal(returnflag,returnflag_group),ones,zeros),tf.bool)
-            linestatus_aux = tf.cast(tf.where(tf.equal(linestatus,linestatus_group),ones,zeros),tf.bool)
-            group_filters.append(tf.logical_and(tf.logical_and(returnflag_aux,linestatus_aux),shipdate))
+
+    # AF
+    group_filter_1 = tf.logical_and(tf.logical_and(A,F),shipdate)
+    # NF
+    group_filter_2 = tf.logical_and(tf.logical_and(N,F),shipdate)
+    # NO
+    group_filter_3 = tf.logical_and(tf.logical_and(N,O),shipdate)
+    # RF
+    group_filter_4 = tf.logical_and(tf.logical_and(R,F),shipdate)
+    group_filters = group_filter_1,group_filter_2,group_filter_3,group_filter_4
+
     result = []
     for group_filter in group_filters:
-        sum_qty = tf.reduce_sum(tf.where(group_filter, quantity, zeros))
-        sum_base_price = tf.reduce_sum(tf.where(group_filter, extendedprice, zeros))
-        sum_disc_price = tf.reduce_sum(
-            tf.where(group_filter, tf.multiply(tf.add(ones, tf.multiply(minus_one, discount)), extendedprice), zeros))
-        sum_charge = tf.reduce_sum(tf.where(group_filter, tf.multiply(
-            tf.multiply(tf.add(ones, tf.multiply(minus_one, discount)), extendedprice), tf.add(ones, tax))
-                                            , zeros))
-        count = tf.reduce_sum(tf.cast(group_filter, tf.float32))
-        avg_qty = tf.div(tf.reduce_sum(tf.where(group_filter, quantity, zeros)),
-                         tf.reduce_sum(count))  # int32 is slower
-        avg_price = tf.div(tf.reduce_sum(tf.where(group_filter, extendedprice, zeros)),
-                           tf.reduce_sum(count))  # int32 is slower
-        avg_disc = tf.div(tf.reduce_sum(tf.where(group_filter, discount, zeros)),
-                          tf.reduce_sum(count))  # int32 is slower
-        result_aux = sum_qty, sum_base_price, sum_disc_price, sum_charge, avg_qty, avg_price, avg_disc, count
+        sum_qty = tf.reduce_sum(tf.where(group_filter,quantity,zeros))
+        sum_base_price = tf.reduce_sum(tf.where(group_filter,extendedprice,zeros))
+        sum_disc_price = tf.reduce_sum(tf.where(group_filter,tf.multiply(tf.add(ones,tf.multiply(minus_one,discount)),extendedprice),zeros))
+        sum_charge = tf.reduce_sum(tf.where(group_filter, tf.multiply(tf.multiply(tf.add(ones,tf.multiply(minus_one,discount)),extendedprice),tf.add(ones,tax))
+    ,zeros))
+        count = tf.reduce_sum(tf.cast(group_filter,tf.float32))
+        avg_qty = tf.div(tf.reduce_sum(tf.where(group_filter,quantity,zeros)),tf.reduce_sum(count)) #int32 is slower  
+        avg_price = tf.div(tf.reduce_sum(tf.where(group_filter,extendedprice,zeros)),tf.reduce_sum(count)) #int32 is slower  
+        avg_disc = tf.div(tf.reduce_sum(tf.where(group_filter,discount,zeros)),tf.reduce_sum(count)) #int32 is slower  
+        result_aux = sum_qty,sum_base_price,sum_disc_price,sum_charge,avg_qty,avg_price,avg_disc,count
         result.extend(result_aux)
+
 
 
 def q1():
