@@ -12,3 +12,5 @@ gsutil cp -r ${STORAGE_BUCKET}/tpch1 ./
 
 setsid tensorboard --logdir=${STORAGE_BUCKET}/res 
 capture_tpu_profile --tpu=pedroholanda --logdir=${STORAGE_BUCKET}/res
+
+pip install pandas
