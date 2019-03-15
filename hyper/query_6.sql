@@ -1,5 +1,3 @@
--- TPC-H Query 6
-
 select
         sum(l_extendedprice * l_discount) as revenue
 from

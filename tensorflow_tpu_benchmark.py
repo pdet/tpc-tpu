@@ -54,6 +54,7 @@ def q1_computation(shipdate,returnflag,linestatus,quantity,extendedprice,discoun
     minus_one = tf.constant(-1.0,dtype=tf.float32)
     two = tf.constant(2.0,dtype=tf.float32)
     three = tf.constant(3.0,dtype=tf.float32)
+    # sorted_a, indices = tf.nn.top_k(discount, 2)
 
     R = tf.cast(tf.where(tf.equal(returnflag,ones),ones,zeros),tf.bool)
     N = tf.cast(tf.where(tf.equal(returnflag,two),ones,zeros),tf.bool)
@@ -86,6 +87,7 @@ def q1_computation(shipdate,returnflag,linestatus,quantity,extendedprice,discoun
         avg_disc = tf.div(tf.reduce_sum(tf.where(group_filter,discount,zeros)),tf.reduce_sum(count)) #int32 is slower  
         result_aux = sum_qty,sum_base_price,sum_disc_price,sum_charge,avg_qty,avg_price,avg_disc,count
         result.extend(result_aux)
+        return result
 
 
 
