@@ -25,7 +25,10 @@ ctpu up --tpu-size=v3-8 --machine-type=n1-standard-8
 ctpu up
 #ctpu up https://cloud.google.com/tpu/docs/ctpu-reference
 export STORAGE_BUCKET=gs://tpctpu
+gsutil cp -r ${STORAGE_BUCKET}/tpch-0.1 ./tpch-0.1
 gsutil cp -r ${STORAGE_BUCKET}/tpch1 ./
+gsutil cp -r ${STORAGE_BUCKET}/tpch-10 ./
+mv tpch1 tpch-1
 gsutil cp -r ${STORAGE_BUCKET}/hyper ./
 
 hyper.20182.18.1009.2120/hyperd --database /home/pedroholanda/mydb --skip-license --no-ssl --no-password --log-dir /home/pedroholanda run
