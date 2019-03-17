@@ -32,9 +32,10 @@ mv tpch1 tpch-1
 gsutil cp -r ${STORAGE_BUCKET}/hyper ./
 
 hyper.20182.18.1009.2120/hyperd --database /home/pedroholanda/mydb --skip-license --no-ssl --no-password --log-dir /home/pedroholanda run
+export PATH="/home/pedroholanda/hyper/postgres-install/bin:$PATH"
 
 ln -s /home/pedroholanda/hyper/postgres-install/lib/libpq.so.5 /usr/lib/libpq.so.5
-postgres-install/bin/psql  -p 7483 -h localhost -U holanda
+psql -p 7483 -h localhost -U pedroholanda
 /home/pedroholanda
 
 # gsutil cp -r  ./ ${STORAGE_BUCKET}

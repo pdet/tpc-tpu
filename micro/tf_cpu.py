@@ -14,7 +14,7 @@ def load_input(scale):
     global l_orderkey
     global l_quantity
     global l_returnflag
-    os.chdir('/Users/holanda/Documents/Projects/tpc-tpu/tpch-dbgen')
+    os.chdir('/home/pedroholanda/tpch-' + str(scale))
     lineitem = pd.read_csv("lineitem.tbl", sep='|',
                               names=["l_orderkey", "l_partkey", "l_suppkey", "l_linenumber", "l_quantity",
                                      "l_extendedprice", "l_discount", "l_tax", "l_returnflag", "l_linestatus", "l_shipdate",
@@ -29,11 +29,15 @@ def load_input(scale):
     l_orderkey = lineitem["l_orderkey"].values.astype('int32')
     l_quantity = lineitem["l_quantity"].values.astype('float32')
     l_returnflag = lineitem["l_returnflag"].values.astype('S1')
+    l_returnflag[l_returnflag=="A"] = "1"
+    l_returnflag[l_returnflag=="N"] = "2"
+    l_returnflag[l_returnflag=="R"] = "3"
+    l_returnflag = l_returnflag.astype(np.float32, copy=False)
     del lineitem
     del orders
 
 
-def filter():
+def filter(scale):
     quantity = tf.placeholder(dtype=tf.float32, shape=(None,))
     filter = tf.where(tf.logical_and(tf.greater_equal(quantity,10),tf.less_equal(quantity,24)))
     result = tf.gather(quantity,filter)
@@ -57,12 +61,12 @@ def filter():
         }, options=run_options, run_metadata=run_metadata)
         tl = timeline.Timeline(run_metadata.step_stats)
         ctf = tl.generate_chrome_trace_format()
-        with open('timeline_filter_cpu.json', 'w') as f:
+        with open('timeline_filter_cpu_'+str(scale)+'.json', 'w') as f:
             f.write(ctf)
         print res
     return res
 
-def aggregation():
+def aggregation(scale):
     quantity = tf.placeholder(dtype=tf.float32, shape=(None,))
     result = tf.reduce_sum(quantity)
     with tf.Session() as sess:
@@ -85,12 +89,12 @@ def aggregation():
         }, options=run_options, run_metadata=run_metadata)
         tl = timeline.Timeline(run_metadata.step_stats)
         ctf = tl.generate_chrome_trace_format()
-        with open('timeline_aggregation_cpu.json', 'w') as f:
+        with open('timeline_aggregation_cpu_'+str(scale)+'.json', 'w') as f:
             f.write(ctf)
         print res
     return res
 
-def group_by():
+def group_by(scale):
     quantity = tf.placeholder(dtype=tf.float32, shape=(None,))
     returnflag = tf.placeholder(dtype=tf.float32, shape=(None,))
     ones = tf.ones_like(quantity)
@@ -127,12 +131,12 @@ def group_by():
         }, options=run_options, run_metadata=run_metadata)
         tl = timeline.Timeline(run_metadata.step_stats)
         ctf = tl.generate_chrome_trace_format()
-        with open('timeline_grouping_cpu.json', 'w') as f:
+        with open('timeline_grouping_cpu_'+str(scale)+'.json', 'w') as f:
             f.write(ctf)
         print res
     return res
 
-def order_by(quantity_size):
+def order_by(scale,quantity_size):
     quantity = tf.placeholder(dtype=tf.float32, shape=(None,))
     sorted_a, indices = tf.nn.top_k(quantity, quantity_size,True)
     result  = sorted_a
@@ -156,12 +160,12 @@ def order_by(quantity_size):
         }, options=run_options, run_metadata=run_metadata)
         tl = timeline.Timeline(run_metadata.step_stats)
         ctf = tl.generate_chrome_trace_format()
-        with open('timeline_order_cpu.json', 'w') as f:
+        with open('timeline_order_cpu_'+str(scale)+'.json', 'w') as f:
             f.write(ctf)
         print res
     return res
 
-def join(order_size):
+def join(scale,order_size):
     lineitem_orderkey = tf.placeholder(dtype=tf.int32, shape=(None,))
     order_orderkey = tf.placeholder(dtype=tf.int32, shape=(None,))
     orders = tf.unstack(order_orderkey,order_size)
@@ -193,7 +197,7 @@ def join(order_size):
         }, options=run_options, run_metadata=run_metadata)
         tl = timeline.Timeline(run_metadata.step_stats)
         ctf = tl.generate_chrome_trace_format()
-        with open('timeline_join_cpu.json', 'w') as f:
+        with open('timeline_join_cpu_'+str(scale)+'.json', 'w') as f:
             f.write(ctf)
         print res
     return res
@@ -201,23 +205,23 @@ def join(order_size):
 
 def run_micro(scale):
     load_input(scale)
-    filter()
-    aggregation()
-    group_by()
+    filter(scale)
+    aggregation(scale)
+    group_by(scale)
     if (scale==0.1):
-        order_by(600572)
-        join(150000)
-    elif (scale==1.0):
-        order_by(6001215)
-        join(1500000)
-    elif (scale ==10.0):
-        order_by(59986052)
-        join(15000000)
-    elif(scale ==100.0):
-        order_by(600037902)
-        join(150000000)
+        order_by(scale,600572)
+        join(scale,150000)
+    elif (scale==1):
+        order_by(scale,6001215)
+        join(scale,1500000)
+    elif (scale ==10):
+        order_by(scale,59986052)
+        join(scale,15000000)
+    elif(scale ==100):
+        order_by(scale,600037902)
+        join(scale,150000000)
 
 run_micro(0.1)
-run_micro(1.0)
-run_micro(10.0)
+run_micro(1)
+run_micro(10)
 # run_micro(0.1)
