@@ -3,6 +3,7 @@ import pandas as pd
 import os
 import tensorflow as tf
 from tensorflow.python.client import timeline
+import sys
 
 o_orderkey = 0
 l_orderkey = 0
@@ -33,8 +34,7 @@ def load_input(scale):
     l_returnflag[l_returnflag=="N"] = "2"
     l_returnflag[l_returnflag=="R"] = "3"
     l_returnflag = l_returnflag.astype(np.float32, copy=False)
-    del lineitem
-    del orders
+    os.chdir('/home/pedroholanda/result/')
 
 
 def filter(scale):
@@ -62,7 +62,7 @@ def filter(scale):
             }, options=run_options, run_metadata=run_metadata)
             tl = timeline.Timeline(run_metadata.step_stats)
             ctf = tl.generate_chrome_trace_format()
-            with open('timeline_filter_cpu_'+str(scale)+'.json', 'w') as f:
+            with open('timeline_filter_gpu_'+str(scale)+'.json', 'w') as f:
                 f.write(ctf)
             print res
         return res
@@ -91,7 +91,7 @@ def aggregation(scale):
             }, options=run_options, run_metadata=run_metadata)
             tl = timeline.Timeline(run_metadata.step_stats)
             ctf = tl.generate_chrome_trace_format()
-            with open('timeline_aggregation_cpu_'+str(scale)+'.json', 'w') as f:
+            with open('timeline_aggregation_gpu_'+str(scale)+'.json', 'w') as f:
                 f.write(ctf)
             print res
         return res
@@ -102,7 +102,8 @@ def group_by(scale):
         returnflag = tf.placeholder(dtype=tf.float32, shape=(None,))
         ones = tf.ones_like(quantity)
         zeros = tf.zeros_like(quantity)
-        returnflag_groups_tensors,idx = tf.unique(returnflag)
+    returnflag_groups_tensors,idx = tf.unique(returnflag)
+    with tf.device('/device:GPU:0'):
         returnflag_groups = tf.unstack(returnflag_groups_tensors,3)
         result = []
         for returnflag_group in returnflag_groups:
@@ -134,15 +135,15 @@ def group_by(scale):
             }, options=run_options, run_metadata=run_metadata)
             tl = timeline.Timeline(run_metadata.step_stats)
             ctf = tl.generate_chrome_trace_format()
-            with open('timeline_grouping_cpu_'+str(scale)+'.json', 'w') as f:
+            with open('timeline_grouping_gpu_'+str(scale)+'.json', 'w') as f:
                 f.write(ctf)
             print res
         return res
 
-def order_by(scale,quantity_size):
+def order_by_limit(scale,quantity_size):
     with tf.device('/device:GPU:0'):
         quantity = tf.placeholder(dtype=tf.float32, shape=(None,))
-        sorted_a, indices = tf.nn.top_k(quantity, quantity_size,True)
+        sorted_a, indices = tf.nn.top_k(quantity, 10,True)
         result  = sorted_a
         with tf.Session() as sess:
             run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
@@ -164,7 +165,7 @@ def order_by(scale,quantity_size):
             }, options=run_options, run_metadata=run_metadata)
             tl = timeline.Timeline(run_metadata.step_stats)
             ctf = tl.generate_chrome_trace_format()
-            with open('timeline_order_cpu_'+str(scale)+'.json', 'w') as f:
+            with open('timeline_order_gpu_'+str(scale)+'.json', 'w') as f:
                 f.write(ctf)
             print res
         return res
@@ -202,7 +203,7 @@ def join(scale,order_size):
             }, options=run_options, run_metadata=run_metadata)
             tl = timeline.Timeline(run_metadata.step_stats)
             ctf = tl.generate_chrome_trace_format()
-            with open('timeline_join_cpu_'+str(scale)+'.json', 'w') as f:
+            with open('timeline_join_gpu_'+str(scale)+'.json', 'w') as f:
                 f.write(ctf)
             print res
         return res
@@ -213,20 +214,17 @@ def run_micro(scale):
     filter(scale)
     aggregation(scale)
     group_by(scale)
-    if (scale==0.1):
-        order_by(scale,600572)
-        join(scale,150000)
-    elif (scale==1.0):
-        order_by(scale,6001215)
-        join(scale,1500000)
-    elif (scale ==10.0):
-        order_by(scale,59986052)
-        join(scale,15000000)
-    elif(scale ==100.0):
-        order_by(scale,600037902)
-        join(scale,150000000)
+    order_by_limit(scale,10)
+    # if (scale==0):
+    #     join(scale,150000)
+    # elif (scale==1):
+    #     join(scale,1500000)
+    # elif (scale ==10):
+    #     join(scale,15000000)
+    # elif(scale ==100):
+    #     join(scale,150000000)
+    return 0
 
-run_micro(0.1)
-run_micro(1.0)
-run_micro(10.0)
-# run_micro(0.1)
+if __name__ == "__main__":
+    scale = int(sys.argv[1])
+    run_micro(scale)

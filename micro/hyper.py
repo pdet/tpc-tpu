@@ -7,7 +7,7 @@ def runMicro(scale):
     join_SQL = '\"select l_orderkey from lineitem_%d inner join orders_%d  on(l_orderkey = o_orderkey);\"'%(scale,scale)
     aggregationSQL = '\"select sum(l_quantity) from lineitem_%d;\"'%scale
     group_by_SQL = '\"select sum(l_quantity) from lineitem_%d group by l_returnflag;\"'%scale
-    order_by_SQL = '\"select l_quantity from lineitem_%d order by l_quantity;\"'%scale
+    order_by_SQL = '\"select l_quantity from lineitem_%d order by l_quantity limit 10;\"'%scale
     for i in range (0,5):
         os.system(client_stmt+filterSQL)
     for i in range (0,5):    

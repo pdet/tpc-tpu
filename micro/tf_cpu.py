@@ -3,6 +3,7 @@ import pandas as pd
 import os
 import tensorflow as tf
 from tensorflow.python.client import timeline
+import sys
 
 o_orderkey = 0
 l_orderkey = 0
@@ -33,8 +34,8 @@ def load_input(scale):
     l_returnflag[l_returnflag=="N"] = "2"
     l_returnflag[l_returnflag=="R"] = "3"
     l_returnflag = l_returnflag.astype(np.float32, copy=False)
-    del lineitem
-    del orders
+    os.chdir('/home/pedroholanda/result/')
+
 
 
 def filter(scale):
@@ -136,7 +137,7 @@ def group_by(scale):
         print res
     return res
 
-def order_by(scale,quantity_size):
+def order_by_limit(scale,quantity_size):
     quantity = tf.placeholder(dtype=tf.float32, shape=(None,))
     sorted_a, indices = tf.nn.top_k(quantity, quantity_size,True)
     result  = sorted_a
@@ -208,20 +209,17 @@ def run_micro(scale):
     filter(scale)
     aggregation(scale)
     group_by(scale)
-    if (scale==0.1):
-        order_by(scale,600572)
-        join(scale,150000)
-    elif (scale==1):
-        order_by(scale,6001215)
-        join(scale,1500000)
-    elif (scale ==10):
-        order_by(scale,59986052)
-        join(scale,15000000)
-    elif(scale ==100):
-        order_by(scale,600037902)
-        join(scale,150000000)
+    order_by_limit(scale,10)
+    # if (scale==0):
+    #     join(scale,150000)
+    # elif (scale==1):
+    #     join(scale,1500000)
+    # elif (scale ==10):
+    #     join(scale,15000000)
+    # elif(scale ==100):
+    #     join(scale,150000000)
+    return 0
 
-run_micro(0.1)
-run_micro(1)
-run_micro(10)
-# run_micro(0.1)
+if __name__ == "__main__":
+    scale = int(sys.argv[1])
+    run_micro(scale)

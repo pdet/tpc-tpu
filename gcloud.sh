@@ -17,7 +17,7 @@
 #TPU ARTICLES
 #https://cloud.google.com/blog/products/gcp/an-in-depth-look-at-googles-first-tensor-processing-unit-tpu
 #https://www.nextplatform.com/2018/05/10/tearing-apart-googles-tpu-3-0-ai-coprocessor/
-ctpu up --tpu-size=v3-8 --machine-type=n1-standard-8
+ctpu up --tpu-size=v3-8 --machine-type=n1-standard-64
 # pip install --install-option="--prefix=/export/scratch1/home/holanda/pythonlib" package_name
 #PYTHONPATH="$PYTHONPATH:/export/scratch1/home/holanda/pythonlib/lib/python2.7"
 
@@ -28,6 +28,8 @@ export STORAGE_BUCKET=gs://tpctpu
 gsutil cp -r ${STORAGE_BUCKET}/tpch-0.1 ./tpch-0.1
 gsutil cp -r ${STORAGE_BUCKET}/tpch1 ./
 gsutil cp -r ${STORAGE_BUCKET}/tpch-10 ./
+gsutil cp -r ${STORAGE_BUCKET}/tpch-100 ./
+
 mv tpch1 tpch-1
 gsutil cp -r ${STORAGE_BUCKET}/hyper ./
 
