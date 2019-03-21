@@ -48,18 +48,10 @@ def filter_sum(scale):
     with tf.Session() as sess:
         run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
         run_metadata = tf.RunMetadata()
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
+        for i in range (0,4):
+            res = sess.run(result, feed_dict={
+                quantity: l_quantity
+            })
         res = sess.run(result, feed_dict={
             quantity: l_quantity
         }, options=run_options, run_metadata=run_metadata)
@@ -79,18 +71,10 @@ def filter(scale):
     with tf.Session() as sess:
         run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
         run_metadata = tf.RunMetadata()
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
+        for i in range (0,4):
+            res = sess.run(result, feed_dict={
+                quantity: l_quantity
+            })
         res = sess.run(result, feed_dict={
             quantity: l_quantity
         }, options=run_options, run_metadata=run_metadata)
@@ -109,18 +93,10 @@ def aggregation(scale):
     with tf.Session() as sess:
         run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
         run_metadata = tf.RunMetadata()
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
+        for i in range (0,4):
+            res = sess.run(result, feed_dict={
+                quantity: l_quantity
+            })
         res = sess.run(result, feed_dict={
             quantity: l_quantity
         }, options=run_options, run_metadata=run_metadata)
@@ -149,22 +125,11 @@ def group_by(scale):
     with tf.Session() as sess:
         run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
         run_metadata = tf.RunMetadata()
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity,
-            returnflag: l_returnflag
-        })
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity,
-            returnflag: l_returnflag
-        })
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity,
-            returnflag: l_returnflag
-        })
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity,
-            returnflag: l_returnflag
-        })
+        for i in range (0,4):
+            res = sess.run(result, feed_dict={
+                quantity: l_quantity,
+                returnflag: l_returnflag
+            })
         res = sess.run(result, feed_dict={
             quantity: l_quantity,
             returnflag: l_returnflag
@@ -185,18 +150,10 @@ def order_by_limit(scale, quantity_size):
     with tf.Session() as sess:
         run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
         run_metadata = tf.RunMetadata()
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
-        res = sess.run(result, feed_dict={
-            quantity: l_quantity
-        })
+        for i in range (0,4):
+            res = sess.run(result, feed_dict={
+                quantity: l_quantity
+            })
         res = sess.run(result, feed_dict={
             quantity: l_quantity
         }, options=run_options, run_metadata=run_metadata)
@@ -222,22 +179,11 @@ def join(scale, order_size):
     with tf.Session() as sess:
         run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
         run_metadata = tf.RunMetadata()
-        res = sess.run(result, feed_dict={
-            lineitem_orderkey: l_orderkey,
-            order_orderkey: o_orderkey
-        })
-        res = sess.run(result, feed_dict={
-            lineitem_orderkey: l_orderkey,
-            order_orderkey: o_orderkey
-        })
-        res = sess.run(result, feed_dict={
-            lineitem_orderkey: l_orderkey,
-            order_orderkey: o_orderkey
-        })
-        res = sess.run(result, feed_dict={
-            lineitem_orderkey: l_orderkey,
-            order_orderkey: o_orderkey
-        })
+        for i in range (0,4):
+            res = sess.run(result, feed_dict={
+                lineitem_orderkey: l_orderkey,
+                order_orderkey: o_orderkey
+            })
         res = sess.run(result, feed_dict={
             lineitem_orderkey: l_orderkey,
             order_orderkey: o_orderkey

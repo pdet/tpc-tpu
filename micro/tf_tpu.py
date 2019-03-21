@@ -58,11 +58,8 @@ def filter_sum():
     with tf.Session(tpu_grpc_url) as sess:
         sess.run(tpu.initialize_system())
         sess.run(tf.global_variables_initializer())
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
+        for i in range (0,5):
+            res = sess.run(tpu_computation)
         sess.run(tpu.shutdown_system())
         print(res)
         return res
@@ -81,11 +78,8 @@ def filter():
     with tf.Session(tpu_grpc_url) as sess:
         sess.run(tpu.initialize_system())
         sess.run(tf.global_variables_initializer())
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
+        for i in range (0,5):
+            res = sess.run(tpu_computation)
         sess.run(tpu.shutdown_system())
         print(l_quantity[res])
         return res
@@ -113,11 +107,8 @@ def group_by():
     with tf.Session(tpu_grpc_url) as sess:
         sess.run(tpu.initialize_system())
         sess.run(tf.global_variables_initializer())
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
+        for i in range (0,5):
+            res = sess.run(tpu_computation)
         sess.run(tpu.shutdown_system())
         print(res)
 
@@ -135,11 +126,8 @@ def aggregation():
     with tf.Session(tpu_grpc_url) as sess:
         sess.run(tpu.initialize_system())
         sess.run(tf.global_variables_initializer())
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
+        for i in range (0,5):
+            res = sess.run(tpu_computation)
         sess.run(tpu.shutdown_system())
         print(res)
         return res
@@ -159,11 +147,8 @@ def order_by_limit():
     with tf.Session(tpu_grpc_url) as sess:
         sess.run(tpu.initialize_system())
         sess.run(tf.global_variables_initializer())
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
+        for i in range (0,5):
+            res = sess.run(tpu_computation)
         sess.run(tpu.shutdown_system())
         print(res)
         return res
@@ -186,11 +171,8 @@ def join():
     with tf.Session(tpu_grpc_url) as sess:
         sess.run(tpu.initialize_system())
         sess.run(tf.global_variables_initializer())
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation, options=run_options, run_metadata=run_metadata)
+        for i in range (0,5):
+            res = sess.run(tpu_computation)
         sess.run(tpu.shutdown_system())
         print(res)
         return res

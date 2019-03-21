@@ -105,42 +105,16 @@ def q1():
     with tf.Session() as sess:
         run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
         run_metadata = tf.RunMetadata()
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            returnflag: l_returnflag,
-            linestatus: l_linestatus,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice,
-            discount: l_discount,
-            tax: l_tax
-        })
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            returnflag: l_returnflag,
-            linestatus: l_linestatus,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice,
-            discount: l_discount,
-            tax: l_tax
-        })
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            returnflag: l_returnflag,
-            linestatus: l_linestatus,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice,
-            discount: l_discount,
-            tax: l_tax
-        })
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            returnflag: l_returnflag,
-            linestatus: l_linestatus,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice,
-            discount: l_discount,
-            tax: l_tax
-        })
+        for i in range (0,4):
+            res = sess.run(result, feed_dict={
+                shipdate: l_shipdate,
+                returnflag: l_returnflag,
+                linestatus: l_linestatus,
+                quantity: l_quantity,
+                extendedprice: l_extendedprice,
+                discount: l_discount,
+                tax: l_tax
+            })
         res = sess.run(result, feed_dict={
             shipdate: l_shipdate,
             returnflag: l_returnflag,
@@ -178,30 +152,13 @@ def q6():
     with tf.Session() as sess:
         run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
         run_metadata = tf.RunMetadata()
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            discount: l_discount,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice
-        })
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            discount: l_discount,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice
-        })
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            discount: l_discount,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice
-        })
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            discount: l_discount,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice
-        })
+        for i in range (0,4):
+            res = sess.run(result, feed_dict={
+                shipdate: l_shipdate,
+                discount: l_discount,
+                quantity: l_quantity,
+                extendedprice: l_extendedprice
+            })
         res = sess.run(result, feed_dict={
             shipdate: l_shipdate,
             discount: l_discount,

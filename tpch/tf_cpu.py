@@ -62,16 +62,16 @@ def load_input(scale):
 
 
 def q1():
-    shipdate = tf.placeholder(dtype=tf.int32, shape=(None,))
-    returnflag = tf.placeholder(dtype=tf.float32, shape=(None,))
-    linestatus = tf.placeholder(dtype=tf.float32, shape=(None,))
-    quantity = tf.placeholder(dtype=tf.float32, shape=(None,))
-    extendedprice = tf.placeholder(dtype=tf.float32, shape=(None,))
-    discount = tf.placeholder(dtype=tf.float32, shape=(None,))
-    tax = tf.placeholder(dtype=tf.float32, shape=(None,))
-    zeros = tf.zeros_like(discount)
-    ones = tf.ones_like(discount)
-    minus_one = tf.constant(-1.0, dtype=tf.float32)
+    shipdate = tf.placeholder(dtype=tf.int32, shape=(None,), name='shipdate')
+    returnflag = tf.placeholder(dtype=tf.float32, shape=(None,), name='returnflag')
+    linestatus = tf.placeholder(dtype=tf.float32, shape=(None,), name='linestatus')
+    quantity = tf.placeholder(dtype=tf.float32, shape=(None,), name='quantity')
+    extendedprice = tf.placeholder(dtype=tf.float32, shape=(None,), name='extendedprice')
+    discount = tf.placeholder(dtype=tf.float32, shape=(None,), name='discount')
+    tax = tf.placeholder(dtype=tf.float32, shape=(None,), name='tax')
+    zeros = tf.zeros_like(discount, name='zero')
+    ones = tf.ones_like(discount, name='one')
+    minus_one = tf.constant(-1.0, dtype=tf.float32, name='minus_one')
     # Performing the groups
     returnflag_groups_tensors, idx = tf.unique(returnflag)
     linestatus_groups_tensors, idx = tf.unique(linestatus)
@@ -104,42 +104,16 @@ def q1():
     with tf.Session() as sess:
         run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
         run_metadata = tf.RunMetadata()
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            returnflag: l_returnflag,
-            linestatus: l_linestatus,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice,
-            discount: l_discount,
-            tax: l_tax
-        })
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            returnflag: l_returnflag,
-            linestatus: l_linestatus,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice,
-            discount: l_discount,
-            tax: l_tax
-        })
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            returnflag: l_returnflag,
-            linestatus: l_linestatus,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice,
-            discount: l_discount,
-            tax: l_tax
-        })
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            returnflag: l_returnflag,
-            linestatus: l_linestatus,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice,
-            discount: l_discount,
-            tax: l_tax
-        })
+        for i in range (0,4):
+            res = sess.run(result, feed_dict={
+                shipdate: l_shipdate,
+                returnflag: l_returnflag,
+                linestatus: l_linestatus,
+                quantity: l_quantity,
+                extendedprice: l_extendedprice,
+                discount: l_discount,
+                tax: l_tax
+            })
         writer = tf.summary.FileWriter("./graph1/", sess.graph)
         res = sess.run(result, feed_dict={
             shipdate: l_shipdate,
@@ -160,48 +134,31 @@ def q1():
 
 
 def q6():
-    shipdate = tf.placeholder(dtype=tf.int32, shape=(None,))
-    discount = tf.placeholder(dtype=tf.float32, shape=(None,))
-    quantity = tf.placeholder(dtype=tf.float32, shape=(None,))
-    extendedprice = tf.placeholder(dtype=tf.float32, shape=(None,))
-    zeros = tf.zeros_like(discount)
-    complete_filter = tf.logical_and(tf.greater_equal(discount, 0.05), tf.logical_and(tf.less_equal(discount, 0.07),
+    shipdate = tf.placeholder(dtype=tf.int32, shape=(None,), name='shipdate')
+    discount = tf.placeholder(dtype=tf.float32, shape=(None,), name='discount')
+    quantity = tf.placeholder(dtype=tf.float32, shape=(None,), name='quantity')
+    extendedprice = tf.placeholder(dtype=tf.float32, shape=(None,), name='extendedprice')
+    zeros = tf.zeros_like(discount, name='zero')
+    complete_filter = tf.logical_and(tf.greater_equal(discount, 0.05, name = 'GTE'), tf.logical_and(tf.less_equal(discount, 0.07, name = 'LEQ'),
                                                                                       tf.logical_and(
-                                                                                          tf.less(quantity, 24),
+                                                                                          tf.less(quantity, 24, name='LESS'),
                                                                                           tf.logical_and(
                                                                                               tf.less(shipdate,
-                                                                                                      19950101),
+                                                                                                      19950101, name='LESS'),
                                                                                               tf.greater_equal(shipdate,
-                                                                                                               19940101)))))
+                                                                                                               19940101, name='GTE'), name='AND'), name='AND'), name='AND'), name='AND')
     result = tf.reduce_sum(
-        tf.multiply(tf.where(complete_filter, extendedprice, zeros), tf.where(complete_filter, discount, zeros)))
+        tf.multiply(tf.where(complete_filter, extendedprice, zeros, name='Filter'), tf.where(complete_filter, discount, zeros, name='Filter'), name='MULT'), name='SUM')
     with tf.Session() as sess:
         run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
         run_metadata = tf.RunMetadata()
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            discount: l_discount,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice
-        })
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            discount: l_discount,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice
-        })
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            discount: l_discount,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice
-        })
-        res = sess.run(result, feed_dict={
-            shipdate: l_shipdate,
-            discount: l_discount,
-            quantity: l_quantity,
-            extendedprice: l_extendedprice
-        })
+        for i in range (0,4):
+            res = sess.run(result, feed_dict={
+                shipdate: l_shipdate,
+                discount: l_discount,
+                quantity: l_quantity,
+                extendedprice: l_extendedprice
+            })
         writer = tf.summary.FileWriter("./graph6/", sess.graph)
         res = sess.run(result, feed_dict={
             shipdate: l_shipdate,
@@ -220,7 +177,7 @@ def q6():
 
 def run_tpch(scale):
     load_input(scale)
-    q1()
+    # q1()
     q6()
 
 
