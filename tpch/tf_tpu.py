@@ -117,11 +117,8 @@ def q1():
     with tf.Session(tpu_grpc_url) as sess:
         sess.run(tpu.initialize_system())
         sess.run(tf.global_variables_initializer())
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
+        for i in range(0,5):
+            res = sess.run(tpu_computation)
         sess.run(tpu.shutdown_system())
         print (res)
         return res
@@ -151,11 +148,8 @@ def q6():
     with tf.Session(tpu_grpc_url) as sess:
         sess.run(tpu.initialize_system())
         sess.run(tf.global_variables_initializer())
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
-        res = sess.run(tpu_computation)
+        for i in range(0,5):
+            res = sess.run(tpu_computation)
         sess.run(tpu.shutdown_system())
         print(res)
         return res

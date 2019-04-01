@@ -134,8 +134,7 @@ def aggregation():
 
 
 def order_by_limit_computation(quantity):
-    sorted_a, indices = tf.nn.top_k(quantity, 10, True)
-    result = sorted_a
+    result, indices = tf.nn.top_k(quantity, 10, True)
     return result
 
 

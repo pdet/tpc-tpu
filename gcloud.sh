@@ -21,6 +21,8 @@ ctpu up --tpu-size=v3-8 --machine-type=n1-standard-16
 # pip install --install-option="--prefix=/export/scratch1/home/holanda/pythonlib" package_name
 #PYTHONPATH="$PYTHONPATH:/export/scratch1/home/holanda/pythonlib/lib/python2.7"
 
+# sudo apt-get install lshw
+# sudo lshw -short
 
 ctpu up
 #ctpu up https://cloud.google.com/tpu/docs/ctpu-reference

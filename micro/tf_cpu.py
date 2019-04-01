@@ -9,14 +9,17 @@ o_orderkey = 0
 l_orderkey = 0
 l_quantity = 0
 l_returnflag = 0
-
+s_nationkey = 0
+n_nationkey = 0
 
 def load_input(scale):
     global o_orderkey
     global l_orderkey
     global l_quantity
     global l_returnflag
-    # os.chdir('/home/pedroholanda/tpch-' + str(scale))
+    global s_nationkey
+    global n_nationkey
+   # os.chdir('/home/pedroholanda/tpch-' + str(scale))
     os.chdir('/Users/holanda/Documents/Projects/tpc-tpu/tpch-dbgen')
 
     lineitem = pd.read_csv("lineitem.tbl", sep='|',
@@ -30,15 +33,23 @@ def load_input(scale):
                                 "o_orderpriority", "o_clerk", "o_shippriority", "o_comment"],
                          dtype={'o_orderstatus': 'category', 'o_orderpriority': 'category'})
 
-    o_orderkey = orders["o_orderkey"].values.astype('int32')
+    o_orderkey = orders["o_orderkey"].values.astype('float32')
     l_orderkey = lineitem["l_orderkey"].values.astype('int32')
+
+    nation = pd.read_csv("nation.tbl", sep='|', names=["n_nationkey", "n_name", "n_regionkey", "n_comment"])
+    supplier = pd.read_csv("supplier.tbl", sep='|',
+                           names=["s_suppkey", "s_name", "s_address", "s_nationkey", "s_phone", "s_acctbal", "s_comment"])
+    s_suppkey = supplier["s_suppkey"].values.astype('float32')
+    s_nationkey = supplier["s_nationkey"].values.astype('float32')
+    n_nationkey = nation["n_nationkey"].values.astype('float32')
+
     l_quantity = lineitem["l_quantity"].values.astype('float32')
     l_returnflag = lineitem["l_returnflag"].values.astype('S1')
     l_returnflag[l_returnflag == "A"] = "1"
     l_returnflag[l_returnflag == "N"] = "2"
     l_returnflag[l_returnflag == "R"] = "3"
     l_returnflag = l_returnflag.astype(np.float32, copy=False)
-    # os.chdir('/home/pedroholanda/result/')
+    #os.chdir('/home/pedroholanda/result/')
     os.chdir('/Users/holanda/Documents/Projects/tpc-tpu/Results')
 
 
@@ -173,48 +184,38 @@ def order_by_limit(scale, quantity_size):
     return res
 
 
+def join(scale):
+    sup_nationkey = tf.placeholder(dtype=tf.float32, shape=(None,))
+    nat_nationkey = tf.placeholder(dtype=tf.float32, shape=(None,))
 
-def join(scale, order_size):
-
-    lineitem_orderkey = tf.placeholder(dtype=tf.int32, shape=(None,))
-    zeros = tf.zeros_like(lineitem_orderkey)
-    order_orderkey = tf.placeholder(dtype=tf.int32, shape=(None,))
-    orders = tf.unstack(order_orderkey, order_size)
-    # Track both the loop index and summation in a tuple in the form (index, summation)
+    zeros = tf.zeros_like(sup_nationkey)
+    nations = tf.unstack(nat_nationkey, 25) # Number of nations
     index_summation = (tf.constant(1), tf.constant(0.0))
+    result = tf.constant([], dtype=tf.int32)
 
-    # The loop condition, note the loop condition is 'i < n-1'
     def condition(index, summation):
-        return tf.less(index, tf.subtract(tf.shape(orders)[0], 1))
+        return tf.less(index, 25)
 
-    # The loop body, this will return a result tuple in the same form (index, summation)
     def body(index, summation):
-        # x_i = tf.gather(columns, index)
-        # x_ip1 = tf.gather(columns, tf.add(index, 1))
-
-        # first_term = tf.square(tf.subtract(x_ip1, tf.square(x_i)))
-        # second_term = tf.square(tf.subtract(x_i, 1.0))
-        summand = tf.reduce_sum(tf.where(tf.equal(lineitem_orderkey, order), lineitem_orderkey, zeros))
+        nation=tf.gather(nations,index)
+        a = tf.equal(sup_nationkey, nation)
+        summand = tf.reduce_sum(tf.where(a, sup_nationkey, zeros))
 
         return tf.add(index, 1), tf.add(summation, summand)
-    result =  tf.while_loop(condition, body, index_summation,parallel_iterations=order_size,maximum_iterations=order_size)[1]
-    # join_idx = tf.constant(0.0,dtype=tf.float32)
-    # for order in orders:
-    #     # join_idx = tf.stack(join_idx,(tf.where(tf.equal(lineitem_orderkey,order))))
-    #     aux = tf.reduce_sum(tf.where(tf.equal(lineitem_orderkey, order), lineitem_orderkey, zeros))
-    # result = aux
+        
+    result =  tf.while_loop(condition, body, index_summation,parallel_iterations=25,maximum_iterations=25)[1]
     with tf.Session() as sess:
         run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
         run_metadata = tf.RunMetadata()
         for i in range (0,4):
             res = sess.run(result, feed_dict={
-                lineitem_orderkey: l_orderkey,
-                order_orderkey: o_orderkey
+                sup_nationkey: s_nationkey,
+                nat_nationkey: n_nationkey
             })
         writer = tf.summary.FileWriter("./join/", sess.graph)
         res = sess.run(result, feed_dict={
-            lineitem_orderkey: l_orderkey,
-            order_orderkey: o_orderkey
+                sup_nationkey: s_nationkey,
+                nat_nationkey: n_nationkey
         }, options=run_options, run_metadata=run_metadata)
         writer.close()
         tl = timeline.Timeline(run_metadata.step_stats)
@@ -232,7 +233,7 @@ def run_micro(scale):
     # aggregation(scale)
     # group_by(scale)
     # order_by_limit(scale, 10)
-    join(scale,150000)
+    join(scale)
     return 0
 
 
