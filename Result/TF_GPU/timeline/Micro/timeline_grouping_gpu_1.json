@@ -1,0 +1,1882 @@
+{
+    "traceEvents": [
+        {
+            "ph": "M",
+            "args": {
+                "name": "Allocators"
+            },
+            "pid": 0,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:21 Compute"
+            },
+            "pid": 1,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:21 Tensors"
+            },
+            "pid": 2,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:22 Compute"
+            },
+            "pid": 3,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:22 Tensors"
+            },
+            "pid": 4,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:20 Compute"
+            },
+            "pid": 5,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:20 Tensors"
+            },
+            "pid": 6,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/memcpy Compute"
+            },
+            "pid": 7,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/memcpy Tensors"
+            },
+            "pid": 8,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:all Compute"
+            },
+            "pid": 9,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:all Tensors"
+            },
+            "pid": 10,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Compute"
+            },
+            "pid": 11,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Tensors"
+            },
+            "pid": 12,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:GPU:0 Compute"
+            },
+            "pid": 13,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:GPU:0 Tensors"
+            },
+            "pid": 14,
+            "name": "process_name"
+        },
+        {
+            "name": "MEMCPYHtoD",
+            "args": {
+                "name": "edge_52__arg_Placeholder_3_0_0",
+                "op": "MEMCPYHtoD"
+            },
+            "pid": 1,
+            "ts": 1554125956252429,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 6764
+        },
+        {
+            "name": "MEMCPYHtoD",
+            "args": {
+                "name": "edge_59__arg_Placeholder_4_0_1",
+                "op": "MEMCPYHtoD"
+            },
+            "pid": 1,
+            "ts": 1554125956259377,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3108
+        },
+        {
+            "name": "MEMCPYHtoD",
+            "args": {
+                "name": "edge_4_Unique",
+                "op": "MEMCPYHtoD"
+            },
+            "pid": 1,
+            "ts": 1554125956722922,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "MEMCPYDtoH",
+            "args": {
+                "name": "edge_62_Reshape",
+                "op": "MEMCPYDtoH"
+            },
+            "pid": 3,
+            "ts": 1554125956724876,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "ZerosLike#id=20#",
+            "args": {
+                "name": "zeros_like_1",
+                "op": "ZerosLike#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956262498,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 45
+        },
+        {
+            "name": "Fill#id=20#",
+            "args": {
+                "name": "ones_like",
+                "op": "Fill#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956262593,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 45
+        },
+        {
+            "name": "Unpack#id=20#",
+            "args": {
+                "name": "unstack",
+                "op": "Unpack#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956723262,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3
+        },
+        {
+            "name": "Unpack#id=20#",
+            "args": {
+                "name": "unstack",
+                "op": "Unpack#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956723277,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3
+        },
+        {
+            "name": "Unpack#id=20#",
+            "args": {
+                "name": "unstack",
+                "op": "Unpack#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956723289,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3
+        },
+        {
+            "name": "Equal#id=20#",
+            "args": {
+                "name": "Equal_2",
+                "op": "Equal#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956723335,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 71
+        },
+        {
+            "name": "Equal#id=20#",
+            "args": {
+                "name": "Equal_1",
+                "op": "Equal#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956723409,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 69
+        },
+        {
+            "name": "Equal#id=20#",
+            "args": {
+                "name": "Equal",
+                "op": "Equal#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956723482,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 68
+        },
+        {
+            "name": "Select#id=20#",
+            "args": {
+                "name": "Select_5",
+                "op": "Select#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956723553,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 148
+        },
+        {
+            "name": "Select#id=20#",
+            "args": {
+                "name": "Select_3",
+                "op": "Select#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956723704,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 148
+        },
+        {
+            "name": "Select#id=20#",
+            "args": {
+                "name": "Select_1",
+                "op": "Select#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956723856,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 146
+        },
+        {
+            "name": "Cast#id=20#",
+            "args": {
+                "name": "Cast_2",
+                "op": "Cast#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724005,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 66
+        },
+        {
+            "name": "Cast#id=20#",
+            "args": {
+                "name": "Cast_1",
+                "op": "Cast#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724075,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 65
+        },
+        {
+            "name": "Cast#id=20#",
+            "args": {
+                "name": "Cast",
+                "op": "Cast#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724143,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 64
+        },
+        {
+            "name": "Select#id=20#",
+            "args": {
+                "name": "Select_6",
+                "op": "Select#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724211,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 149
+        },
+        {
+            "name": "Select#id=20#",
+            "args": {
+                "name": "Select_4",
+                "op": "Select#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724363,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 152
+        },
+        {
+            "name": "Select#id=20#",
+            "args": {
+                "name": "Select_2",
+                "op": "Select#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724518,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 148
+        },
+        {
+            "name": "Sum#id=20#",
+            "args": {
+                "name": "Sum_4",
+                "op": "Sum#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724669,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 48
+        },
+        {
+            "name": "Sum#id=20#",
+            "args": {
+                "name": "Sum_4",
+                "op": "Sum#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724720,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4
+        },
+        {
+            "name": "Sum#id=20#",
+            "args": {
+                "name": "Sum_3",
+                "op": "Sum#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724727,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 43
+        },
+        {
+            "name": "Sum#id=20#",
+            "args": {
+                "name": "Sum_3",
+                "op": "Sum#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724774,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4
+        },
+        {
+            "name": "Sum#id=20#",
+            "args": {
+                "name": "Sum_2",
+                "op": "Sum#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724781,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 44
+        },
+        {
+            "name": "Sum#id=20#",
+            "args": {
+                "name": "Sum_2",
+                "op": "Sum#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724828,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4
+        },
+        {
+            "name": "Pack#id=20#",
+            "args": {
+                "name": "stack_2",
+                "op": "Pack#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724836,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "Pack#id=20#",
+            "args": {
+                "name": "stack_2",
+                "op": "Pack#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724840,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "Pack#id=20#",
+            "args": {
+                "name": "stack_1",
+                "op": "Pack#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724844,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "Pack#id=20#",
+            "args": {
+                "name": "stack_1",
+                "op": "Pack#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724848,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "Pack#id=20#",
+            "args": {
+                "name": "stack",
+                "op": "Pack#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724852,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "Pack#id=20#",
+            "args": {
+                "name": "stack",
+                "op": "Pack#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724856,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "ConcatV2#id=20#",
+            "args": {
+                "name": "concat_2",
+                "op": "ConcatV2#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724860,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "ConcatV2#id=20#",
+            "args": {
+                "name": "concat_2",
+                "op": "ConcatV2#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724865,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "ConcatV2#id=20#",
+            "args": {
+                "name": "concat_2",
+                "op": "ConcatV2#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724869,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "ConcatV2#id=20#",
+            "args": {
+                "name": "concat_2",
+                "op": "ConcatV2#id=20#"
+            },
+            "pid": 5,
+            "ts": 1554125956724873,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "MEMCPYHtoD",
+            "args": {
+                "name": "edge_52__arg_Placeholder_3_0_0",
+                "op": "MEMCPYHtoD"
+            },
+            "pid": 7,
+            "ts": 1554125956252429,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 6764
+        },
+        {
+            "name": "MEMCPYHtoD",
+            "args": {
+                "name": "edge_59__arg_Placeholder_4_0_1",
+                "op": "MEMCPYHtoD"
+            },
+            "pid": 7,
+            "ts": 1554125956259377,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3108
+        },
+        {
+            "name": "MEMCPYHtoD",
+            "args": {
+                "name": "edge_4_Unique",
+                "op": "MEMCPYHtoD"
+            },
+            "pid": 7,
+            "ts": 1554125956722922,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "Pack#id=20#",
+            "args": {
+                "name": "stack_2",
+                "op": "Pack#id=20#"
+            },
+            "pid": 7,
+            "ts": 1554125956724836,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "Pack#id=20#",
+            "args": {
+                "name": "stack_2",
+                "op": "Pack#id=20#"
+            },
+            "pid": 7,
+            "ts": 1554125956724840,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "Pack#id=20#",
+            "args": {
+                "name": "stack_1",
+                "op": "Pack#id=20#"
+            },
+            "pid": 7,
+            "ts": 1554125956724844,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "Pack#id=20#",
+            "args": {
+                "name": "stack_1",
+                "op": "Pack#id=20#"
+            },
+            "pid": 7,
+            "ts": 1554125956724848,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "Pack#id=20#",
+            "args": {
+                "name": "stack",
+                "op": "Pack#id=20#"
+            },
+            "pid": 7,
+            "ts": 1554125956724852,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "Pack#id=20#",
+            "args": {
+                "name": "stack",
+                "op": "Pack#id=20#"
+            },
+            "pid": 7,
+            "ts": 1554125956724856,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "ConcatV2#id=20#",
+            "args": {
+                "name": "concat_2",
+                "op": "ConcatV2#id=20#"
+            },
+            "pid": 7,
+            "ts": 1554125956724860,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "ConcatV2#id=20#",
+            "args": {
+                "name": "concat_2",
+                "op": "ConcatV2#id=20#"
+            },
+            "pid": 7,
+            "ts": 1554125956724865,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "ConcatV2#id=20#",
+            "args": {
+                "name": "concat_2",
+                "op": "ConcatV2#id=20#"
+            },
+            "pid": 7,
+            "ts": 1554125956724869,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "ConcatV2#id=20#",
+            "args": {
+                "name": "concat_2",
+                "op": "ConcatV2#id=20#"
+            },
+            "pid": 7,
+            "ts": 1554125956724873,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "MEMCPYDtoH",
+            "args": {
+                "name": "edge_62_Reshape",
+                "op": "MEMCPYDtoH"
+            },
+            "pid": 7,
+            "ts": 1554125956724876,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "ZerosLike#id=20#",
+            "args": {
+                "name": "zeros_like_1",
+                "op": "ZerosLike#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956262498,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 45
+        },
+        {
+            "name": "Fill#id=20#",
+            "args": {
+                "name": "ones_like",
+                "op": "Fill#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956262593,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 45
+        },
+        {
+            "name": "Unpack#id=20#",
+            "args": {
+                "name": "unstack",
+                "op": "Unpack#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956723262,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3
+        },
+        {
+            "name": "Unpack#id=20#",
+            "args": {
+                "name": "unstack",
+                "op": "Unpack#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956723277,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3
+        },
+        {
+            "name": "Unpack#id=20#",
+            "args": {
+                "name": "unstack",
+                "op": "Unpack#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956723289,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3
+        },
+        {
+            "name": "Equal#id=20#",
+            "args": {
+                "name": "Equal_2",
+                "op": "Equal#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956723335,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 71
+        },
+        {
+            "name": "Equal#id=20#",
+            "args": {
+                "name": "Equal_1",
+                "op": "Equal#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956723409,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 69
+        },
+        {
+            "name": "Equal#id=20#",
+            "args": {
+                "name": "Equal",
+                "op": "Equal#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956723482,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 68
+        },
+        {
+            "name": "Select#id=20#",
+            "args": {
+                "name": "Select_5",
+                "op": "Select#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956723553,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 148
+        },
+        {
+            "name": "Select#id=20#",
+            "args": {
+                "name": "Select_3",
+                "op": "Select#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956723704,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 148
+        },
+        {
+            "name": "Select#id=20#",
+            "args": {
+                "name": "Select_1",
+                "op": "Select#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956723856,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 146
+        },
+        {
+            "name": "Cast#id=20#",
+            "args": {
+                "name": "Cast_2",
+                "op": "Cast#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956724005,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 66
+        },
+        {
+            "name": "Cast#id=20#",
+            "args": {
+                "name": "Cast_1",
+                "op": "Cast#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956724075,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 65
+        },
+        {
+            "name": "Cast#id=20#",
+            "args": {
+                "name": "Cast",
+                "op": "Cast#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956724143,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 64
+        },
+        {
+            "name": "Select#id=20#",
+            "args": {
+                "name": "Select_6",
+                "op": "Select#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956724211,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 149
+        },
+        {
+            "name": "Select#id=20#",
+            "args": {
+                "name": "Select_4",
+                "op": "Select#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956724363,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 152
+        },
+        {
+            "name": "Select#id=20#",
+            "args": {
+                "name": "Select_2",
+                "op": "Select#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956724518,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 148
+        },
+        {
+            "name": "Sum#id=20#",
+            "args": {
+                "name": "Sum_4",
+                "op": "Sum#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956724669,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 48
+        },
+        {
+            "name": "Sum#id=20#",
+            "args": {
+                "name": "Sum_4",
+                "op": "Sum#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956724720,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4
+        },
+        {
+            "name": "Sum#id=20#",
+            "args": {
+                "name": "Sum_3",
+                "op": "Sum#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956724727,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 43
+        },
+        {
+            "name": "Sum#id=20#",
+            "args": {
+                "name": "Sum_3",
+                "op": "Sum#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956724774,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4
+        },
+        {
+            "name": "Sum#id=20#",
+            "args": {
+                "name": "Sum_2",
+                "op": "Sum#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956724781,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 44
+        },
+        {
+            "name": "Sum#id=20#",
+            "args": {
+                "name": "Sum_2",
+                "op": "Sum#id=20#"
+            },
+            "pid": 9,
+            "ts": 1554125956724828,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4
+        },
+        {
+            "name": "NoOp",
+            "args": {
+                "name": "_SOURCE",
+                "op": "NoOp"
+            },
+            "pid": 11,
+            "ts": 1554125956251552,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 5
+        },
+        {
+            "name": "_Arg",
+            "args": {
+                "name": "_arg_Placeholder_3_0_0",
+                "op": "_Arg"
+            },
+            "pid": 11,
+            "ts": 1554125956251580,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 31
+        },
+        {
+            "name": "_Arg",
+            "args": {
+                "name": "_arg_Placeholder_4_0_1",
+                "op": "_Arg"
+            },
+            "pid": 11,
+            "ts": 1554125956251625,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4
+        },
+        {
+            "name": "Unique",
+            "args": {
+                "input0": "_arg_Placeholder_4_0_1",
+                "name": "Unique",
+                "op": "Unique"
+            },
+            "pid": 11,
+            "ts": 1554125956251642,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 471056
+        },
+        {
+            "name": "_Retval",
+            "args": {
+                "input0": "Reshape/_7",
+                "name": "_retval_Reshape_0_0",
+                "op": "_Retval"
+            },
+            "pid": 11,
+            "ts": 1554125956724925,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 5
+        },
+        {
+            "name": "Reshape",
+            "pid": 13,
+            "ts": 1554125956723857,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 0
+        },
+        {
+            "name": "Reshape",
+            "pid": 11,
+            "ts": 1554125956724925,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 0
+        },
+        {
+            "name": "NoOp",
+            "args": {
+                "name": "_SOURCE",
+                "op": "NoOp"
+            },
+            "pid": 13,
+            "ts": 1554125956251498,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 23
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "Reshape/shape",
+                "op": "Const"
+            },
+            "pid": 13,
+            "ts": 1554125956251551,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 17
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "concat_2/axis",
+                "op": "Const"
+            },
+            "pid": 13,
+            "ts": 1554125956251571,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 6
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "Const_5",
+                "op": "Const"
+            },
+            "pid": 13,
+            "ts": 1554125956251579,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 23
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "ones_like/Const",
+                "op": "Const"
+            },
+            "pid": 13,
+            "ts": 1554125956251604,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 10
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "Const_2",
+                "op": "Const"
+            },
+            "pid": 13,
+            "ts": 1554125956251617,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 7
+        },
+        {
+            "name": "Shape",
+            "args": {
+                "input0": "_arg_Placeholder_3_0_0/_1",
+                "name": "ones_like/Shape",
+                "op": "Shape"
+            },
+            "pid": 13,
+            "ts": 1554125956259408,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 63
+        },
+        {
+            "name": "_arg_Placeholder_3_0_0",
+            "pid": 11,
+            "ts": 1554125956251611,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 1
+        },
+        {
+            "name": "_arg_Placeholder_3_0_0",
+            "pid": 13,
+            "ts": 1554125956259408,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 1
+        },
+        {
+            "name": "ZerosLike",
+            "args": {
+                "input0": "_arg_Placeholder_3_0_0/_1",
+                "name": "zeros_like_1",
+                "op": "ZerosLike"
+            },
+            "pid": 13,
+            "ts": 1554125956259406,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 3090
+        },
+        {
+            "name": "_arg_Placeholder_3_0_0",
+            "pid": 11,
+            "ts": 1554125956251611,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 2
+        },
+        {
+            "name": "_arg_Placeholder_3_0_0",
+            "pid": 13,
+            "ts": 1554125956259406,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 2
+        },
+        {
+            "name": "Fill",
+            "args": {
+                "input0": "ones_like/Shape",
+                "input1": "ones_like/Const",
+                "name": "ones_like",
+                "op": "Fill"
+            },
+            "pid": 13,
+            "ts": 1554125956259478,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3095
+        },
+        {
+            "name": "Unpack",
+            "args": {
+                "input0": "Unique/_3",
+                "name": "unstack",
+                "op": "Unpack"
+            },
+            "pid": 13,
+            "ts": 1554125956723124,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 122
+        },
+        {
+            "name": "Unique",
+            "pid": 11,
+            "ts": 1554125956722698,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 3
+        },
+        {
+            "name": "Unique",
+            "pid": 13,
+            "ts": 1554125956723124,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 3
+        },
+        {
+            "name": "Equal",
+            "args": {
+                "input0": "_arg_Placeholder_4_0_1/_5",
+                "input1": "unstack:2",
+                "name": "Equal_2",
+                "op": "Equal"
+            },
+            "pid": 13,
+            "ts": 1554125956723251,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 38
+        },
+        {
+            "name": "_arg_Placeholder_4_0_1",
+            "pid": 11,
+            "ts": 1554125956251629,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 4
+        },
+        {
+            "name": "_arg_Placeholder_4_0_1",
+            "pid": 13,
+            "ts": 1554125956723251,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 4
+        },
+        {
+            "name": "Equal",
+            "args": {
+                "input0": "_arg_Placeholder_4_0_1/_5",
+                "input1": "unstack:1",
+                "name": "Equal_1",
+                "op": "Equal"
+            },
+            "pid": 13,
+            "ts": 1554125956723295,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 16
+        },
+        {
+            "name": "_arg_Placeholder_4_0_1",
+            "pid": 11,
+            "ts": 1554125956251629,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 5
+        },
+        {
+            "name": "_arg_Placeholder_4_0_1",
+            "pid": 13,
+            "ts": 1554125956723295,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 5
+        },
+        {
+            "name": "Equal",
+            "args": {
+                "input0": "_arg_Placeholder_4_0_1/_5",
+                "input1": "unstack",
+                "name": "Equal",
+                "op": "Equal"
+            },
+            "pid": 13,
+            "ts": 1554125956723314,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 16
+        },
+        {
+            "name": "_arg_Placeholder_4_0_1",
+            "pid": 11,
+            "ts": 1554125956251629,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 6
+        },
+        {
+            "name": "_arg_Placeholder_4_0_1",
+            "pid": 13,
+            "ts": 1554125956723314,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 6
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zeros_like_1",
+                "input0": "Equal_2",
+                "input1": "ones_like",
+                "name": "Select_5",
+                "op": "Select"
+            },
+            "pid": 13,
+            "ts": 1554125956723333,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 38
+        },
+        {
+            "name": "zeros_like_1",
+            "pid": 13,
+            "ts": 1554125956262496,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 7
+        },
+        {
+            "name": "zeros_like_1",
+            "pid": 13,
+            "ts": 1554125956723333,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 7
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zeros_like_1",
+                "input0": "Equal_1",
+                "input1": "ones_like",
+                "name": "Select_3",
+                "op": "Select"
+            },
+            "pid": 13,
+            "ts": 1554125956723376,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 20
+        },
+        {
+            "name": "zeros_like_1",
+            "pid": 13,
+            "ts": 1554125956262496,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 8
+        },
+        {
+            "name": "zeros_like_1",
+            "pid": 13,
+            "ts": 1554125956723376,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 8
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zeros_like_1",
+                "input0": "Equal",
+                "input1": "ones_like",
+                "name": "Select_1",
+                "op": "Select"
+            },
+            "pid": 13,
+            "ts": 1554125956723400,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 17
+        },
+        {
+            "name": "zeros_like_1",
+            "pid": 13,
+            "ts": 1554125956262496,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 9
+        },
+        {
+            "name": "zeros_like_1",
+            "pid": 13,
+            "ts": 1554125956723400,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 9
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "Select_5",
+                "name": "Cast_2",
+                "op": "Cast"
+            },
+            "pid": 13,
+            "ts": 1554125956723419,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 29
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "Select_3",
+                "name": "Cast_1",
+                "op": "Cast"
+            },
+            "pid": 13,
+            "ts": 1554125956723454,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 15
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "Select_1",
+                "name": "Cast",
+                "op": "Cast"
+            },
+            "pid": 13,
+            "ts": 1554125956723471,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 16
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zeros_like_1",
+                "input0": "Cast_2",
+                "input1": "_arg_Placeholder_3_0_0/_1",
+                "name": "Select_6",
+                "op": "Select"
+            },
+            "pid": 13,
+            "ts": 1554125956723489,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 15
+        },
+        {
+            "name": "_arg_Placeholder_3_0_0",
+            "pid": 11,
+            "ts": 1554125956251611,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 10
+        },
+        {
+            "name": "_arg_Placeholder_3_0_0",
+            "pid": 13,
+            "ts": 1554125956723489,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 10
+        },
+        {
+            "name": "zeros_like_1",
+            "pid": 13,
+            "ts": 1554125956262496,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 11
+        },
+        {
+            "name": "zeros_like_1",
+            "pid": 13,
+            "ts": 1554125956723489,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 11
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zeros_like_1",
+                "input0": "Cast_1",
+                "input1": "_arg_Placeholder_3_0_0/_1",
+                "name": "Select_4",
+                "op": "Select"
+            },
+            "pid": 13,
+            "ts": 1554125956723508,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 16
+        },
+        {
+            "name": "_arg_Placeholder_3_0_0",
+            "pid": 11,
+            "ts": 1554125956251611,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 12
+        },
+        {
+            "name": "_arg_Placeholder_3_0_0",
+            "pid": 13,
+            "ts": 1554125956723508,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 12
+        },
+        {
+            "name": "zeros_like_1",
+            "pid": 13,
+            "ts": 1554125956262496,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 13
+        },
+        {
+            "name": "zeros_like_1",
+            "pid": 13,
+            "ts": 1554125956723508,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 13
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zeros_like_1",
+                "input0": "Cast",
+                "input1": "_arg_Placeholder_3_0_0/_1",
+                "name": "Select_2",
+                "op": "Select"
+            },
+            "pid": 13,
+            "ts": 1554125956723528,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 15
+        },
+        {
+            "name": "_arg_Placeholder_3_0_0",
+            "pid": 11,
+            "ts": 1554125956251611,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 14
+        },
+        {
+            "name": "_arg_Placeholder_3_0_0",
+            "pid": 13,
+            "ts": 1554125956723528,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 14
+        },
+        {
+            "name": "zeros_like_1",
+            "pid": 13,
+            "ts": 1554125956262496,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 15
+        },
+        {
+            "name": "zeros_like_1",
+            "pid": 13,
+            "ts": 1554125956723528,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 15
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_6",
+                "input1": "Const_5",
+                "name": "Sum_4",
+                "op": "Sum"
+            },
+            "pid": 13,
+            "ts": 1554125956723546,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 75
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_4",
+                "input1": "Const_5",
+                "name": "Sum_3",
+                "op": "Sum"
+            },
+            "pid": 13,
+            "ts": 1554125956723623,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 32
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_2",
+                "input1": "Const_5",
+                "name": "Sum_2",
+                "op": "Sum"
+            },
+            "pid": 13,
+            "ts": 1554125956723658,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 29
+        },
+        {
+            "name": "Pack",
+            "args": {
+                "input0": "unstack:2",
+                "input1": "Sum_4",
+                "name": "stack_2",
+                "op": "Pack"
+            },
+            "pid": 13,
+            "ts": 1554125956723690,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 54
+        },
+        {
+            "name": "Pack",
+            "args": {
+                "input0": "unstack:1",
+                "input1": "Sum_3",
+                "name": "stack_1",
+                "op": "Pack"
+            },
+            "pid": 13,
+            "ts": 1554125956723746,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 24
+        },
+        {
+            "name": "Pack",
+            "args": {
+                "input0": "unstack",
+                "input1": "Sum_2",
+                "name": "stack",
+                "op": "Pack"
+            },
+            "pid": 13,
+            "ts": 1554125956723773,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 26
+        },
+        {
+            "name": "ConcatV2",
+            "args": {
+                "input2": "stack_1",
+                "input3": "stack_2",
+                "input0": "Const_2",
+                "input1": "stack",
+                "name": "concat_2",
+                "input4": "concat_2/axis",
+                "op": "ConcatV2"
+            },
+            "pid": 13,
+            "ts": 1554125956723801,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 46
+        },
+        {
+            "name": "Reshape",
+            "args": {
+                "input0": "concat_2",
+                "input1": "Reshape/shape",
+                "name": "Reshape",
+                "op": "Reshape"
+            },
+            "pid": 13,
+            "ts": 1554125956723851,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 6
+        }
+    ]
+}

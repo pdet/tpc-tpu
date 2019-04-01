@@ -1,0 +1,684 @@
+{
+    "traceEvents": [
+        {
+            "ph": "M",
+            "args": {
+                "name": "Allocators"
+            },
+            "pid": 0,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:21 Compute"
+            },
+            "pid": 1,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:21 Tensors"
+            },
+            "pid": 2,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:22 Compute"
+            },
+            "pid": 3,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:22 Tensors"
+            },
+            "pid": 4,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:20 Compute"
+            },
+            "pid": 5,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:20 Tensors"
+            },
+            "pid": 6,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/memcpy Compute"
+            },
+            "pid": 7,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/memcpy Tensors"
+            },
+            "pid": 8,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:all Compute"
+            },
+            "pid": 9,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/device:GPU:0/stream:all Tensors"
+            },
+            "pid": 10,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Compute"
+            },
+            "pid": 11,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Tensors"
+            },
+            "pid": 12,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:GPU:0 Compute"
+            },
+            "pid": 13,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:GPU:0 Tensors"
+            },
+            "pid": 14,
+            "name": "process_name"
+        },
+        {
+            "name": "MEMCPYHtoD",
+            "args": {
+                "name": "edge_15__arg_Placeholder_0_0",
+                "op": "MEMCPYHtoD"
+            },
+            "pid": 1,
+            "ts": 1554125954191758,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4855
+        },
+        {
+            "name": "MEMCPYDtoH",
+            "args": {
+                "name": "edge_19_Sum",
+                "op": "MEMCPYDtoH"
+            },
+            "pid": 3,
+            "ts": 1554125954197480,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 2
+        },
+        {
+            "name": "LessEqual#id=5#",
+            "args": {
+                "name": "LessEqual",
+                "op": "LessEqual#id=5#"
+            },
+            "pid": 5,
+            "ts": 1554125954196973,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 72
+        },
+        {
+            "name": "GreaterEqual#id=5#",
+            "args": {
+                "name": "GreaterEqual",
+                "op": "GreaterEqual#id=5#"
+            },
+            "pid": 5,
+            "ts": 1554125954197049,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 70
+        },
+        {
+            "name": "LogicalAnd#id=5#",
+            "args": {
+                "name": "LogicalAnd",
+                "op": "LogicalAnd#id=5#"
+            },
+            "pid": 5,
+            "ts": 1554125954197122,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 84
+        },
+        {
+            "name": "ZerosLike#id=5#",
+            "args": {
+                "name": "zeros_like",
+                "op": "ZerosLike#id=5#"
+            },
+            "pid": 5,
+            "ts": 1554125954197209,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 44
+        },
+        {
+            "name": "Select#id=5#",
+            "args": {
+                "name": "Select",
+                "op": "Select#id=5#"
+            },
+            "pid": 5,
+            "ts": 1554125954197257,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 156
+        },
+        {
+            "name": "Sum#id=5#",
+            "args": {
+                "name": "Sum",
+                "op": "Sum#id=5#"
+            },
+            "pid": 5,
+            "ts": 1554125954197416,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 49
+        },
+        {
+            "name": "Sum#id=5#",
+            "args": {
+                "name": "Sum",
+                "op": "Sum#id=5#"
+            },
+            "pid": 5,
+            "ts": 1554125954197468,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 7
+        },
+        {
+            "name": "MEMCPYHtoD",
+            "args": {
+                "name": "edge_15__arg_Placeholder_0_0",
+                "op": "MEMCPYHtoD"
+            },
+            "pid": 7,
+            "ts": 1554125954191758,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4855
+        },
+        {
+            "name": "MEMCPYDtoH",
+            "args": {
+                "name": "edge_19_Sum",
+                "op": "MEMCPYDtoH"
+            },
+            "pid": 7,
+            "ts": 1554125954197480,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 2
+        },
+        {
+            "name": "LessEqual#id=5#",
+            "args": {
+                "name": "LessEqual",
+                "op": "LessEqual#id=5#"
+            },
+            "pid": 9,
+            "ts": 1554125954196973,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 72
+        },
+        {
+            "name": "GreaterEqual#id=5#",
+            "args": {
+                "name": "GreaterEqual",
+                "op": "GreaterEqual#id=5#"
+            },
+            "pid": 9,
+            "ts": 1554125954197049,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 70
+        },
+        {
+            "name": "LogicalAnd#id=5#",
+            "args": {
+                "name": "LogicalAnd",
+                "op": "LogicalAnd#id=5#"
+            },
+            "pid": 9,
+            "ts": 1554125954197122,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 84
+        },
+        {
+            "name": "ZerosLike#id=5#",
+            "args": {
+                "name": "zeros_like",
+                "op": "ZerosLike#id=5#"
+            },
+            "pid": 9,
+            "ts": 1554125954197209,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 44
+        },
+        {
+            "name": "Select#id=5#",
+            "args": {
+                "name": "Select",
+                "op": "Select#id=5#"
+            },
+            "pid": 9,
+            "ts": 1554125954197257,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 156
+        },
+        {
+            "name": "Sum#id=5#",
+            "args": {
+                "name": "Sum",
+                "op": "Sum#id=5#"
+            },
+            "pid": 9,
+            "ts": 1554125954197416,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 49
+        },
+        {
+            "name": "Sum#id=5#",
+            "args": {
+                "name": "Sum",
+                "op": "Sum#id=5#"
+            },
+            "pid": 9,
+            "ts": 1554125954197468,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 7
+        },
+        {
+            "name": "NoOp",
+            "args": {
+                "name": "_SOURCE",
+                "op": "NoOp"
+            },
+            "pid": 11,
+            "ts": 1554125954191406,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 6
+        },
+        {
+            "name": "_Arg",
+            "args": {
+                "name": "_arg_Placeholder_0_0",
+                "op": "_Arg"
+            },
+            "pid": 11,
+            "ts": 1554125954191439,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 25
+        },
+        {
+            "name": "_Retval",
+            "args": {
+                "input0": "Sum/_3",
+                "name": "_retval_Sum_0_0",
+                "op": "_Retval"
+            },
+            "pid": 11,
+            "ts": 1554125954197611,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 5
+        },
+        {
+            "name": "Sum",
+            "pid": 13,
+            "ts": 1554125954197290,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 0
+        },
+        {
+            "name": "Sum",
+            "pid": 11,
+            "ts": 1554125954197611,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 0
+        },
+        {
+            "name": "NoOp",
+            "args": {
+                "name": "_SOURCE",
+                "op": "NoOp"
+            },
+            "pid": 13,
+            "ts": 1554125954191254,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 83
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "Const",
+                "op": "Const"
+            },
+            "pid": 13,
+            "ts": 1554125954191363,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 25
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "LessEqual/y",
+                "op": "Const"
+            },
+            "pid": 13,
+            "ts": 1554125954191391,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 9
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "GreaterEqual/y",
+                "op": "Const"
+            },
+            "pid": 13,
+            "ts": 1554125954191402,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3
+        },
+        {
+            "name": "LessEqual",
+            "args": {
+                "input0": "_arg_Placeholder_0_0/_1",
+                "input1": "LessEqual/y",
+                "name": "LessEqual",
+                "op": "LessEqual"
+            },
+            "pid": 13,
+            "ts": 1554125954196823,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 118
+        },
+        {
+            "name": "_arg_Placeholder_0_0",
+            "pid": 11,
+            "ts": 1554125954191464,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 1
+        },
+        {
+            "name": "_arg_Placeholder_0_0",
+            "pid": 13,
+            "ts": 1554125954196823,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 1
+        },
+        {
+            "name": "GreaterEqual",
+            "args": {
+                "input0": "_arg_Placeholder_0_0/_1",
+                "input1": "GreaterEqual/y",
+                "name": "GreaterEqual",
+                "op": "GreaterEqual"
+            },
+            "pid": 13,
+            "ts": 1554125954196939,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 117
+        },
+        {
+            "name": "_arg_Placeholder_0_0",
+            "pid": 11,
+            "ts": 1554125954191464,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 2
+        },
+        {
+            "name": "_arg_Placeholder_0_0",
+            "pid": 13,
+            "ts": 1554125954196939,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 2
+        },
+        {
+            "name": "GreaterEqual/y",
+            "pid": 13,
+            "ts": 1554125954191405,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 3
+        },
+        {
+            "name": "GreaterEqual/y",
+            "pid": 13,
+            "ts": 1554125954196939,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 3
+        },
+        {
+            "name": "LogicalAnd",
+            "args": {
+                "input0": "GreaterEqual",
+                "input1": "LessEqual",
+                "name": "LogicalAnd",
+                "op": "LogicalAnd"
+            },
+            "pid": 13,
+            "ts": 1554125954197065,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 37
+        },
+        {
+            "name": "GreaterEqual",
+            "pid": 13,
+            "ts": 1554125954197056,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 4
+        },
+        {
+            "name": "GreaterEqual",
+            "pid": 13,
+            "ts": 1554125954197065,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 4
+        },
+        {
+            "name": "ZerosLike",
+            "args": {
+                "input0": "_arg_Placeholder_0_0/_1",
+                "name": "zeros_like",
+                "op": "ZerosLike"
+            },
+            "pid": 13,
+            "ts": 1554125954196939,
+            "cat": "Op",
+            "tid": 2,
+            "ph": "X",
+            "dur": 219
+        },
+        {
+            "name": "_arg_Placeholder_0_0",
+            "pid": 11,
+            "ts": 1554125954191464,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 5
+        },
+        {
+            "name": "_arg_Placeholder_0_0",
+            "pid": 13,
+            "ts": 1554125954196939,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 5
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zeros_like",
+                "input0": "LogicalAnd",
+                "input1": "_arg_Placeholder_0_0/_1",
+                "name": "Select",
+                "op": "Select"
+            },
+            "pid": 13,
+            "ts": 1554125954197169,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 47
+        },
+        {
+            "name": "_arg_Placeholder_0_0",
+            "pid": 11,
+            "ts": 1554125954191464,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 6
+        },
+        {
+            "name": "_arg_Placeholder_0_0",
+            "pid": 13,
+            "ts": 1554125954197169,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 6
+        },
+        {
+            "name": "zeros_like",
+            "pid": 13,
+            "ts": 1554125954197158,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "s",
+            "id": 7
+        },
+        {
+            "name": "zeros_like",
+            "pid": 13,
+            "ts": 1554125954197169,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 7
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select",
+                "input1": "Const",
+                "name": "Sum",
+                "op": "Sum"
+            },
+            "pid": 13,
+            "ts": 1554125954197220,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 70
+        }
+    ]
+}

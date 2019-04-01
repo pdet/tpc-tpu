@@ -175,7 +175,7 @@ def order_by_limit(scale, quantity_size):
     return res
 
 
-def join(scale, order_size):
+def join(scale):
     with tf.device('/device:GPU:0'):
         sup_nationkey = tf.placeholder(dtype=tf.float32, shape=(None,))
         nat_nationkey = tf.placeholder(dtype=tf.float32, shape=(None,))
@@ -201,12 +201,12 @@ def join(scale, order_size):
         run_metadata = tf.RunMetadata()
         for i in range (0,4):
             res = sess.run(result, feed_dict={
-                lineitem_orderkey: l_orderkey,
-                order_orderkey: o_orderkey
+                sup_nationkey: s_nationkey,
+                nat_nationkey: n_nationkey
             })
         res = sess.run(result, feed_dict={
-            lineitem_orderkey: l_orderkey,
-            order_orderkey: o_orderkey
+            sup_nationkey: s_nationkey,
+            nat_nationkey: n_nationkey
         }, options=run_options, run_metadata=run_metadata)
         tl = timeline.Timeline(run_metadata.step_stats)
         ctf = tl.generate_chrome_trace_format()

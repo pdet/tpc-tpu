@@ -80,7 +80,7 @@ def q1_computation(shipdate, returnflag, linestatus, quantity, extendedprice, di
             returnflag_aux = tf.cast(tf.where(tf.equal(returnflag, returnflag_group), ones, zeros), tf.bool)
             linestatus_aux = tf.cast(tf.where(tf.equal(linestatus, linestatus_group), ones, zeros), tf.bool)
             group_filters.append(tf.logical_and(tf.logical_and(returnflag_aux, linestatus_aux), shipdate))
-    result = tf.constant(0.0, dtype=tf.float32, shape=[8])
+    result = tf.constant([], dtype=tf.float32, shape=[8])
     for group_filter in group_filters:
         sum_qty = tf.reduce_sum(tf.where(group_filter, quantity, zeros))
         sum_base_price = tf.reduce_sum(tf.where(group_filter, extendedprice, zeros))
@@ -95,7 +95,7 @@ def q1_computation(shipdate, returnflag, linestatus, quantity, extendedprice, di
         avg_disc = tf.div(tf.reduce_sum(tf.where(group_filter, discount, zeros)), tf.reduce_sum(count))
         result = tf.concat([result, tf.stack(
             [sum_qty, sum_base_price, sum_disc_price, sum_charge, avg_qty, avg_price, avg_disc, count])], axis=0)
-    result = tf.reshape(result, [l_returnflag_group_size * l_linestatus_group_size + 1, 8])[1:]
+    result = tf.reshape(result, [l_returnflag_group_size * l_linestatus_group_size + 1, 8])
     return result
 
 

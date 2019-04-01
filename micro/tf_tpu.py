@@ -6,17 +6,20 @@ from tensorflow.contrib import tpu
 from tensorflow.contrib.cluster_resolver import TPUClusterResolver
 import sys
 
-o_orderkey = 0
 l_orderkey = 0
 l_quantity = 0
 l_returnflag = 0
+s_nationkey = 0
+n_nationkey = 0
 
 
 def load_input(scale):
-    global o_orderkey
     global l_orderkey
     global l_quantity
     global l_returnflag
+    global s_nationkey
+    global n_nationkey
+
     os.chdir('/home/pedroholanda/tpch-' + str(scale))
     lineitem = pd.read_csv("lineitem.tbl", sep='|',
                            names=["l_orderkey", "l_partkey", "l_suppkey", "l_linenumber", "l_quantity",
@@ -24,13 +27,20 @@ def load_input(scale):
                                   "l_shipdate",
                                   "l_commitdate", "l_receiptdate", "l_shipinstruct", "l_shipmode", "l_comment"],
                            dtype={'l_returnflag': 'category', 'l_linestatus': 'category'})
-    orders = pd.read_csv("orders.tbl", sep='|',
-                         names=["o_orderkey", "o_custkey", "o_orderstatus", "o_totalprice", "o_orderdate",
-                                "o_orderpriority", "o_clerk", "o_shippriority", "o_comment"],
-                         dtype={'o_orderstatus': 'category', 'o_orderpriority': 'category'})
+    # orders = pd.read_csv("orders.tbl", sep='|',
+    #                      names=["o_orderkey", "o_custkey", "o_orderstatus", "o_totalprice", "o_orderdate",
+    #                             "o_orderpriority", "o_clerk", "o_shippriority", "o_comment"],
+    #                      dtype={'o_orderstatus': 'category', 'o_orderpriority': 'category'})
 
-    o_orderkey = orders["o_orderkey"].values.astype('int32')
-    l_orderkey = lineitem["l_orderkey"].values.astype('int32')
+    # o_orderkey = orders["o_orderkey"].values.astype('int32')
+    # l_orderkey = lineitem["l_orderkey"].values.astype('int32')
+    nation = pd.read_csv("nation.tbl", sep='|', names=["n_nationkey", "n_name", "n_regionkey", "n_comment"])
+    supplier = pd.read_csv("supplier.tbl", sep='|',
+                           names=["s_suppkey", "s_name", "s_address", "s_nationkey", "s_phone", "s_acctbal", "s_comment"])
+    s_suppkey = supplier["s_suppkey"].values.astype('float32')
+    s_nationkey = supplier["s_nationkey"].values.astype('float32')
+    n_nationkey = nation["n_nationkey"].values.astype('float32')
+
     l_quantity = lineitem["l_quantity"].values.astype('float32')
     l_returnflag = lineitem["l_returnflag"].values.astype('S1')
     l_returnflag[l_returnflag == "A"] = "1"
@@ -153,17 +163,28 @@ def order_by_limit():
         return res
 
 
-def join_computation(lineitem_orderkey, order_orderkey):
-    orders = tf.unstack(order_orderkey, 150000)
-    zeros = tf.zeros_like(lineitem_orderkey)
-    for order in orders:
-        aux = tf.reduce_sum(tf.where(tf.equal(lineitem_orderkey, order), lineitem_orderkey, zeros))
-    result = aux
+def join_computation(sup_nationkey, nat_nationkey):
+    zeros = tf.zeros_like(sup_nationkey)
+    nations = tf.unstack(nat_nationkey, 25) # Number of nations
+    index_summation = (tf.constant(1), tf.constant(0.0))
+    result = tf.constant([], dtype=tf.int32)
+
+    def condition(index, summation):
+        return tf.less(index, 25)
+
+    def body(index, summation):
+        nation=tf.gather(nations,index)
+        a = tf.equal(sup_nationkey, nation)
+        summand = tf.reduce_sum(tf.where(a, sup_nationkey, zeros))
+
+        return tf.add(index, 1), tf.add(summation, summand)
+        
+    result =  tf.while_loop(condition, body, index_summation,parallel_iterations=25,maximum_iterations=25)[1]
     return result
 
 
 def join():
-    inputs = [tf.convert_to_tensor(l_orderkey, np.int32), tf.convert_to_tensor(o_orderkey, np.int32)]
+    inputs = [tf.convert_to_tensor(s_nationkey, np.float32), tf.convert_to_tensor(n_nationkey, np.float32)]
     tpu_computation = tpu.rewrite(join_computation, inputs)
     tpu_grpc_url = TPUClusterResolver(
         tpu=[os.environ['TPU_NAME']]).get_master()
@@ -184,7 +205,7 @@ def run_micro(scale):
     aggregation()
     order_by_limit()
     group_by()
-    # join()
+    join()
 
 
 if __name__ == "__main__":
