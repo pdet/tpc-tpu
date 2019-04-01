@@ -1,0 +1,901 @@
+{
+    "traceEvents": [
+        {
+            "ph": "M",
+            "args": {
+                "name": "Allocators"
+            },
+            "pid": 0,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Compute"
+            },
+            "pid": 1,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Tensors"
+            },
+            "pid": 2,
+            "name": "process_name"
+        },
+        {
+            "name": "NoOp",
+            "args": {
+                "name": "_SOURCE",
+                "op": "NoOp"
+            },
+            "pid": 1,
+            "ts": 1554120893773205,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 5
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "RESHAPE/shape",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ts": 1554120893773215,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 13
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "CONCAT_2/axis",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ts": 1554120893773229,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 2
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "Const_4",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ts": 1554120893773232,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 2
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "one/Const",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ts": 1554120893773236,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "result",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ts": 1554120893773238,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 2
+        },
+        {
+            "name": "_Arg",
+            "args": {
+                "name": "_arg_quantity_3_0_0",
+                "op": "_Arg"
+            },
+            "pid": 1,
+            "ts": 1554120893773241,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 5
+        },
+        {
+            "name": "_Arg",
+            "args": {
+                "name": "_arg_returnflag_0_1",
+                "op": "_Arg"
+            },
+            "pid": 1,
+            "ts": 1554120893773261,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 2
+        },
+        {
+            "name": "Shape",
+            "args": {
+                "input0": "_arg_quantity_3_0_0",
+                "name": "one/Shape",
+                "op": "Shape"
+            },
+            "pid": 1,
+            "ts": 1554120893773277,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 9
+        },
+        {
+            "name": "ZerosLike",
+            "args": {
+                "input0": "_arg_quantity_3_0_0",
+                "name": "zero_1",
+                "op": "ZerosLike"
+            },
+            "pid": 1,
+            "ts": 1554120893773296,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 209
+        },
+        {
+            "name": "Fill",
+            "args": {
+                "input0": "one/Shape",
+                "input1": "one/Const",
+                "name": "one",
+                "op": "Fill"
+            },
+            "pid": 1,
+            "ts": 1554120893773288,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 276
+        },
+        {
+            "name": "one/Shape",
+            "pid": 1,
+            "ts": 1554120893773286,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 0
+        },
+        {
+            "name": "one/Shape",
+            "pid": 1,
+            "ts": 1554120893773288,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 0
+        },
+        {
+            "name": "one/Const",
+            "pid": 1,
+            "ts": 1554120893773237,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 1
+        },
+        {
+            "name": "one/Const",
+            "pid": 1,
+            "ts": 1554120893773288,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 1
+        },
+        {
+            "name": "Unique",
+            "args": {
+                "input0": "_arg_returnflag_0_1",
+                "name": "UNIQUE",
+                "op": "Unique"
+            },
+            "pid": 1,
+            "ts": 1554120893773304,
+            "cat": "Op",
+            "tid": 2,
+            "ph": "X",
+            "dur": 46214
+        },
+        {
+            "name": "_arg_returnflag_0_1",
+            "pid": 1,
+            "ts": 1554120893773263,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 2
+        },
+        {
+            "name": "_arg_returnflag_0_1",
+            "pid": 1,
+            "ts": 1554120893773304,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 2
+        },
+        {
+            "name": "Unpack",
+            "args": {
+                "input0": "UNIQUE",
+                "name": "UNSTACK",
+                "op": "Unpack"
+            },
+            "pid": 1,
+            "ts": 1554120893819532,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 14
+        },
+        {
+            "name": "UNIQUE",
+            "pid": 1,
+            "ts": 1554120893819518,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "s",
+            "id": 3
+        },
+        {
+            "name": "UNIQUE",
+            "pid": 1,
+            "ts": 1554120893819532,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 3
+        },
+        {
+            "name": "Equal",
+            "args": {
+                "input0": "_arg_returnflag_0_1",
+                "input1": "UNSTACK",
+                "name": "EQUAL",
+                "op": "Equal"
+            },
+            "pid": 1,
+            "ts": 1554120893819583,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 424
+        },
+        {
+            "name": "Equal",
+            "args": {
+                "input0": "_arg_returnflag_0_1",
+                "input1": "UNSTACK:1",
+                "name": "EQUAL_1",
+                "op": "Equal"
+            },
+            "pid": 1,
+            "ts": 1554120893819626,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 384
+        },
+        {
+            "name": "_arg_returnflag_0_1",
+            "pid": 1,
+            "ts": 1554120893773263,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 4
+        },
+        {
+            "name": "_arg_returnflag_0_1",
+            "pid": 1,
+            "ts": 1554120893819626,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 4
+        },
+        {
+            "name": "UNSTACK:1",
+            "pid": 1,
+            "ts": 1554120893819546,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 5
+        },
+        {
+            "name": "UNSTACK:1",
+            "pid": 1,
+            "ts": 1554120893819626,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 5
+        },
+        {
+            "name": "Equal",
+            "args": {
+                "input0": "_arg_returnflag_0_1",
+                "input1": "UNSTACK:2",
+                "name": "EQUAL_2",
+                "op": "Equal"
+            },
+            "pid": 1,
+            "ts": 1554120893819597,
+            "cat": "Op",
+            "tid": 2,
+            "ph": "X",
+            "dur": 470
+        },
+        {
+            "name": "_arg_returnflag_0_1",
+            "pid": 1,
+            "ts": 1554120893773263,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 6
+        },
+        {
+            "name": "_arg_returnflag_0_1",
+            "pid": 1,
+            "ts": 1554120893819597,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 6
+        },
+        {
+            "name": "UNSTACK:2",
+            "pid": 1,
+            "ts": 1554120893819546,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 7
+        },
+        {
+            "name": "UNSTACK:2",
+            "pid": 1,
+            "ts": 1554120893819597,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 7
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero_1",
+                "input0": "EQUAL",
+                "input1": "one",
+                "name": "FILTER_2",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554120893820019,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 429
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554120893773564,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 8
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554120893820019,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 8
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero_1",
+                "input0": "EQUAL_1",
+                "input1": "one",
+                "name": "FILTER_4",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554120893820022,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 451
+        },
+        {
+            "name": "zero_1",
+            "pid": 1,
+            "ts": 1554120893773505,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 9
+        },
+        {
+            "name": "zero_1",
+            "pid": 1,
+            "ts": 1554120893820022,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 9
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "FILTER_2",
+                "name": "CAST",
+                "op": "Cast"
+            },
+            "pid": 1,
+            "ts": 1554120893820458,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 154
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "FILTER_4",
+                "name": "CAST_1",
+                "op": "Cast"
+            },
+            "pid": 1,
+            "ts": 1554120893820483,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 165
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero_1",
+                "input0": "CAST",
+                "input1": "_arg_quantity_3_0_0",
+                "name": "FILTER_3",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554120893820618,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 136
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero_1",
+                "input0": "CAST_1",
+                "input1": "_arg_quantity_3_0_0",
+                "name": "FILTER_5",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554120893820655,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 186
+        },
+        {
+            "name": "_arg_quantity_3_0_0",
+            "pid": 1,
+            "ts": 1554120893773246,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 10
+        },
+        {
+            "name": "_arg_quantity_3_0_0",
+            "pid": 1,
+            "ts": 1554120893820655,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 10
+        },
+        {
+            "name": "zero_1",
+            "pid": 1,
+            "ts": 1554120893773505,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 11
+        },
+        {
+            "name": "zero_1",
+            "pid": 1,
+            "ts": 1554120893820655,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 11
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero_1",
+                "input0": "EQUAL_2",
+                "input1": "one",
+                "name": "FILTER_6",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554120893820079,
+            "cat": "Op",
+            "tid": 2,
+            "ph": "X",
+            "dur": 812
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554120893773564,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 12
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554120893820079,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 12
+        },
+        {
+            "name": "zero_1",
+            "pid": 1,
+            "ts": 1554120893773505,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 13
+        },
+        {
+            "name": "zero_1",
+            "pid": 1,
+            "ts": 1554120893820079,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 13
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "FILTER_3",
+                "input1": "Const_4",
+                "name": "SUM_2",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554120893820758,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 168
+        },
+        {
+            "name": "Pack",
+            "args": {
+                "input0": "UNSTACK",
+                "input1": "SUM_2",
+                "name": "stack",
+                "op": "Pack"
+            },
+            "pid": 1,
+            "ts": 1554120893820929,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 8
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "FILTER_6",
+                "name": "CAST_2",
+                "op": "Cast"
+            },
+            "pid": 1,
+            "ts": 1554120893820900,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 184
+        },
+        {
+            "name": "FILTER_6",
+            "pid": 1,
+            "ts": 1554120893820891,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "s",
+            "id": 14
+        },
+        {
+            "name": "FILTER_6",
+            "pid": 1,
+            "ts": 1554120893820900,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 14
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "FILTER_5",
+                "input1": "Const_4",
+                "name": "SUM_3",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554120893820849,
+            "cat": "Op",
+            "tid": 3,
+            "ph": "X",
+            "dur": 267
+        },
+        {
+            "name": "FILTER_5",
+            "pid": 1,
+            "ts": 1554120893820841,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 15
+        },
+        {
+            "name": "FILTER_5",
+            "pid": 1,
+            "ts": 1554120893820849,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "t",
+            "id": 15
+        },
+        {
+            "name": "Const_4",
+            "pid": 1,
+            "ts": 1554120893773234,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 16
+        },
+        {
+            "name": "Const_4",
+            "pid": 1,
+            "ts": 1554120893820849,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "t",
+            "id": 16
+        },
+        {
+            "name": "Pack",
+            "args": {
+                "input0": "UNSTACK:1",
+                "input1": "SUM_3",
+                "name": "stack_1",
+                "op": "Pack"
+            },
+            "pid": 1,
+            "ts": 1554120893821120,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 10
+        },
+        {
+            "name": "SUM_3",
+            "pid": 1,
+            "ts": 1554120893821116,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "s",
+            "id": 17
+        },
+        {
+            "name": "SUM_3",
+            "pid": 1,
+            "ts": 1554120893821120,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 17
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero_1",
+                "input0": "CAST_2",
+                "input1": "_arg_quantity_3_0_0",
+                "name": "FILTER_7",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554120893821090,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 209
+        },
+        {
+            "name": "_arg_quantity_3_0_0",
+            "pid": 1,
+            "ts": 1554120893773246,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 18
+        },
+        {
+            "name": "_arg_quantity_3_0_0",
+            "pid": 1,
+            "ts": 1554120893821090,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 18
+        },
+        {
+            "name": "zero_1",
+            "pid": 1,
+            "ts": 1554120893773505,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 19
+        },
+        {
+            "name": "zero_1",
+            "pid": 1,
+            "ts": 1554120893821090,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 19
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "FILTER_7",
+                "input1": "Const_4",
+                "name": "SUM_4",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554120893821304,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 165
+        },
+        {
+            "name": "FILTER_7",
+            "pid": 1,
+            "ts": 1554120893821299,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 20
+        },
+        {
+            "name": "FILTER_7",
+            "pid": 1,
+            "ts": 1554120893821304,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 20
+        },
+        {
+            "name": "Pack",
+            "args": {
+                "input0": "UNSTACK:2",
+                "input1": "SUM_4",
+                "name": "stack_2",
+                "op": "Pack"
+            },
+            "pid": 1,
+            "ts": 1554120893821472,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 9
+        },
+        {
+            "name": "ConcatV2",
+            "args": {
+                "input2": "stack_1",
+                "input3": "stack_2",
+                "input0": "result",
+                "input1": "stack",
+                "name": "CONCAT_2",
+                "input4": "CONCAT_2/axis",
+                "op": "ConcatV2"
+            },
+            "pid": 1,
+            "ts": 1554120893821484,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 8
+        },
+        {
+            "name": "Reshape",
+            "args": {
+                "input0": "CONCAT_2",
+                "input1": "RESHAPE/shape",
+                "name": "RESHAPE",
+                "op": "Reshape"
+            },
+            "pid": 1,
+            "ts": 1554120893821496,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3
+        },
+        {
+            "name": "_Retval",
+            "args": {
+                "input0": "RESHAPE",
+                "name": "_retval_RESHAPE_0_0",
+                "op": "_Retval"
+            },
+            "pid": 1,
+            "ts": 1554120893821503,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 5
+        }
+    ]
+}

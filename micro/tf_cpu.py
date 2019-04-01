@@ -5,7 +5,7 @@ import tensorflow as tf
 from tensorflow.python.client import timeline
 import sys
 
-o_orderkey = 0
+# o_orderkey = 0
 l_orderkey = 0
 l_quantity = 0
 l_returnflag = 0
@@ -13,14 +13,14 @@ s_nationkey = 0
 n_nationkey = 0
 
 def load_input(scale):
-    global o_orderkey
+    # global o_orderkey
     global l_orderkey
     global l_quantity
     global l_returnflag
     global s_nationkey
     global n_nationkey
-   # os.chdir('/home/pedroholanda/tpch-' + str(scale))
-    os.chdir('/Users/holanda/Documents/Projects/tpc-tpu/tpch-dbgen')
+    os.chdir('/home/pedroholanda/tpch-' + str(scale))
+    # os.chdir('/Users/holanda/Documents/Projects/tpc-tpu/tpch-dbgen')
 
     lineitem = pd.read_csv("lineitem.tbl", sep='|',
                            names=["l_orderkey", "l_partkey", "l_suppkey", "l_linenumber", "l_quantity",
@@ -28,13 +28,13 @@ def load_input(scale):
                                   "l_shipdate",
                                   "l_commitdate", "l_receiptdate", "l_shipinstruct", "l_shipmode", "l_comment"],
                            dtype={'l_returnflag': 'category', 'l_linestatus': 'category'})
-    orders = pd.read_csv("orders.tbl", sep='|',
-                         names=["o_orderkey", "o_custkey", "o_orderstatus", "o_totalprice", "o_orderdate",
-                                "o_orderpriority", "o_clerk", "o_shippriority", "o_comment"],
-                         dtype={'o_orderstatus': 'category', 'o_orderpriority': 'category'})
+    # orders = pd.read_csv("orders.tbl", sep='|',
+    #                      names=["o_orderkey", "o_custkey", "o_orderstatus", "o_totalprice", "o_orderdate",
+    #                             "o_orderpriority", "o_clerk", "o_shippriority", "o_comment"],
+    #                      dtype={'o_orderstatus': 'category', 'o_orderpriority': 'category'})
 
-    o_orderkey = orders["o_orderkey"].values.astype('float32')
-    l_orderkey = lineitem["l_orderkey"].values.astype('int32')
+    # o_orderkey = orders["o_orderkey"].values.astype('float32')
+    # l_orderkey = lineitem["l_orderkey"].values.astype('int32')
 
     nation = pd.read_csv("nation.tbl", sep='|', names=["n_nationkey", "n_name", "n_regionkey", "n_comment"])
     supplier = pd.read_csv("supplier.tbl", sep='|',
@@ -49,8 +49,8 @@ def load_input(scale):
     l_returnflag[l_returnflag == "N"] = "2"
     l_returnflag[l_returnflag == "R"] = "3"
     l_returnflag = l_returnflag.astype(np.float32, copy=False)
-    #os.chdir('/home/pedroholanda/result/')
-    os.chdir('/Users/holanda/Documents/Projects/tpc-tpu/Results')
+    os.chdir('/home/pedroholanda/result/')
+    # os.chdir('/Users/holanda/Documents/Projects/tpc-tpu/Results')
 
 
 
@@ -133,12 +133,12 @@ def group_by(scale):
     zeros = tf.zeros_like(quantity, name='zero')
     returnflag_groups_tensors, idx = tf.unique(returnflag, name='UNIQUE')
     returnflag_groups = tf.unstack(returnflag_groups_tensors, 3, name='UNSTACK')
-    result = tf.constant(0.0, dtype=tf.float32, shape=[2], name='result')
+    result = tf.constant([], dtype=tf.float32, shape=[2], name='result')
     for returnflag_group in returnflag_groups:
         returnflag_filter = tf.cast(tf.where(tf.equal(returnflag, returnflag_group, name='EQUAL'), ones, zeros, name='FILTER'), tf.bool, name='CAST')
         sum_qty = tf.reduce_sum(tf.where(returnflag_filter, quantity, zeros, name='FILTER'), name='SUM')
         result = tf.concat([result, tf.stack([returnflag_group, sum_qty])], axis=0, name='CONCAT')
-    result = tf.reshape(result, [4, 2], name='RESHAPE')[1:]
+    result = tf.reshape(result, [4, 2], name='RESHAPE')
     with tf.Session() as sess:
         run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
         run_metadata = tf.RunMetadata()
@@ -228,11 +228,11 @@ def join(scale):
 
 def run_micro(scale):
     load_input(scale)
-    # filter_sum(scale)
-    # filter(scale)
-    # aggregation(scale)
-    # group_by(scale)
-    # order_by_limit(scale, 10)
+    filter_sum(scale)
+    filter(scale)
+    aggregation(scale)
+    group_by(scale)
+    order_by_limit(scale, 10)
     join(scale)
     return 0
 

@@ -1,0 +1,6297 @@
+{
+    "traceEvents": [
+        {
+            "ph": "M",
+            "args": {
+                "name": "Allocators"
+            },
+            "pid": 0,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Compute"
+            },
+            "pid": 1,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Tensors"
+            },
+            "pid": 2,
+            "name": "process_name"
+        },
+        {
+            "name": "NoOp",
+            "args": {
+                "name": "_SOURCE",
+                "op": "NoOp"
+            },
+            "pid": 1,
+            "ts": 1554124651839847,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 9
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "one/Const",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ts": 1554124651839867,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 18
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "minus_one",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ts": 1554124651839887,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "Const",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ts": 1554124651839892,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "Const_1",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ts": 1554124651839897,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 7
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "Const_7",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ts": 1554124651839906,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 2
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "concat/axis",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ts": 1554124651839909,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "Reshape/shape",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ts": 1554124651839914,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 2
+        },
+        {
+            "name": "_Arg",
+            "args": {
+                "name": "_arg_LessEqual_0_0",
+                "op": "_Arg"
+            },
+            "pid": 1,
+            "ts": 1554124651839918,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 8
+        },
+        {
+            "name": "_Arg",
+            "args": {
+                "name": "_arg_discount_0_1",
+                "op": "_Arg"
+            },
+            "pid": 1,
+            "ts": 1554124651839927,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 12
+        },
+        {
+            "name": "_Arg",
+            "args": {
+                "name": "_arg_extendedprice_0_2",
+                "op": "_Arg"
+            },
+            "pid": 1,
+            "ts": 1554124651839978,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4
+        },
+        {
+            "name": "_Arg",
+            "args": {
+                "name": "_arg_linestatus_0_3",
+                "op": "_Arg"
+            },
+            "pid": 1,
+            "ts": 1554124651839984,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3
+        },
+        {
+            "name": "_Arg",
+            "args": {
+                "name": "_arg_quantity_0_4",
+                "op": "_Arg"
+            },
+            "pid": 1,
+            "ts": 1554124651840006,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3
+        },
+        {
+            "name": "_Arg",
+            "args": {
+                "name": "_arg_returnflag_0_5",
+                "op": "_Arg"
+            },
+            "pid": 1,
+            "ts": 1554124651840010,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 2
+        },
+        {
+            "name": "_Arg",
+            "args": {
+                "name": "_arg_tax_0_6",
+                "op": "_Arg"
+            },
+            "pid": 1,
+            "ts": 1554124651840026,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3
+        },
+        {
+            "name": "Shape",
+            "args": {
+                "input0": "_arg_discount_0_1",
+                "name": "one/Shape",
+                "op": "Shape"
+            },
+            "pid": 1,
+            "ts": 1554124651840031,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 12
+        },
+        {
+            "name": "ZerosLike",
+            "args": {
+                "input0": "_arg_discount_0_1",
+                "name": "zero",
+                "op": "ZerosLike"
+            },
+            "pid": 1,
+            "ts": 1554124651840110,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1728
+        },
+        {
+            "name": "Fill",
+            "args": {
+                "input0": "one/Shape",
+                "input1": "one/Const",
+                "name": "one",
+                "op": "Fill"
+            },
+            "pid": 1,
+            "ts": 1554124651840046,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 1986
+        },
+        {
+            "name": "one/Shape",
+            "pid": 1,
+            "ts": 1554124651840043,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 0
+        },
+        {
+            "name": "one/Shape",
+            "pid": 1,
+            "ts": 1554124651840046,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 0
+        },
+        {
+            "name": "one/Const",
+            "pid": 1,
+            "ts": 1554124651839885,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 1
+        },
+        {
+            "name": "one/Const",
+            "pid": 1,
+            "ts": 1554124651840046,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 1
+        },
+        {
+            "name": "Mul",
+            "args": {
+                "input0": "minus_one",
+                "input1": "_arg_discount_0_1",
+                "name": "Mul",
+                "op": "Mul"
+            },
+            "pid": 1,
+            "ts": 1554124651840117,
+            "cat": "Op",
+            "tid": 2,
+            "ph": "X",
+            "dur": 1944
+        },
+        {
+            "name": "minus_one",
+            "pid": 1,
+            "ts": 1554124651839890,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 2
+        },
+        {
+            "name": "minus_one",
+            "pid": 1,
+            "ts": 1554124651840117,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 2
+        },
+        {
+            "name": "_arg_discount_0_1",
+            "pid": 1,
+            "ts": 1554124651839939,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 3
+        },
+        {
+            "name": "_arg_discount_0_1",
+            "pid": 1,
+            "ts": 1554124651840117,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 3
+        },
+        {
+            "name": "Add",
+            "args": {
+                "input0": "one",
+                "input1": "Mul",
+                "name": "Add",
+                "op": "Add"
+            },
+            "pid": 1,
+            "ts": 1554124651842073,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 914
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554124651842032,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 4
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554124651842073,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 4
+        },
+        {
+            "name": "Mul",
+            "pid": 1,
+            "ts": 1554124651842061,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "s",
+            "id": 5
+        },
+        {
+            "name": "Mul",
+            "pid": 1,
+            "ts": 1554124651842073,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 5
+        },
+        {
+            "name": "Mul",
+            "args": {
+                "input0": "Add",
+                "input1": "_arg_extendedprice_0_2",
+                "name": "Mul_1",
+                "op": "Mul"
+            },
+            "pid": 1,
+            "ts": 1554124651842994,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 2373
+        },
+        {
+            "name": "Add",
+            "args": {
+                "input0": "one",
+                "input1": "_arg_tax_0_6",
+                "name": "Add_2",
+                "op": "Add"
+            },
+            "pid": 1,
+            "ts": 1554124651842046,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 3471
+        },
+        {
+            "name": "_arg_tax_0_6",
+            "pid": 1,
+            "ts": 1554124651840029,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 6
+        },
+        {
+            "name": "_arg_tax_0_6",
+            "pid": 1,
+            "ts": 1554124651842046,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 6
+        },
+        {
+            "name": "Mul",
+            "args": {
+                "input0": "Mul_3",
+                "input1": "Add_2",
+                "name": "Mul_4",
+                "op": "Mul"
+            },
+            "pid": 1,
+            "ts": 1554124651845529,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 878
+        },
+        {
+            "name": "Add_2",
+            "pid": 1,
+            "ts": 1554124651845517,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 7
+        },
+        {
+            "name": "Add_2",
+            "pid": 1,
+            "ts": 1554124651845529,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 7
+        },
+        {
+            "name": "Unique",
+            "args": {
+                "input0": "_arg_returnflag_0_5",
+                "name": "Unique",
+                "op": "Unique"
+            },
+            "pid": 1,
+            "ts": 1554124651840153,
+            "cat": "Op",
+            "tid": 3,
+            "ph": "X",
+            "dur": 458494
+        },
+        {
+            "name": "_arg_returnflag_0_5",
+            "pid": 1,
+            "ts": 1554124651840012,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 8
+        },
+        {
+            "name": "_arg_returnflag_0_5",
+            "pid": 1,
+            "ts": 1554124651840153,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "t",
+            "id": 8
+        },
+        {
+            "name": "Unpack",
+            "args": {
+                "input0": "Unique",
+                "name": "unstack",
+                "op": "Unpack"
+            },
+            "pid": 1,
+            "ts": 1554124652298672,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 29
+        },
+        {
+            "name": "Unique",
+            "pid": 1,
+            "ts": 1554124652298647,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "s",
+            "id": 9
+        },
+        {
+            "name": "Unique",
+            "pid": 1,
+            "ts": 1554124652298672,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 9
+        },
+        {
+            "name": "Equal",
+            "args": {
+                "input0": "_arg_returnflag_0_5",
+                "input1": "unstack:2",
+                "name": "Equal_8",
+                "op": "Equal"
+            },
+            "pid": 1,
+            "ts": 1554124652298743,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1263
+        },
+        {
+            "name": "Equal",
+            "args": {
+                "input0": "_arg_returnflag_0_5",
+                "input1": "unstack",
+                "name": "Equal",
+                "op": "Equal"
+            },
+            "pid": 1,
+            "ts": 1554124652298779,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 1251
+        },
+        {
+            "name": "_arg_returnflag_0_5",
+            "pid": 1,
+            "ts": 1554124651840012,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 10
+        },
+        {
+            "name": "_arg_returnflag_0_5",
+            "pid": 1,
+            "ts": 1554124652298779,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 10
+        },
+        {
+            "name": "unstack",
+            "pid": 1,
+            "ts": 1554124652298701,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 11
+        },
+        {
+            "name": "unstack",
+            "pid": 1,
+            "ts": 1554124652298779,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 11
+        },
+        {
+            "name": "Equal",
+            "args": {
+                "input0": "_arg_returnflag_0_5",
+                "input1": "unstack:1",
+                "name": "Equal_4",
+                "op": "Equal"
+            },
+            "pid": 1,
+            "ts": 1554124652298850,
+            "cat": "Op",
+            "tid": 2,
+            "ph": "X",
+            "dur": 1227
+        },
+        {
+            "name": "_arg_returnflag_0_5",
+            "pid": 1,
+            "ts": 1554124651840012,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 12
+        },
+        {
+            "name": "_arg_returnflag_0_5",
+            "pid": 1,
+            "ts": 1554124652298850,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 12
+        },
+        {
+            "name": "unstack:1",
+            "pid": 1,
+            "ts": 1554124652298701,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 13
+        },
+        {
+            "name": "unstack:1",
+            "pid": 1,
+            "ts": 1554124652298850,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 13
+        },
+        {
+            "name": "Unique",
+            "args": {
+                "input0": "_arg_linestatus_0_3",
+                "name": "Unique_1",
+                "op": "Unique"
+            },
+            "pid": 1,
+            "ts": 1554124651840127,
+            "cat": "Op",
+            "tid": 4,
+            "ph": "X",
+            "dur": 463719
+        },
+        {
+            "name": "_arg_linestatus_0_3",
+            "pid": 1,
+            "ts": 1554124651839987,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 14
+        },
+        {
+            "name": "_arg_linestatus_0_3",
+            "pid": 1,
+            "ts": 1554124651840127,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "t",
+            "id": 14
+        },
+        {
+            "name": "Unpack",
+            "args": {
+                "input0": "Unique_1",
+                "name": "unstack_1",
+                "op": "Unpack"
+            },
+            "pid": 1,
+            "ts": 1554124652303856,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 11
+        },
+        {
+            "name": "Unique_1",
+            "pid": 1,
+            "ts": 1554124652303846,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "s",
+            "id": 15
+        },
+        {
+            "name": "Unique_1",
+            "pid": 1,
+            "ts": 1554124652303856,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 15
+        },
+        {
+            "name": "Equal",
+            "args": {
+                "input0": "_arg_linestatus_0_3",
+                "input1": "unstack_1:1",
+                "name": "Equal_3",
+                "op": "Equal"
+            },
+            "pid": 1,
+            "ts": 1554124652303886,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1586
+        },
+        {
+            "name": "Equal",
+            "args": {
+                "input0": "_arg_linestatus_0_3",
+                "input1": "unstack_1",
+                "name": "Equal_1",
+                "op": "Equal"
+            },
+            "pid": 1,
+            "ts": 1554124652303918,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 4709
+        },
+        {
+            "name": "_arg_linestatus_0_3",
+            "pid": 1,
+            "ts": 1554124651839987,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 16
+        },
+        {
+            "name": "_arg_linestatus_0_3",
+            "pid": 1,
+            "ts": 1554124652303918,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 16
+        },
+        {
+            "name": "unstack_1",
+            "pid": 1,
+            "ts": 1554124652303867,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 17
+        },
+        {
+            "name": "unstack_1",
+            "pid": 1,
+            "ts": 1554124652303918,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 17
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "Equal_4",
+                "input1": "one",
+                "name": "Select_4",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652300088,
+            "cat": "Op",
+            "tid": 2,
+            "ph": "X",
+            "dur": 9670
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554124651842032,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 18
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554124652300088,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 18
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 19
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652300088,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 19
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "Equal_8",
+                "input1": "one",
+                "name": "Select_8",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652300040,
+            "cat": "Op",
+            "tid": 3,
+            "ph": "X",
+            "dur": 9909
+        },
+        {
+            "name": "Equal_8",
+            "pid": 1,
+            "ts": 1554124652300006,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 20
+        },
+        {
+            "name": "Equal_8",
+            "pid": 1,
+            "ts": 1554124652300040,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "t",
+            "id": 20
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554124651842032,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 21
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554124652300040,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "t",
+            "id": 21
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 22
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652300040,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "t",
+            "id": 22
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "Select_8",
+                "name": "Cast_8",
+                "op": "Cast"
+            },
+            "pid": 1,
+            "ts": 1554124652309966,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3021
+        },
+        {
+            "name": "Select_8",
+            "pid": 1,
+            "ts": 1554124652309949,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "s",
+            "id": 23
+        },
+        {
+            "name": "Select_8",
+            "pid": 1,
+            "ts": 1554124652309966,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 23
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "Select_4",
+                "name": "Cast_4",
+                "op": "Cast"
+            },
+            "pid": 1,
+            "ts": 1554124652309778,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 3230
+        },
+        {
+            "name": "Select_4",
+            "pid": 1,
+            "ts": 1554124652309758,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "s",
+            "id": 24
+        },
+        {
+            "name": "Select_4",
+            "pid": 1,
+            "ts": 1554124652309778,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 24
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "Equal",
+                "input1": "one",
+                "name": "Select",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652300047,
+            "cat": "Op",
+            "tid": 5,
+            "ph": "X",
+            "dur": 13035
+        },
+        {
+            "name": "Equal",
+            "pid": 1,
+            "ts": 1554124652300030,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 25
+        },
+        {
+            "name": "Equal",
+            "pid": 1,
+            "ts": 1554124652300047,
+            "cat": "DataFlow",
+            "tid": 5,
+            "ph": "t",
+            "id": 25
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554124651842032,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 26
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554124652300047,
+            "cat": "DataFlow",
+            "tid": 5,
+            "ph": "t",
+            "id": 26
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 27
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652300047,
+            "cat": "DataFlow",
+            "tid": 5,
+            "ph": "t",
+            "id": 27
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "Equal_3",
+                "input1": "one",
+                "name": "Select_3",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652305482,
+            "cat": "Op",
+            "tid": 4,
+            "ph": "X",
+            "dur": 7627
+        },
+        {
+            "name": "Equal_3",
+            "pid": 1,
+            "ts": 1554124652305472,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 28
+        },
+        {
+            "name": "Equal_3",
+            "pid": 1,
+            "ts": 1554124652305482,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "t",
+            "id": 28
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554124651842032,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 29
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554124652305482,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "t",
+            "id": 29
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 30
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652305482,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "t",
+            "id": 30
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "Equal_1",
+                "input1": "one",
+                "name": "Select_1",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652308656,
+            "cat": "Op",
+            "tid": 6,
+            "ph": "X",
+            "dur": 4638
+        },
+        {
+            "name": "Equal_1",
+            "pid": 1,
+            "ts": 1554124652308627,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 31
+        },
+        {
+            "name": "Equal_1",
+            "pid": 1,
+            "ts": 1554124652308656,
+            "cat": "DataFlow",
+            "tid": 6,
+            "ph": "t",
+            "id": 31
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554124651842032,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 32
+        },
+        {
+            "name": "one",
+            "pid": 1,
+            "ts": 1554124652308656,
+            "cat": "DataFlow",
+            "tid": 6,
+            "ph": "t",
+            "id": 32
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 33
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652308656,
+            "cat": "DataFlow",
+            "tid": 6,
+            "ph": "t",
+            "id": 33
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "Select",
+                "name": "Cast",
+                "op": "Cast"
+            },
+            "pid": 1,
+            "ts": 1554124652313094,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 993
+        },
+        {
+            "name": "Select",
+            "pid": 1,
+            "ts": 1554124652313082,
+            "cat": "DataFlow",
+            "tid": 5,
+            "ph": "s",
+            "id": 34
+        },
+        {
+            "name": "Select",
+            "pid": 1,
+            "ts": 1554124652313094,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 34
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "Select_3",
+                "name": "Cast_3",
+                "op": "Cast"
+            },
+            "pid": 1,
+            "ts": 1554124652313125,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 1354
+        },
+        {
+            "name": "Select_3",
+            "pid": 1,
+            "ts": 1554124652313109,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "s",
+            "id": 35
+        },
+        {
+            "name": "Select_3",
+            "pid": 1,
+            "ts": 1554124652313125,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 35
+        },
+        {
+            "name": "LogicalAnd",
+            "args": {
+                "input0": "Cast_10",
+                "input1": "Cast_11",
+                "name": "LogicalAnd_10",
+                "op": "LogicalAnd"
+            },
+            "pid": 1,
+            "ts": 1554124652314534,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 582
+        },
+        {
+            "name": "LogicalAnd",
+            "args": {
+                "input0": "Cast_2",
+                "input1": "Cast_3",
+                "name": "LogicalAnd_2",
+                "op": "LogicalAnd"
+            },
+            "pid": 1,
+            "ts": 1554124652314702,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 487
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "Select_1",
+                "name": "Cast_1",
+                "op": "Cast"
+            },
+            "pid": 1,
+            "ts": 1554124652313330,
+            "cat": "Op",
+            "tid": 2,
+            "ph": "X",
+            "dur": 1987
+        },
+        {
+            "name": "Select_1",
+            "pid": 1,
+            "ts": 1554124652313294,
+            "cat": "DataFlow",
+            "tid": 6,
+            "ph": "s",
+            "id": 36
+        },
+        {
+            "name": "Select_1",
+            "pid": 1,
+            "ts": 1554124652313330,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 36
+        },
+        {
+            "name": "LogicalAnd",
+            "args": {
+                "input0": "LogicalAnd_10",
+                "input1": "_arg_LessEqual_0_0",
+                "name": "LogicalAnd_11",
+                "op": "LogicalAnd"
+            },
+            "pid": 1,
+            "ts": 1554124652315128,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 375
+        },
+        {
+            "name": "LogicalAnd",
+            "args": {
+                "input0": "LogicalAnd_2",
+                "input1": "_arg_LessEqual_0_0",
+                "name": "LogicalAnd_3",
+                "op": "LogicalAnd"
+            },
+            "pid": 1,
+            "ts": 1554124652315212,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 459
+        },
+        {
+            "name": "_arg_LessEqual_0_0",
+            "pid": 1,
+            "ts": 1554124651839926,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 37
+        },
+        {
+            "name": "_arg_LessEqual_0_0",
+            "pid": 1,
+            "ts": 1554124652315212,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 37
+        },
+        {
+            "name": "LogicalAnd",
+            "args": {
+                "input0": "Cast_8",
+                "input1": "Cast_9",
+                "name": "LogicalAnd_8",
+                "op": "LogicalAnd"
+            },
+            "pid": 1,
+            "ts": 1554124652315422,
+            "cat": "Op",
+            "tid": 2,
+            "ph": "X",
+            "dur": 626
+        },
+        {
+            "name": "Cast_8",
+            "pid": 1,
+            "ts": 1554124652312987,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 38
+        },
+        {
+            "name": "Cast_8",
+            "pid": 1,
+            "ts": 1554124652315422,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 38
+        },
+        {
+            "name": "LogicalAnd",
+            "args": {
+                "input0": "Cast_4",
+                "input1": "Cast_5",
+                "name": "LogicalAnd_4",
+                "op": "LogicalAnd"
+            },
+            "pid": 1,
+            "ts": 1554124652315585,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 2024
+        },
+        {
+            "name": "Cast_4",
+            "pid": 1,
+            "ts": 1554124652313008,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 39
+        },
+        {
+            "name": "Cast_4",
+            "pid": 1,
+            "ts": 1554124652315585,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 39
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "LogicalAnd_11",
+                "name": "Cast_17",
+                "op": "Cast"
+            },
+            "pid": 1,
+            "ts": 1554124652315617,
+            "cat": "Op",
+            "tid": 3,
+            "ph": "X",
+            "dur": 2675
+        },
+        {
+            "name": "LogicalAnd_11",
+            "pid": 1,
+            "ts": 1554124652315503,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 40
+        },
+        {
+            "name": "LogicalAnd_11",
+            "pid": 1,
+            "ts": 1554124652315617,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "t",
+            "id": 40
+        },
+        {
+            "name": "LogicalAnd",
+            "args": {
+                "input0": "LogicalAnd_8",
+                "input1": "_arg_LessEqual_0_0",
+                "name": "LogicalAnd_9",
+                "op": "LogicalAnd"
+            },
+            "pid": 1,
+            "ts": 1554124652316059,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 3393
+        },
+        {
+            "name": "LogicalAnd_8",
+            "pid": 1,
+            "ts": 1554124652316048,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "s",
+            "id": 41
+        },
+        {
+            "name": "LogicalAnd_8",
+            "pid": 1,
+            "ts": 1554124652316059,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 41
+        },
+        {
+            "name": "_arg_LessEqual_0_0",
+            "pid": 1,
+            "ts": 1554124651839926,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 42
+        },
+        {
+            "name": "_arg_LessEqual_0_0",
+            "pid": 1,
+            "ts": 1554124652316059,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 42
+        },
+        {
+            "name": "LogicalAnd",
+            "args": {
+                "input0": "Cast_6",
+                "input1": "Cast_7",
+                "name": "LogicalAnd_6",
+                "op": "LogicalAnd"
+            },
+            "pid": 1,
+            "ts": 1554124652315522,
+            "cat": "Op",
+            "tid": 4,
+            "ph": "X",
+            "dur": 5438
+        },
+        {
+            "name": "LogicalAnd",
+            "args": {
+                "input0": "LogicalAnd_4",
+                "input1": "_arg_LessEqual_0_0",
+                "name": "LogicalAnd_5",
+                "op": "LogicalAnd"
+            },
+            "pid": 1,
+            "ts": 1554124652317683,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4574
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "LogicalAnd_3",
+                "name": "Cast_13",
+                "op": "Cast"
+            },
+            "pid": 1,
+            "ts": 1554124652316769,
+            "cat": "Op",
+            "tid": 2,
+            "ph": "X",
+            "dur": 5570
+        },
+        {
+            "name": "LogicalAnd_3",
+            "pid": 1,
+            "ts": 1554124652315671,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 43
+        },
+        {
+            "name": "LogicalAnd_3",
+            "pid": 1,
+            "ts": 1554124652316769,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 43
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_11",
+                "input1": "_arg_discount_0_1",
+                "name": "Select_53",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652315893,
+            "cat": "Op",
+            "tid": 5,
+            "ph": "X",
+            "dur": 6723
+        },
+        {
+            "name": "LogicalAnd_11",
+            "pid": 1,
+            "ts": 1554124652315503,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 44
+        },
+        {
+            "name": "LogicalAnd_11",
+            "pid": 1,
+            "ts": 1554124652315893,
+            "cat": "DataFlow",
+            "tid": 5,
+            "ph": "t",
+            "id": 44
+        },
+        {
+            "name": "_arg_discount_0_1",
+            "pid": 1,
+            "ts": 1554124651839939,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 45
+        },
+        {
+            "name": "_arg_discount_0_1",
+            "pid": 1,
+            "ts": 1554124652315893,
+            "cat": "DataFlow",
+            "tid": 5,
+            "ph": "t",
+            "id": 45
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 46
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652315893,
+            "cat": "DataFlow",
+            "tid": 5,
+            "ph": "t",
+            "id": 46
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_11",
+                "input1": "_arg_extendedprice_0_2",
+                "name": "Select_48",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652315603,
+            "cat": "Op",
+            "tid": 6,
+            "ph": "X",
+            "dur": 7180
+        },
+        {
+            "name": "LogicalAnd_11",
+            "pid": 1,
+            "ts": 1554124652315503,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 47
+        },
+        {
+            "name": "LogicalAnd_11",
+            "pid": 1,
+            "ts": 1554124652315603,
+            "cat": "DataFlow",
+            "tid": 6,
+            "ph": "t",
+            "id": 47
+        },
+        {
+            "name": "_arg_extendedprice_0_2",
+            "pid": 1,
+            "ts": 1554124651839982,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 48
+        },
+        {
+            "name": "_arg_extendedprice_0_2",
+            "pid": 1,
+            "ts": 1554124652315603,
+            "cat": "DataFlow",
+            "tid": 6,
+            "ph": "t",
+            "id": 48
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 49
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652315603,
+            "cat": "DataFlow",
+            "tid": 6,
+            "ph": "t",
+            "id": 49
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_11",
+                "input1": "_arg_quantity_0_4",
+                "name": "Select_47",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652315572,
+            "cat": "Op",
+            "tid": 7,
+            "ph": "X",
+            "dur": 7528
+        },
+        {
+            "name": "LogicalAnd_11",
+            "pid": 1,
+            "ts": 1554124652315503,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 50
+        },
+        {
+            "name": "LogicalAnd_11",
+            "pid": 1,
+            "ts": 1554124652315572,
+            "cat": "DataFlow",
+            "tid": 7,
+            "ph": "t",
+            "id": 50
+        },
+        {
+            "name": "_arg_quantity_0_4",
+            "pid": 1,
+            "ts": 1554124651840009,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 51
+        },
+        {
+            "name": "_arg_quantity_0_4",
+            "pid": 1,
+            "ts": 1554124652315572,
+            "cat": "DataFlow",
+            "tid": 7,
+            "ph": "t",
+            "id": 51
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 52
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652315572,
+            "cat": "DataFlow",
+            "tid": 7,
+            "ph": "t",
+            "id": 52
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Cast_17",
+                "input1": "Const_60",
+                "name": "Sum_59",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652318353,
+            "cat": "Op",
+            "tid": 3,
+            "ph": "X",
+            "dur": 4840
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Sum_59",
+                "input1": "Const_62",
+                "name": "Sum_61",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652323220,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 13
+        },
+        {
+            "name": "Sum_59",
+            "pid": 1,
+            "ts": 1554124652323193,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "s",
+            "id": 53
+        },
+        {
+            "name": "Sum_59",
+            "pid": 1,
+            "ts": 1554124652323220,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 53
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_3",
+                "input1": "_arg_quantity_0_4",
+                "name": "Select_19",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652315849,
+            "cat": "Op",
+            "tid": 8,
+            "ph": "X",
+            "dur": 8505
+        },
+        {
+            "name": "LogicalAnd_3",
+            "pid": 1,
+            "ts": 1554124652315671,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 54
+        },
+        {
+            "name": "LogicalAnd_3",
+            "pid": 1,
+            "ts": 1554124652315849,
+            "cat": "DataFlow",
+            "tid": 8,
+            "ph": "t",
+            "id": 54
+        },
+        {
+            "name": "_arg_quantity_0_4",
+            "pid": 1,
+            "ts": 1554124651840009,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 55
+        },
+        {
+            "name": "_arg_quantity_0_4",
+            "pid": 1,
+            "ts": 1554124652315849,
+            "cat": "DataFlow",
+            "tid": 8,
+            "ph": "t",
+            "id": 55
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 56
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652315849,
+            "cat": "DataFlow",
+            "tid": 8,
+            "ph": "t",
+            "id": 56
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_9",
+                "input1": "_arg_quantity_0_4",
+                "name": "Select_40",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652319647,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 5701
+        },
+        {
+            "name": "_arg_quantity_0_4",
+            "pid": 1,
+            "ts": 1554124651840009,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 57
+        },
+        {
+            "name": "_arg_quantity_0_4",
+            "pid": 1,
+            "ts": 1554124652319647,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 57
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 58
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652319647,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 58
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_9",
+                "input1": "_arg_extendedprice_0_2",
+                "name": "Select_41",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652319732,
+            "cat": "Op",
+            "tid": 9,
+            "ph": "X",
+            "dur": 5638
+        },
+        {
+            "name": "LogicalAnd_9",
+            "pid": 1,
+            "ts": 1554124652319452,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 59
+        },
+        {
+            "name": "LogicalAnd_9",
+            "pid": 1,
+            "ts": 1554124652319732,
+            "cat": "DataFlow",
+            "tid": 9,
+            "ph": "t",
+            "id": 59
+        },
+        {
+            "name": "_arg_extendedprice_0_2",
+            "pid": 1,
+            "ts": 1554124651839982,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 60
+        },
+        {
+            "name": "_arg_extendedprice_0_2",
+            "pid": 1,
+            "ts": 1554124652319732,
+            "cat": "DataFlow",
+            "tid": 9,
+            "ph": "t",
+            "id": 60
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 61
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652319732,
+            "cat": "DataFlow",
+            "tid": 9,
+            "ph": "t",
+            "id": 61
+        },
+        {
+            "name": "LogicalAnd",
+            "args": {
+                "input0": "Cast",
+                "input1": "Cast_1",
+                "name": "LogicalAnd",
+                "op": "LogicalAnd"
+            },
+            "pid": 1,
+            "ts": 1554124652315393,
+            "cat": "Op",
+            "tid": 10,
+            "ph": "X",
+            "dur": 10440
+        },
+        {
+            "name": "Cast",
+            "pid": 1,
+            "ts": 1554124652314087,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 62
+        },
+        {
+            "name": "Cast",
+            "pid": 1,
+            "ts": 1554124652315393,
+            "cat": "DataFlow",
+            "tid": 10,
+            "ph": "t",
+            "id": 62
+        },
+        {
+            "name": "Cast_1",
+            "pid": 1,
+            "ts": 1554124652315317,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "s",
+            "id": 63
+        },
+        {
+            "name": "Cast_1",
+            "pid": 1,
+            "ts": 1554124652315393,
+            "cat": "DataFlow",
+            "tid": 10,
+            "ph": "t",
+            "id": 63
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_11",
+                "input1": "Mul_26",
+                "name": "Select_49",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652315612,
+            "cat": "Op",
+            "tid": 11,
+            "ph": "X",
+            "dur": 10342
+        },
+        {
+            "name": "LogicalAnd_11",
+            "pid": 1,
+            "ts": 1554124652315503,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 64
+        },
+        {
+            "name": "LogicalAnd_11",
+            "pid": 1,
+            "ts": 1554124652315612,
+            "cat": "DataFlow",
+            "tid": 11,
+            "ph": "t",
+            "id": 64
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 65
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652315612,
+            "cat": "DataFlow",
+            "tid": 11,
+            "ph": "t",
+            "id": 65
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_3",
+                "input1": "_arg_extendedprice_0_2",
+                "name": "Select_20",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652315988,
+            "cat": "Op",
+            "tid": 12,
+            "ph": "X",
+            "dur": 10264
+        },
+        {
+            "name": "LogicalAnd_3",
+            "pid": 1,
+            "ts": 1554124652315671,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 66
+        },
+        {
+            "name": "LogicalAnd_3",
+            "pid": 1,
+            "ts": 1554124652315988,
+            "cat": "DataFlow",
+            "tid": 12,
+            "ph": "t",
+            "id": 66
+        },
+        {
+            "name": "_arg_extendedprice_0_2",
+            "pid": 1,
+            "ts": 1554124651839982,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 67
+        },
+        {
+            "name": "_arg_extendedprice_0_2",
+            "pid": 1,
+            "ts": 1554124652315988,
+            "cat": "DataFlow",
+            "tid": 12,
+            "ph": "t",
+            "id": 67
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 68
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652315988,
+            "cat": "DataFlow",
+            "tid": 12,
+            "ph": "t",
+            "id": 68
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_9",
+                "input1": "Mul_21",
+                "name": "Select_42",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652319791,
+            "cat": "Op",
+            "tid": 13,
+            "ph": "X",
+            "dur": 11063
+        },
+        {
+            "name": "LogicalAnd_9",
+            "pid": 1,
+            "ts": 1554124652319452,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 69
+        },
+        {
+            "name": "LogicalAnd_9",
+            "pid": 1,
+            "ts": 1554124652319791,
+            "cat": "DataFlow",
+            "tid": 13,
+            "ph": "t",
+            "id": 69
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 70
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652319791,
+            "cat": "DataFlow",
+            "tid": 13,
+            "ph": "t",
+            "id": 70
+        },
+        {
+            "name": "LogicalAnd",
+            "args": {
+                "input0": "LogicalAnd",
+                "input1": "_arg_LessEqual_0_0",
+                "name": "LogicalAnd_1",
+                "op": "LogicalAnd"
+            },
+            "pid": 1,
+            "ts": 1554124652325843,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 5302
+        },
+        {
+            "name": "LogicalAnd",
+            "pid": 1,
+            "ts": 1554124652325833,
+            "cat": "DataFlow",
+            "tid": 10,
+            "ph": "s",
+            "id": 71
+        },
+        {
+            "name": "LogicalAnd",
+            "pid": 1,
+            "ts": 1554124652325843,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 71
+        },
+        {
+            "name": "LogicalAnd",
+            "args": {
+                "input0": "LogicalAnd_6",
+                "input1": "_arg_LessEqual_0_0",
+                "name": "LogicalAnd_7",
+                "op": "LogicalAnd"
+            },
+            "pid": 1,
+            "ts": 1554124652320982,
+            "cat": "Op",
+            "tid": 4,
+            "ph": "X",
+            "dur": 10282
+        },
+        {
+            "name": "_arg_LessEqual_0_0",
+            "pid": 1,
+            "ts": 1554124651839926,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 72
+        },
+        {
+            "name": "_arg_LessEqual_0_0",
+            "pid": 1,
+            "ts": 1554124652320982,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "t",
+            "id": 72
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_9",
+                "input1": "_arg_discount_0_1",
+                "name": "Select_46",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652320301,
+            "cat": "Op",
+            "tid": 14,
+            "ph": "X",
+            "dur": 11275
+        },
+        {
+            "name": "LogicalAnd_9",
+            "pid": 1,
+            "ts": 1554124652319452,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 73
+        },
+        {
+            "name": "LogicalAnd_9",
+            "pid": 1,
+            "ts": 1554124652320301,
+            "cat": "DataFlow",
+            "tid": 14,
+            "ph": "t",
+            "id": 73
+        },
+        {
+            "name": "_arg_discount_0_1",
+            "pid": 1,
+            "ts": 1554124651839939,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 74
+        },
+        {
+            "name": "_arg_discount_0_1",
+            "pid": 1,
+            "ts": 1554124652320301,
+            "cat": "DataFlow",
+            "tid": 14,
+            "ph": "t",
+            "id": 74
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 75
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652320301,
+            "cat": "DataFlow",
+            "tid": 14,
+            "ph": "t",
+            "id": 75
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "LogicalAnd_5",
+                "name": "Cast_14",
+                "op": "Cast"
+            },
+            "pid": 1,
+            "ts": 1554124652322694,
+            "cat": "Op",
+            "tid": 2,
+            "ph": "X",
+            "dur": 10959
+        },
+        {
+            "name": "LogicalAnd_5",
+            "pid": 1,
+            "ts": 1554124652322257,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 76
+        },
+        {
+            "name": "LogicalAnd_5",
+            "pid": 1,
+            "ts": 1554124652322694,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 76
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_47",
+                "input1": "Const_56",
+                "name": "Sum_55",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652323133,
+            "cat": "Op",
+            "tid": 5,
+            "ph": "X",
+            "dur": 10622
+        },
+        {
+            "name": "Select_47",
+            "pid": 1,
+            "ts": 1554124652323100,
+            "cat": "DataFlow",
+            "tid": 7,
+            "ph": "s",
+            "id": 77
+        },
+        {
+            "name": "Select_47",
+            "pid": 1,
+            "ts": 1554124652323133,
+            "cat": "DataFlow",
+            "tid": 5,
+            "ph": "t",
+            "id": 77
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_60",
+                "input1": "Sum_61",
+                "name": "div_15",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652333768,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 28
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_49",
+                "input1": "Const_58",
+                "name": "Sum_57",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652325967,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 8172
+        },
+        {
+            "name": "Select_49",
+            "pid": 1,
+            "ts": 1554124652325954,
+            "cat": "DataFlow",
+            "tid": 11,
+            "ph": "s",
+            "id": 78
+        },
+        {
+            "name": "Select_49",
+            "pid": 1,
+            "ts": 1554124652325967,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 78
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_53",
+                "input1": "Const_65",
+                "name": "Sum_64",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652322649,
+            "cat": "Op",
+            "tid": 15,
+            "ph": "X",
+            "dur": 11572
+        },
+        {
+            "name": "Select_53",
+            "pid": 1,
+            "ts": 1554124652322616,
+            "cat": "DataFlow",
+            "tid": 5,
+            "ph": "s",
+            "id": 79
+        },
+        {
+            "name": "Select_53",
+            "pid": 1,
+            "ts": 1554124652322649,
+            "cat": "DataFlow",
+            "tid": 15,
+            "ph": "t",
+            "id": 79
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_64",
+                "input1": "Sum_65",
+                "name": "div_17",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652334231,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 18
+        },
+        {
+            "name": "Sum_64",
+            "pid": 1,
+            "ts": 1554124652334221,
+            "cat": "DataFlow",
+            "tid": 15,
+            "ph": "s",
+            "id": 80
+        },
+        {
+            "name": "Sum_64",
+            "pid": 1,
+            "ts": 1554124652334231,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 80
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_40",
+                "input1": "Const_45",
+                "name": "Sum_44",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652325361,
+            "cat": "Op",
+            "tid": 3,
+            "ph": "X",
+            "dur": 8958
+        },
+        {
+            "name": "Select_40",
+            "pid": 1,
+            "ts": 1554124652325348,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 81
+        },
+        {
+            "name": "Select_40",
+            "pid": 1,
+            "ts": 1554124652325361,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "t",
+            "id": 81
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "LogicalAnd_7",
+                "name": "Cast_15",
+                "op": "Cast"
+            },
+            "pid": 1,
+            "ts": 1554124652331376,
+            "cat": "Op",
+            "tid": 4,
+            "ph": "X",
+            "dur": 5253
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_3",
+                "input1": "Mul_6",
+                "name": "Select_21",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652316056,
+            "cat": "Op",
+            "tid": 16,
+            "ph": "X",
+            "dur": 20836
+        },
+        {
+            "name": "LogicalAnd_3",
+            "pid": 1,
+            "ts": 1554124652315671,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 82
+        },
+        {
+            "name": "LogicalAnd_3",
+            "pid": 1,
+            "ts": 1554124652316056,
+            "cat": "DataFlow",
+            "tid": 16,
+            "ph": "t",
+            "id": 82
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 83
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652316056,
+            "cat": "DataFlow",
+            "tid": 16,
+            "ph": "t",
+            "id": 83
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_19",
+                "input1": "Const_12",
+                "name": "Sum_11",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652324376,
+            "cat": "Op",
+            "tid": 6,
+            "ph": "X",
+            "dur": 12782
+        },
+        {
+            "name": "Select_19",
+            "pid": 1,
+            "ts": 1554124652324354,
+            "cat": "DataFlow",
+            "tid": 8,
+            "ph": "s",
+            "id": 84
+        },
+        {
+            "name": "Select_19",
+            "pid": 1,
+            "ts": 1554124652324376,
+            "cat": "DataFlow",
+            "tid": 6,
+            "ph": "t",
+            "id": 84
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_5",
+                "input1": "Mul_11",
+                "name": "Select_28",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652322647,
+            "cat": "Op",
+            "tid": 17,
+            "ph": "X",
+            "dur": 15510
+        },
+        {
+            "name": "LogicalAnd_5",
+            "pid": 1,
+            "ts": 1554124652322257,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 85
+        },
+        {
+            "name": "LogicalAnd_5",
+            "pid": 1,
+            "ts": 1554124652322647,
+            "cat": "DataFlow",
+            "tid": 17,
+            "ph": "t",
+            "id": 85
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 86
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652322647,
+            "cat": "DataFlow",
+            "tid": 17,
+            "ph": "t",
+            "id": 86
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_9",
+                "input1": "Mul_24",
+                "name": "Select_43",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652319596,
+            "cat": "Op",
+            "tid": 18,
+            "ph": "X",
+            "dur": 18670
+        },
+        {
+            "name": "LogicalAnd_9",
+            "pid": 1,
+            "ts": 1554124652319452,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 87
+        },
+        {
+            "name": "LogicalAnd_9",
+            "pid": 1,
+            "ts": 1554124652319596,
+            "cat": "DataFlow",
+            "tid": 18,
+            "ph": "t",
+            "id": 87
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 88
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652319596,
+            "cat": "DataFlow",
+            "tid": 18,
+            "ph": "t",
+            "id": 88
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_5",
+                "input1": "Mul_14",
+                "name": "Select_29",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652322593,
+            "cat": "Op",
+            "tid": 19,
+            "ph": "X",
+            "dur": 16146
+        },
+        {
+            "name": "LogicalAnd_5",
+            "pid": 1,
+            "ts": 1554124652322257,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 89
+        },
+        {
+            "name": "LogicalAnd_5",
+            "pid": 1,
+            "ts": 1554124652322593,
+            "cat": "DataFlow",
+            "tid": 19,
+            "ph": "t",
+            "id": 89
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 90
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652322593,
+            "cat": "DataFlow",
+            "tid": 19,
+            "ph": "t",
+            "id": 90
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_7",
+                "input1": "_arg_discount_0_1",
+                "name": "Select_39",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652331397,
+            "cat": "Op",
+            "tid": 7,
+            "ph": "X",
+            "dur": 8220
+        },
+        {
+            "name": "LogicalAnd_7",
+            "pid": 1,
+            "ts": 1554124652331264,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "s",
+            "id": 91
+        },
+        {
+            "name": "LogicalAnd_7",
+            "pid": 1,
+            "ts": 1554124652331397,
+            "cat": "DataFlow",
+            "tid": 7,
+            "ph": "t",
+            "id": 91
+        },
+        {
+            "name": "_arg_discount_0_1",
+            "pid": 1,
+            "ts": 1554124651839939,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 92
+        },
+        {
+            "name": "_arg_discount_0_1",
+            "pid": 1,
+            "ts": 1554124652331397,
+            "cat": "DataFlow",
+            "tid": 7,
+            "ph": "t",
+            "id": 92
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 93
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652331397,
+            "cat": "DataFlow",
+            "tid": 7,
+            "ph": "t",
+            "id": 93
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_1",
+                "input1": "_arg_quantity_0_4",
+                "name": "Select_12",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652331226,
+            "cat": "Op",
+            "tid": 8,
+            "ph": "X",
+            "dur": 11093
+        },
+        {
+            "name": "LogicalAnd_1",
+            "pid": 1,
+            "ts": 1554124652331145,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 94
+        },
+        {
+            "name": "LogicalAnd_1",
+            "pid": 1,
+            "ts": 1554124652331226,
+            "cat": "DataFlow",
+            "tid": 8,
+            "ph": "t",
+            "id": 94
+        },
+        {
+            "name": "_arg_quantity_0_4",
+            "pid": 1,
+            "ts": 1554124651840009,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 95
+        },
+        {
+            "name": "_arg_quantity_0_4",
+            "pid": 1,
+            "ts": 1554124652331226,
+            "cat": "DataFlow",
+            "tid": 8,
+            "ph": "t",
+            "id": 95
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 96
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652331226,
+            "cat": "DataFlow",
+            "tid": 8,
+            "ph": "t",
+            "id": 96
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_5",
+                "input1": "_arg_extendedprice_0_2",
+                "name": "Select_27",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652322517,
+            "cat": "Op",
+            "tid": 20,
+            "ph": "X",
+            "dur": 21489
+        },
+        {
+            "name": "LogicalAnd_5",
+            "pid": 1,
+            "ts": 1554124652322257,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 97
+        },
+        {
+            "name": "LogicalAnd_5",
+            "pid": 1,
+            "ts": 1554124652322517,
+            "cat": "DataFlow",
+            "tid": 20,
+            "ph": "t",
+            "id": 97
+        },
+        {
+            "name": "_arg_extendedprice_0_2",
+            "pid": 1,
+            "ts": 1554124651839982,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 98
+        },
+        {
+            "name": "_arg_extendedprice_0_2",
+            "pid": 1,
+            "ts": 1554124652322517,
+            "cat": "DataFlow",
+            "tid": 20,
+            "ph": "t",
+            "id": 98
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 99
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652322517,
+            "cat": "DataFlow",
+            "tid": 20,
+            "ph": "t",
+            "id": 99
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_39",
+                "input1": "Const_43",
+                "name": "Sum_42",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652339625,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4780
+        },
+        {
+            "name": "Select_39",
+            "pid": 1,
+            "ts": 1554124652339617,
+            "cat": "DataFlow",
+            "tid": 7,
+            "ph": "s",
+            "id": 100
+        },
+        {
+            "name": "Select_39",
+            "pid": 1,
+            "ts": 1554124652339625,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 100
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_1",
+                "input1": "_arg_extendedprice_0_2",
+                "name": "Select_13",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652331292,
+            "cat": "Op",
+            "tid": 9,
+            "ph": "X",
+            "dur": 13674
+        },
+        {
+            "name": "LogicalAnd_1",
+            "pid": 1,
+            "ts": 1554124652331145,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 101
+        },
+        {
+            "name": "LogicalAnd_1",
+            "pid": 1,
+            "ts": 1554124652331292,
+            "cat": "DataFlow",
+            "tid": 9,
+            "ph": "t",
+            "id": 101
+        },
+        {
+            "name": "_arg_extendedprice_0_2",
+            "pid": 1,
+            "ts": 1554124651839982,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 102
+        },
+        {
+            "name": "_arg_extendedprice_0_2",
+            "pid": 1,
+            "ts": 1554124652331292,
+            "cat": "DataFlow",
+            "tid": 9,
+            "ph": "t",
+            "id": 102
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 103
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652331292,
+            "cat": "DataFlow",
+            "tid": 9,
+            "ph": "t",
+            "id": 103
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_7",
+                "input1": "_arg_extendedprice_0_2",
+                "name": "Select_34",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652331322,
+            "cat": "Op",
+            "tid": 10,
+            "ph": "X",
+            "dur": 14151
+        },
+        {
+            "name": "LogicalAnd_7",
+            "pid": 1,
+            "ts": 1554124652331264,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "s",
+            "id": 104
+        },
+        {
+            "name": "LogicalAnd_7",
+            "pid": 1,
+            "ts": 1554124652331322,
+            "cat": "DataFlow",
+            "tid": 10,
+            "ph": "t",
+            "id": 104
+        },
+        {
+            "name": "_arg_extendedprice_0_2",
+            "pid": 1,
+            "ts": 1554124651839982,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 105
+        },
+        {
+            "name": "_arg_extendedprice_0_2",
+            "pid": 1,
+            "ts": 1554124652331322,
+            "cat": "DataFlow",
+            "tid": 10,
+            "ph": "t",
+            "id": 105
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 106
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652331322,
+            "cat": "DataFlow",
+            "tid": 10,
+            "ph": "t",
+            "id": 106
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_7",
+                "input1": "_arg_quantity_0_4",
+                "name": "Select_33",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652331288,
+            "cat": "Op",
+            "tid": 11,
+            "ph": "X",
+            "dur": 15132
+        },
+        {
+            "name": "LogicalAnd_7",
+            "pid": 1,
+            "ts": 1554124652331264,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "s",
+            "id": 107
+        },
+        {
+            "name": "LogicalAnd_7",
+            "pid": 1,
+            "ts": 1554124652331288,
+            "cat": "DataFlow",
+            "tid": 11,
+            "ph": "t",
+            "id": 107
+        },
+        {
+            "name": "_arg_quantity_0_4",
+            "pid": 1,
+            "ts": 1554124651840009,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 108
+        },
+        {
+            "name": "_arg_quantity_0_4",
+            "pid": 1,
+            "ts": 1554124652331288,
+            "cat": "DataFlow",
+            "tid": 11,
+            "ph": "t",
+            "id": 108
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 109
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652331288,
+            "cat": "DataFlow",
+            "tid": 11,
+            "ph": "t",
+            "id": 109
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_48",
+                "input1": "Const_57",
+                "name": "Sum_56",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652322814,
+            "cat": "Op",
+            "tid": 21,
+            "ph": "X",
+            "dur": 26246
+        },
+        {
+            "name": "Select_48",
+            "pid": 1,
+            "ts": 1554124652322783,
+            "cat": "DataFlow",
+            "tid": 6,
+            "ph": "s",
+            "id": 110
+        },
+        {
+            "name": "Select_48",
+            "pid": 1,
+            "ts": 1554124652322814,
+            "cat": "DataFlow",
+            "tid": 21,
+            "ph": "t",
+            "id": 110
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_62",
+                "input1": "Sum_63",
+                "name": "div_16",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652349071,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 34
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "LogicalAnd_9",
+                "name": "Cast_16",
+                "op": "Cast"
+            },
+            "pid": 1,
+            "ts": 1554124652319835,
+            "cat": "Op",
+            "tid": 22,
+            "ph": "X",
+            "dur": 30799
+        },
+        {
+            "name": "LogicalAnd_9",
+            "pid": 1,
+            "ts": 1554124652319452,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 111
+        },
+        {
+            "name": "LogicalAnd_9",
+            "pid": 1,
+            "ts": 1554124652319835,
+            "cat": "DataFlow",
+            "tid": 22,
+            "ph": "t",
+            "id": 111
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_41",
+                "input1": "Const_46",
+                "name": "Sum_45",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652325383,
+            "cat": "Op",
+            "tid": 23,
+            "ph": "X",
+            "dur": 25259
+        },
+        {
+            "name": "Select_41",
+            "pid": 1,
+            "ts": 1554124652325370,
+            "cat": "DataFlow",
+            "tid": 9,
+            "ph": "s",
+            "id": 112
+        },
+        {
+            "name": "Select_41",
+            "pid": 1,
+            "ts": 1554124652325383,
+            "cat": "DataFlow",
+            "tid": 23,
+            "ph": "t",
+            "id": 112
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_20",
+                "input1": "Const_13",
+                "name": "Sum_12",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652326269,
+            "cat": "Op",
+            "tid": 12,
+            "ph": "X",
+            "dur": 24459
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_43",
+                "input1": "Const_48",
+                "name": "Sum_47",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652338279,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 12844
+        },
+        {
+            "name": "Select_43",
+            "pid": 1,
+            "ts": 1554124652338266,
+            "cat": "DataFlow",
+            "tid": 18,
+            "ph": "s",
+            "id": 113
+        },
+        {
+            "name": "Select_43",
+            "pid": 1,
+            "ts": 1554124652338279,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 113
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_29",
+                "input1": "Const_26",
+                "name": "Sum_25",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652338753,
+            "cat": "Op",
+            "tid": 2,
+            "ph": "X",
+            "dur": 12377
+        },
+        {
+            "name": "Select_29",
+            "pid": 1,
+            "ts": 1554124652338739,
+            "cat": "DataFlow",
+            "tid": 19,
+            "ph": "s",
+            "id": 114
+        },
+        {
+            "name": "Select_29",
+            "pid": 1,
+            "ts": 1554124652338753,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 114
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_12",
+                "input1": "Const_1",
+                "name": "Sum",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652342329,
+            "cat": "Op",
+            "tid": 3,
+            "ph": "X",
+            "dur": 9006
+        },
+        {
+            "name": "Select_12",
+            "pid": 1,
+            "ts": 1554124652342319,
+            "cat": "DataFlow",
+            "tid": 8,
+            "ph": "s",
+            "id": 115
+        },
+        {
+            "name": "Select_12",
+            "pid": 1,
+            "ts": 1554124652342329,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "t",
+            "id": 115
+        },
+        {
+            "name": "Const_1",
+            "pid": 1,
+            "ts": 1554124651839904,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 116
+        },
+        {
+            "name": "Const_1",
+            "pid": 1,
+            "ts": 1554124652342329,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "t",
+            "id": 116
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_33",
+                "input1": "Const_34",
+                "name": "Sum_33",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652346434,
+            "cat": "Op",
+            "tid": 4,
+            "ph": "X",
+            "dur": 5049
+        },
+        {
+            "name": "Select_33",
+            "pid": 1,
+            "ts": 1554124652346420,
+            "cat": "DataFlow",
+            "tid": 11,
+            "ph": "s",
+            "id": 117
+        },
+        {
+            "name": "Select_33",
+            "pid": 1,
+            "ts": 1554124652346434,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "t",
+            "id": 117
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_34",
+                "input1": "Const_35",
+                "name": "Sum_34",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652345484,
+            "cat": "Op",
+            "tid": 5,
+            "ph": "X",
+            "dur": 6385
+        },
+        {
+            "name": "Select_34",
+            "pid": 1,
+            "ts": 1554124652345473,
+            "cat": "DataFlow",
+            "tid": 10,
+            "ph": "s",
+            "id": 118
+        },
+        {
+            "name": "Select_34",
+            "pid": 1,
+            "ts": 1554124652345484,
+            "cat": "DataFlow",
+            "tid": 5,
+            "ph": "t",
+            "id": 118
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_27",
+                "input1": "Const_24",
+                "name": "Sum_23",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652344024,
+            "cat": "Op",
+            "tid": 6,
+            "ph": "X",
+            "dur": 7952
+        },
+        {
+            "name": "Select_27",
+            "pid": 1,
+            "ts": 1554124652344006,
+            "cat": "DataFlow",
+            "tid": 20,
+            "ph": "s",
+            "id": 119
+        },
+        {
+            "name": "Select_27",
+            "pid": 1,
+            "ts": 1554124652344024,
+            "cat": "DataFlow",
+            "tid": 6,
+            "ph": "t",
+            "id": 119
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_13",
+                "input1": "Const_2",
+                "name": "Sum_1",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652345002,
+            "cat": "Op",
+            "tid": 7,
+            "ph": "X",
+            "dur": 7175
+        },
+        {
+            "name": "Select_13",
+            "pid": 1,
+            "ts": 1554124652344966,
+            "cat": "DataFlow",
+            "tid": 9,
+            "ph": "s",
+            "id": 120
+        },
+        {
+            "name": "Select_13",
+            "pid": 1,
+            "ts": 1554124652345002,
+            "cat": "DataFlow",
+            "tid": 7,
+            "ph": "t",
+            "id": 120
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_3",
+                "input1": "_arg_discount_0_1",
+                "name": "Select_25",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652319684,
+            "cat": "Op",
+            "tid": 24,
+            "ph": "X",
+            "dur": 32545
+        },
+        {
+            "name": "LogicalAnd_3",
+            "pid": 1,
+            "ts": 1554124652315671,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 121
+        },
+        {
+            "name": "LogicalAnd_3",
+            "pid": 1,
+            "ts": 1554124652319684,
+            "cat": "DataFlow",
+            "tid": 24,
+            "ph": "t",
+            "id": 121
+        },
+        {
+            "name": "_arg_discount_0_1",
+            "pid": 1,
+            "ts": 1554124651839939,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 122
+        },
+        {
+            "name": "_arg_discount_0_1",
+            "pid": 1,
+            "ts": 1554124652319684,
+            "cat": "DataFlow",
+            "tid": 24,
+            "ph": "t",
+            "id": 122
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 123
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652319684,
+            "cat": "DataFlow",
+            "tid": 24,
+            "ph": "t",
+            "id": 123
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_7",
+                "input1": "Mul_16",
+                "name": "Select_35",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652331358,
+            "cat": "Op",
+            "tid": 13,
+            "ph": "X",
+            "dur": 21468
+        },
+        {
+            "name": "LogicalAnd_7",
+            "pid": 1,
+            "ts": 1554124652331264,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "s",
+            "id": 124
+        },
+        {
+            "name": "LogicalAnd_7",
+            "pid": 1,
+            "ts": 1554124652331358,
+            "cat": "DataFlow",
+            "tid": 13,
+            "ph": "t",
+            "id": 124
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 125
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652331358,
+            "cat": "DataFlow",
+            "tid": 13,
+            "ph": "t",
+            "id": 125
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_7",
+                "input1": "Mul_19",
+                "name": "Select_36",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652331357,
+            "cat": "Op",
+            "tid": 25,
+            "ph": "X",
+            "dur": 21636
+        },
+        {
+            "name": "LogicalAnd_7",
+            "pid": 1,
+            "ts": 1554124652331264,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "s",
+            "id": 126
+        },
+        {
+            "name": "LogicalAnd_7",
+            "pid": 1,
+            "ts": 1554124652331357,
+            "cat": "DataFlow",
+            "tid": 25,
+            "ph": "t",
+            "id": 126
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 127
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652331357,
+            "cat": "DataFlow",
+            "tid": 25,
+            "ph": "t",
+            "id": 127
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Cast_15",
+                "input1": "Const_38",
+                "name": "Sum_37",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652336647,
+            "cat": "Op",
+            "tid": 14,
+            "ph": "X",
+            "dur": 17322
+        },
+        {
+            "name": "Cast_15",
+            "pid": 1,
+            "ts": 1554124652336629,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "s",
+            "id": 128
+        },
+        {
+            "name": "Cast_15",
+            "pid": 1,
+            "ts": 1554124652336647,
+            "cat": "DataFlow",
+            "tid": 14,
+            "ph": "t",
+            "id": 128
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Sum_37",
+                "input1": "Const_40",
+                "name": "Sum_39",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652353977,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 5
+        },
+        {
+            "name": "Sum_37",
+            "pid": 1,
+            "ts": 1554124652353969,
+            "cat": "DataFlow",
+            "tid": 14,
+            "ph": "s",
+            "id": 129
+        },
+        {
+            "name": "Sum_37",
+            "pid": 1,
+            "ts": 1554124652353977,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 129
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Cast_14",
+                "input1": "Const_27",
+                "name": "Sum_26",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652333673,
+            "cat": "Op",
+            "tid": 26,
+            "ph": "X",
+            "dur": 20388
+        },
+        {
+            "name": "Cast_14",
+            "pid": 1,
+            "ts": 1554124652333653,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "s",
+            "id": 130
+        },
+        {
+            "name": "Cast_14",
+            "pid": 1,
+            "ts": 1554124652333673,
+            "cat": "DataFlow",
+            "tid": 26,
+            "ph": "t",
+            "id": 130
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Sum_26",
+                "input1": "Const_29",
+                "name": "Sum_28",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652354069,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 6
+        },
+        {
+            "name": "Sum_26",
+            "pid": 1,
+            "ts": 1554124652354061,
+            "cat": "DataFlow",
+            "tid": 26,
+            "ph": "s",
+            "id": 131
+        },
+        {
+            "name": "Sum_26",
+            "pid": 1,
+            "ts": 1554124652354069,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 131
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_42",
+                "input1": "Sum_43",
+                "name": "div_11",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652354061,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 23
+        },
+        {
+            "name": "Sum_42",
+            "pid": 1,
+            "ts": 1554124652344405,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 132
+        },
+        {
+            "name": "Sum_42",
+            "pid": 1,
+            "ts": 1554124652354061,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 132
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_29",
+                "input1": "Sum_30",
+                "name": "div_7",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652354078,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 18
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_40",
+                "input1": "Sum_41",
+                "name": "div_10",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652354093,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 15
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_38",
+                "input1": "Sum_39",
+                "name": "div_9",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652354106,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 6
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_25",
+                "input1": "Const_21",
+                "name": "Sum_20",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652352262,
+            "cat": "Op",
+            "tid": 2,
+            "ph": "X",
+            "dur": 2082
+        },
+        {
+            "name": "Select_25",
+            "pid": 1,
+            "ts": 1554124652352229,
+            "cat": "DataFlow",
+            "tid": 24,
+            "ph": "s",
+            "id": 133
+        },
+        {
+            "name": "Select_25",
+            "pid": 1,
+            "ts": 1554124652352262,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 133
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_35",
+                "input1": "Const_36",
+                "name": "Sum_35",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652352853,
+            "cat": "Op",
+            "tid": 3,
+            "ph": "X",
+            "dur": 1727
+        },
+        {
+            "name": "Select_35",
+            "pid": 1,
+            "ts": 1554124652352826,
+            "cat": "DataFlow",
+            "tid": 13,
+            "ph": "s",
+            "id": 134
+        },
+        {
+            "name": "Select_35",
+            "pid": 1,
+            "ts": 1554124652352853,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "t",
+            "id": 134
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_28",
+                "input1": "Const_25",
+                "name": "Sum_24",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652338181,
+            "cat": "Op",
+            "tid": 15,
+            "ph": "X",
+            "dur": 16432
+        },
+        {
+            "name": "Select_28",
+            "pid": 1,
+            "ts": 1554124652338157,
+            "cat": "DataFlow",
+            "tid": 17,
+            "ph": "s",
+            "id": 135
+        },
+        {
+            "name": "Select_28",
+            "pid": 1,
+            "ts": 1554124652338181,
+            "cat": "DataFlow",
+            "tid": 15,
+            "ph": "t",
+            "id": 135
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Cast_13",
+                "input1": "Const_16",
+                "name": "Sum_15",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652322368,
+            "cat": "Op",
+            "tid": 27,
+            "ph": "X",
+            "dur": 32352
+        },
+        {
+            "name": "Cast_13",
+            "pid": 1,
+            "ts": 1554124652322339,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "s",
+            "id": 136
+        },
+        {
+            "name": "Cast_13",
+            "pid": 1,
+            "ts": 1554124652322368,
+            "cat": "DataFlow",
+            "tid": 27,
+            "ph": "t",
+            "id": 136
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Sum_15",
+                "input1": "Const_18",
+                "name": "Sum_17",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652354724,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4
+        },
+        {
+            "name": "Sum_15",
+            "pid": 1,
+            "ts": 1554124652354720,
+            "cat": "DataFlow",
+            "tid": 27,
+            "ph": "s",
+            "id": 137
+        },
+        {
+            "name": "Sum_15",
+            "pid": 1,
+            "ts": 1554124652354724,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 137
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_20",
+                "input1": "Sum_21",
+                "name": "div_5",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652354757,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 20
+        },
+        {
+            "name": "Sum_20",
+            "pid": 1,
+            "ts": 1554124652354344,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "s",
+            "id": 138
+        },
+        {
+            "name": "Sum_20",
+            "pid": 1,
+            "ts": 1554124652354757,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 138
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_18",
+                "input1": "Sum_19",
+                "name": "div_4",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652354782,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 10
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_16",
+                "input1": "Sum_17",
+                "name": "div_3",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652354793,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 14
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_42",
+                "input1": "Const_47",
+                "name": "Sum_46",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652330888,
+            "cat": "Op",
+            "tid": 28,
+            "ph": "X",
+            "dur": 24308
+        },
+        {
+            "name": "Select_42",
+            "pid": 1,
+            "ts": 1554124652330854,
+            "cat": "DataFlow",
+            "tid": 13,
+            "ph": "s",
+            "id": 139
+        },
+        {
+            "name": "Select_42",
+            "pid": 1,
+            "ts": 1554124652330888,
+            "cat": "DataFlow",
+            "tid": 28,
+            "ph": "t",
+            "id": 139
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Cast_16",
+                "input1": "Const_49",
+                "name": "Sum_48",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652350650,
+            "cat": "Op",
+            "tid": 8,
+            "ph": "X",
+            "dur": 4791
+        },
+        {
+            "name": "Cast_16",
+            "pid": 1,
+            "ts": 1554124652350634,
+            "cat": "DataFlow",
+            "tid": 22,
+            "ph": "s",
+            "id": 140
+        },
+        {
+            "name": "Cast_16",
+            "pid": 1,
+            "ts": 1554124652350650,
+            "cat": "DataFlow",
+            "tid": 8,
+            "ph": "t",
+            "id": 140
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Sum_48",
+                "input1": "Const_51",
+                "name": "Sum_50",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652355447,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 5
+        },
+        {
+            "name": "Sum_48",
+            "pid": 1,
+            "ts": 1554124652355441,
+            "cat": "DataFlow",
+            "tid": 8,
+            "ph": "s",
+            "id": 141
+        },
+        {
+            "name": "Sum_48",
+            "pid": 1,
+            "ts": 1554124652355447,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 141
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_46",
+                "input1": "Const_54",
+                "name": "Sum_53",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652331588,
+            "cat": "Op",
+            "tid": 29,
+            "ph": "X",
+            "dur": 23868
+        },
+        {
+            "name": "Select_46",
+            "pid": 1,
+            "ts": 1554124652331576,
+            "cat": "DataFlow",
+            "tid": 14,
+            "ph": "s",
+            "id": 142
+        },
+        {
+            "name": "Select_46",
+            "pid": 1,
+            "ts": 1554124652331588,
+            "cat": "DataFlow",
+            "tid": 29,
+            "ph": "t",
+            "id": 142
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_53",
+                "input1": "Sum_54",
+                "name": "div_14",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652355464,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 7
+        },
+        {
+            "name": "Sum_53",
+            "pid": 1,
+            "ts": 1554124652355456,
+            "cat": "DataFlow",
+            "tid": 29,
+            "ph": "s",
+            "id": 143
+        },
+        {
+            "name": "Sum_53",
+            "pid": 1,
+            "ts": 1554124652355464,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 143
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_49",
+                "input1": "Sum_50",
+                "name": "div_12",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652355479,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 7
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_51",
+                "input1": "Sum_52",
+                "name": "div_13",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652355475,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 21
+        },
+        {
+            "name": "Pack",
+            "args": {
+                "input2": "Sum_46",
+                "input3": "Sum_47",
+                "input0": "Sum_44",
+                "input1": "Sum_45",
+                "input6": "div_14",
+                "name": "stack_4",
+                "input4": "div_12",
+                "input5": "div_13",
+                "input7": "Sum_48",
+                "op": "Pack"
+            },
+            "pid": 1,
+            "ts": 1554124652355500,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 32
+        },
+        {
+            "name": "Sum_44",
+            "pid": 1,
+            "ts": 1554124652334319,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "s",
+            "id": 144
+        },
+        {
+            "name": "Sum_44",
+            "pid": 1,
+            "ts": 1554124652355500,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 144
+        },
+        {
+            "name": "Sum_45",
+            "pid": 1,
+            "ts": 1554124652350642,
+            "cat": "DataFlow",
+            "tid": 23,
+            "ph": "s",
+            "id": 145
+        },
+        {
+            "name": "Sum_45",
+            "pid": 1,
+            "ts": 1554124652355500,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 145
+        },
+        {
+            "name": "Sum_46",
+            "pid": 1,
+            "ts": 1554124652355196,
+            "cat": "DataFlow",
+            "tid": 28,
+            "ph": "s",
+            "id": 146
+        },
+        {
+            "name": "Sum_46",
+            "pid": 1,
+            "ts": 1554124652355500,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 146
+        },
+        {
+            "name": "Sum_47",
+            "pid": 1,
+            "ts": 1554124652351123,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 147
+        },
+        {
+            "name": "Sum_47",
+            "pid": 1,
+            "ts": 1554124652355500,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 147
+        },
+        {
+            "name": "div_13",
+            "pid": 1,
+            "ts": 1554124652355496,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 148
+        },
+        {
+            "name": "div_13",
+            "pid": 1,
+            "ts": 1554124652355500,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 148
+        },
+        {
+            "name": "Sum_48",
+            "pid": 1,
+            "ts": 1554124652355441,
+            "cat": "DataFlow",
+            "tid": 8,
+            "ph": "s",
+            "id": 149
+        },
+        {
+            "name": "Sum_48",
+            "pid": 1,
+            "ts": 1554124652355500,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 149
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_36",
+                "input1": "Const_37",
+                "name": "Sum_36",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652353009,
+            "cat": "Op",
+            "tid": 4,
+            "ph": "X",
+            "dur": 2544
+        },
+        {
+            "name": "Select_36",
+            "pid": 1,
+            "ts": 1554124652352993,
+            "cat": "DataFlow",
+            "tid": 25,
+            "ph": "s",
+            "id": 150
+        },
+        {
+            "name": "Select_36",
+            "pid": 1,
+            "ts": 1554124652353009,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "t",
+            "id": 150
+        },
+        {
+            "name": "Pack",
+            "args": {
+                "input2": "Sum_35",
+                "input3": "Sum_36",
+                "input0": "Sum_33",
+                "input1": "Sum_34",
+                "input6": "div_11",
+                "name": "stack_3",
+                "input4": "div_9",
+                "input5": "div_10",
+                "input7": "Sum_37",
+                "op": "Pack"
+            },
+            "pid": 1,
+            "ts": 1554124652355560,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 21
+        },
+        {
+            "name": "Sum_33",
+            "pid": 1,
+            "ts": 1554124652351483,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "s",
+            "id": 151
+        },
+        {
+            "name": "Sum_33",
+            "pid": 1,
+            "ts": 1554124652355560,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 151
+        },
+        {
+            "name": "Sum_34",
+            "pid": 1,
+            "ts": 1554124652351869,
+            "cat": "DataFlow",
+            "tid": 5,
+            "ph": "s",
+            "id": 152
+        },
+        {
+            "name": "Sum_34",
+            "pid": 1,
+            "ts": 1554124652355560,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 152
+        },
+        {
+            "name": "Sum_35",
+            "pid": 1,
+            "ts": 1554124652354580,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "s",
+            "id": 153
+        },
+        {
+            "name": "Sum_35",
+            "pid": 1,
+            "ts": 1554124652355560,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 153
+        },
+        {
+            "name": "Sum_36",
+            "pid": 1,
+            "ts": 1554124652355553,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "s",
+            "id": 154
+        },
+        {
+            "name": "Sum_36",
+            "pid": 1,
+            "ts": 1554124652355560,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 154
+        },
+        {
+            "name": "div_10",
+            "pid": 1,
+            "ts": 1554124652354108,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 155
+        },
+        {
+            "name": "div_10",
+            "pid": 1,
+            "ts": 1554124652355560,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 155
+        },
+        {
+            "name": "div_11",
+            "pid": 1,
+            "ts": 1554124652354084,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 156
+        },
+        {
+            "name": "div_11",
+            "pid": 1,
+            "ts": 1554124652355560,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 156
+        },
+        {
+            "name": "Sum_37",
+            "pid": 1,
+            "ts": 1554124652353969,
+            "cat": "DataFlow",
+            "tid": 14,
+            "ph": "s",
+            "id": 157
+        },
+        {
+            "name": "Sum_37",
+            "pid": 1,
+            "ts": 1554124652355560,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 157
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_1",
+                "input1": "Mul_1",
+                "name": "Select_14",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652331350,
+            "cat": "Op",
+            "tid": 30,
+            "ph": "X",
+            "dur": 24260
+        },
+        {
+            "name": "LogicalAnd_1",
+            "pid": 1,
+            "ts": 1554124652331145,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 158
+        },
+        {
+            "name": "LogicalAnd_1",
+            "pid": 1,
+            "ts": 1554124652331350,
+            "cat": "DataFlow",
+            "tid": 30,
+            "ph": "t",
+            "id": 158
+        },
+        {
+            "name": "Mul_1",
+            "pid": 1,
+            "ts": 1554124651845367,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 159
+        },
+        {
+            "name": "Mul_1",
+            "pid": 1,
+            "ts": 1554124652331350,
+            "cat": "DataFlow",
+            "tid": 30,
+            "ph": "t",
+            "id": 159
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 160
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652331350,
+            "cat": "DataFlow",
+            "tid": 30,
+            "ph": "t",
+            "id": 160
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_11",
+                "input1": "Mul_29",
+                "name": "Select_50",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652315868,
+            "cat": "Op",
+            "tid": 31,
+            "ph": "X",
+            "dur": 39785
+        },
+        {
+            "name": "LogicalAnd_11",
+            "pid": 1,
+            "ts": 1554124652315503,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 161
+        },
+        {
+            "name": "LogicalAnd_11",
+            "pid": 1,
+            "ts": 1554124652315868,
+            "cat": "DataFlow",
+            "tid": 31,
+            "ph": "t",
+            "id": 161
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 162
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652315868,
+            "cat": "DataFlow",
+            "tid": 31,
+            "ph": "t",
+            "id": 162
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_21",
+                "input1": "Const_14",
+                "name": "Sum_13",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652336903,
+            "cat": "Op",
+            "tid": 16,
+            "ph": "X",
+            "dur": 18777
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_3",
+                "input1": "Mul_9",
+                "name": "Select_22",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652315819,
+            "cat": "Op",
+            "tid": 32,
+            "ph": "X",
+            "dur": 39869
+        },
+        {
+            "name": "LogicalAnd_3",
+            "pid": 1,
+            "ts": 1554124652315671,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 163
+        },
+        {
+            "name": "LogicalAnd_3",
+            "pid": 1,
+            "ts": 1554124652315819,
+            "cat": "DataFlow",
+            "tid": 32,
+            "ph": "t",
+            "id": 163
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 164
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652315819,
+            "cat": "DataFlow",
+            "tid": 32,
+            "ph": "t",
+            "id": 164
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_1",
+                "input1": "Mul_4",
+                "name": "Select_15",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652331264,
+            "cat": "Op",
+            "tid": 33,
+            "ph": "X",
+            "dur": 24438
+        },
+        {
+            "name": "LogicalAnd_1",
+            "pid": 1,
+            "ts": 1554124652331145,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 165
+        },
+        {
+            "name": "LogicalAnd_1",
+            "pid": 1,
+            "ts": 1554124652331264,
+            "cat": "DataFlow",
+            "tid": 33,
+            "ph": "t",
+            "id": 165
+        },
+        {
+            "name": "Mul_4",
+            "pid": 1,
+            "ts": 1554124651846407,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 166
+        },
+        {
+            "name": "Mul_4",
+            "pid": 1,
+            "ts": 1554124652331264,
+            "cat": "DataFlow",
+            "tid": 33,
+            "ph": "t",
+            "id": 166
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 167
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652331264,
+            "cat": "DataFlow",
+            "tid": 33,
+            "ph": "t",
+            "id": 167
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_5",
+                "input1": "_arg_quantity_0_4",
+                "name": "Select_26",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652322440,
+            "cat": "Op",
+            "tid": 34,
+            "ph": "X",
+            "dur": 33270
+        },
+        {
+            "name": "LogicalAnd_5",
+            "pid": 1,
+            "ts": 1554124652322257,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 168
+        },
+        {
+            "name": "LogicalAnd_5",
+            "pid": 1,
+            "ts": 1554124652322440,
+            "cat": "DataFlow",
+            "tid": 34,
+            "ph": "t",
+            "id": 168
+        },
+        {
+            "name": "_arg_quantity_0_4",
+            "pid": 1,
+            "ts": 1554124651840009,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 169
+        },
+        {
+            "name": "_arg_quantity_0_4",
+            "pid": 1,
+            "ts": 1554124652322440,
+            "cat": "DataFlow",
+            "tid": 34,
+            "ph": "t",
+            "id": 169
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 170
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652322440,
+            "cat": "DataFlow",
+            "tid": 34,
+            "ph": "t",
+            "id": 170
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_5",
+                "input1": "_arg_discount_0_1",
+                "name": "Select_32",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652322728,
+            "cat": "Op",
+            "tid": 35,
+            "ph": "X",
+            "dur": 33122
+        },
+        {
+            "name": "LogicalAnd_5",
+            "pid": 1,
+            "ts": 1554124652322257,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 171
+        },
+        {
+            "name": "LogicalAnd_5",
+            "pid": 1,
+            "ts": 1554124652322728,
+            "cat": "DataFlow",
+            "tid": 35,
+            "ph": "t",
+            "id": 171
+        },
+        {
+            "name": "_arg_discount_0_1",
+            "pid": 1,
+            "ts": 1554124651839939,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 172
+        },
+        {
+            "name": "_arg_discount_0_1",
+            "pid": 1,
+            "ts": 1554124652322728,
+            "cat": "DataFlow",
+            "tid": 35,
+            "ph": "t",
+            "id": 172
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 173
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652322728,
+            "cat": "DataFlow",
+            "tid": 35,
+            "ph": "t",
+            "id": 173
+        },
+        {
+            "name": "Cast",
+            "args": {
+                "input0": "LogicalAnd_1",
+                "name": "Cast_12",
+                "op": "Cast"
+            },
+            "pid": 1,
+            "ts": 1554124652331369,
+            "cat": "Op",
+            "tid": 36,
+            "ph": "X",
+            "dur": 24508
+        },
+        {
+            "name": "LogicalAnd_1",
+            "pid": 1,
+            "ts": 1554124652331145,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 174
+        },
+        {
+            "name": "LogicalAnd_1",
+            "pid": 1,
+            "ts": 1554124652331369,
+            "cat": "DataFlow",
+            "tid": 36,
+            "ph": "t",
+            "id": 174
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "LogicalAnd_1",
+                "input1": "_arg_discount_0_1",
+                "name": "Select_18",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554124652331400,
+            "cat": "Op",
+            "tid": 37,
+            "ph": "X",
+            "dur": 24560
+        },
+        {
+            "name": "LogicalAnd_1",
+            "pid": 1,
+            "ts": 1554124652331145,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 175
+        },
+        {
+            "name": "LogicalAnd_1",
+            "pid": 1,
+            "ts": 1554124652331400,
+            "cat": "DataFlow",
+            "tid": 37,
+            "ph": "t",
+            "id": 175
+        },
+        {
+            "name": "_arg_discount_0_1",
+            "pid": 1,
+            "ts": 1554124651839939,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 176
+        },
+        {
+            "name": "_arg_discount_0_1",
+            "pid": 1,
+            "ts": 1554124652331400,
+            "cat": "DataFlow",
+            "tid": 37,
+            "ph": "t",
+            "id": 176
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124651841838,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 177
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554124652331400,
+            "cat": "DataFlow",
+            "tid": 37,
+            "ph": "t",
+            "id": 177
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_15",
+                "input1": "Const_4",
+                "name": "Sum_3",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652355718,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 1743
+        },
+        {
+            "name": "Select_15",
+            "pid": 1,
+            "ts": 1554124652355702,
+            "cat": "DataFlow",
+            "tid": 33,
+            "ph": "s",
+            "id": 178
+        },
+        {
+            "name": "Select_15",
+            "pid": 1,
+            "ts": 1554124652355718,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 178
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_14",
+                "input1": "Const_3",
+                "name": "Sum_2",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652355621,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 1850
+        },
+        {
+            "name": "Select_14",
+            "pid": 1,
+            "ts": 1554124652355610,
+            "cat": "DataFlow",
+            "tid": 30,
+            "ph": "s",
+            "id": 179
+        },
+        {
+            "name": "Select_14",
+            "pid": 1,
+            "ts": 1554124652355621,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 179
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_18",
+                "input1": "Const_10",
+                "name": "Sum_9",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652355984,
+            "cat": "Op",
+            "tid": 2,
+            "ph": "X",
+            "dur": 1489
+        },
+        {
+            "name": "Select_18",
+            "pid": 1,
+            "ts": 1554124652355960,
+            "cat": "DataFlow",
+            "tid": 37,
+            "ph": "s",
+            "id": 180
+        },
+        {
+            "name": "Select_18",
+            "pid": 1,
+            "ts": 1554124652355984,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 180
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_26",
+                "input1": "Const_23",
+                "name": "Sum_22",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652355724,
+            "cat": "Op",
+            "tid": 3,
+            "ph": "X",
+            "dur": 1750
+        },
+        {
+            "name": "Select_26",
+            "pid": 1,
+            "ts": 1554124652355710,
+            "cat": "DataFlow",
+            "tid": 34,
+            "ph": "s",
+            "id": 181
+        },
+        {
+            "name": "Select_26",
+            "pid": 1,
+            "ts": 1554124652355724,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "t",
+            "id": 181
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_27",
+                "input1": "Sum_28",
+                "name": "div_6",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652357480,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 11
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_50",
+                "input1": "Const_59",
+                "name": "Sum_58",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652355665,
+            "cat": "Op",
+            "tid": 4,
+            "ph": "X",
+            "dur": 1819
+        },
+        {
+            "name": "Select_50",
+            "pid": 1,
+            "ts": 1554124652355653,
+            "cat": "DataFlow",
+            "tid": 31,
+            "ph": "s",
+            "id": 182
+        },
+        {
+            "name": "Select_50",
+            "pid": 1,
+            "ts": 1554124652355665,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "t",
+            "id": 182
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Cast_12",
+                "input1": "Const_5",
+                "name": "Sum_4",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652355892,
+            "cat": "Op",
+            "tid": 5,
+            "ph": "X",
+            "dur": 1627
+        },
+        {
+            "name": "Cast_12",
+            "pid": 1,
+            "ts": 1554124652355877,
+            "cat": "DataFlow",
+            "tid": 36,
+            "ph": "s",
+            "id": 183
+        },
+        {
+            "name": "Cast_12",
+            "pid": 1,
+            "ts": 1554124652355892,
+            "cat": "DataFlow",
+            "tid": 5,
+            "ph": "t",
+            "id": 183
+        },
+        {
+            "name": "Pack",
+            "args": {
+                "input2": "Sum_57",
+                "input3": "Sum_58",
+                "input0": "Sum_55",
+                "input1": "Sum_56",
+                "input6": "div_17",
+                "name": "stack_5",
+                "input4": "div_15",
+                "input5": "div_16",
+                "input7": "Sum_59",
+                "op": "Pack"
+            },
+            "pid": 1,
+            "ts": 1554124652357496,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 29
+        },
+        {
+            "name": "Sum_55",
+            "pid": 1,
+            "ts": 1554124652333755,
+            "cat": "DataFlow",
+            "tid": 5,
+            "ph": "s",
+            "id": 184
+        },
+        {
+            "name": "Sum_55",
+            "pid": 1,
+            "ts": 1554124652357496,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 184
+        },
+        {
+            "name": "Sum_56",
+            "pid": 1,
+            "ts": 1554124652349060,
+            "cat": "DataFlow",
+            "tid": 21,
+            "ph": "s",
+            "id": 185
+        },
+        {
+            "name": "Sum_56",
+            "pid": 1,
+            "ts": 1554124652357496,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 185
+        },
+        {
+            "name": "Sum_57",
+            "pid": 1,
+            "ts": 1554124652334139,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 186
+        },
+        {
+            "name": "Sum_57",
+            "pid": 1,
+            "ts": 1554124652357496,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 186
+        },
+        {
+            "name": "Sum_58",
+            "pid": 1,
+            "ts": 1554124652357484,
+            "cat": "DataFlow",
+            "tid": 4,
+            "ph": "s",
+            "id": 187
+        },
+        {
+            "name": "Sum_58",
+            "pid": 1,
+            "ts": 1554124652357496,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 187
+        },
+        {
+            "name": "Sum_59",
+            "pid": 1,
+            "ts": 1554124652323193,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "s",
+            "id": 188
+        },
+        {
+            "name": "Sum_59",
+            "pid": 1,
+            "ts": 1554124652357496,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 188
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_32",
+                "input1": "Const_32",
+                "name": "Sum_31",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652355865,
+            "cat": "Op",
+            "tid": 6,
+            "ph": "X",
+            "dur": 1664
+        },
+        {
+            "name": "Select_32",
+            "pid": 1,
+            "ts": 1554124652355850,
+            "cat": "DataFlow",
+            "tid": 35,
+            "ph": "s",
+            "id": 189
+        },
+        {
+            "name": "Select_32",
+            "pid": 1,
+            "ts": 1554124652355865,
+            "cat": "DataFlow",
+            "tid": 6,
+            "ph": "t",
+            "id": 189
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_31",
+                "input1": "Sum_32",
+                "name": "div_8",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652357535,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 9
+        },
+        {
+            "name": "Sum_31",
+            "pid": 1,
+            "ts": 1554124652357529,
+            "cat": "DataFlow",
+            "tid": 6,
+            "ph": "s",
+            "id": 190
+        },
+        {
+            "name": "Sum_31",
+            "pid": 1,
+            "ts": 1554124652357535,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 190
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Sum_4",
+                "input1": "Const_7",
+                "name": "Sum_6",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652357527,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 4
+        },
+        {
+            "name": "Sum_4",
+            "pid": 1,
+            "ts": 1554124652357519,
+            "cat": "DataFlow",
+            "tid": 5,
+            "ph": "s",
+            "id": 191
+        },
+        {
+            "name": "Sum_4",
+            "pid": 1,
+            "ts": 1554124652357527,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 191
+        },
+        {
+            "name": "Const_7",
+            "pid": 1,
+            "ts": 1554124651839908,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 192
+        },
+        {
+            "name": "Const_7",
+            "pid": 1,
+            "ts": 1554124652357527,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 192
+        },
+        {
+            "name": "Pack",
+            "args": {
+                "input2": "Sum_24",
+                "input3": "Sum_25",
+                "input0": "Sum_22",
+                "input1": "Sum_23",
+                "input6": "div_8",
+                "name": "stack_2",
+                "input4": "div_6",
+                "input5": "div_7",
+                "input7": "Sum_26",
+                "op": "Pack"
+            },
+            "pid": 1,
+            "ts": 1554124652357548,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 18
+        },
+        {
+            "name": "Sum_22",
+            "pid": 1,
+            "ts": 1554124652357474,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "s",
+            "id": 193
+        },
+        {
+            "name": "Sum_22",
+            "pid": 1,
+            "ts": 1554124652357548,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 193
+        },
+        {
+            "name": "Sum_23",
+            "pid": 1,
+            "ts": 1554124652351976,
+            "cat": "DataFlow",
+            "tid": 6,
+            "ph": "s",
+            "id": 194
+        },
+        {
+            "name": "Sum_23",
+            "pid": 1,
+            "ts": 1554124652357548,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 194
+        },
+        {
+            "name": "Sum_24",
+            "pid": 1,
+            "ts": 1554124652354613,
+            "cat": "DataFlow",
+            "tid": 15,
+            "ph": "s",
+            "id": 195
+        },
+        {
+            "name": "Sum_24",
+            "pid": 1,
+            "ts": 1554124652357548,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 195
+        },
+        {
+            "name": "Sum_25",
+            "pid": 1,
+            "ts": 1554124652351130,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "s",
+            "id": 196
+        },
+        {
+            "name": "Sum_25",
+            "pid": 1,
+            "ts": 1554124652357548,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 196
+        },
+        {
+            "name": "Sum_26",
+            "pid": 1,
+            "ts": 1554124652354061,
+            "cat": "DataFlow",
+            "tid": 26,
+            "ph": "s",
+            "id": 197
+        },
+        {
+            "name": "Sum_26",
+            "pid": 1,
+            "ts": 1554124652357548,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 197
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_5",
+                "input1": "Sum_6",
+                "name": "div",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652357574,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4
+        },
+        {
+            "name": "Sum_6",
+            "pid": 1,
+            "ts": 1554124652357531,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 198
+        },
+        {
+            "name": "Sum_6",
+            "pid": 1,
+            "ts": 1554124652357574,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 198
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_7",
+                "input1": "Sum_8",
+                "name": "div_1",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652357589,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 3
+        },
+        {
+            "name": "RealDiv",
+            "args": {
+                "input0": "Sum_9",
+                "input1": "Sum_10",
+                "name": "div_2",
+                "op": "RealDiv"
+            },
+            "pid": 1,
+            "ts": 1554124652357601,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 8
+        },
+        {
+            "name": "Sum_9",
+            "pid": 1,
+            "ts": 1554124652357473,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "s",
+            "id": 199
+        },
+        {
+            "name": "Sum_9",
+            "pid": 1,
+            "ts": 1554124652357601,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 199
+        },
+        {
+            "name": "Pack",
+            "args": {
+                "input2": "Sum_2",
+                "input3": "Sum_3",
+                "input0": "Sum",
+                "input1": "Sum_1",
+                "input6": "div_2",
+                "name": "stack",
+                "input4": "div",
+                "input5": "div_1",
+                "input7": "Sum_4",
+                "op": "Pack"
+            },
+            "pid": 1,
+            "ts": 1554124652357612,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 16
+        },
+        {
+            "name": "Sum",
+            "pid": 1,
+            "ts": 1554124652351335,
+            "cat": "DataFlow",
+            "tid": 3,
+            "ph": "s",
+            "id": 200
+        },
+        {
+            "name": "Sum",
+            "pid": 1,
+            "ts": 1554124652357612,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 200
+        },
+        {
+            "name": "Sum_1",
+            "pid": 1,
+            "ts": 1554124652352177,
+            "cat": "DataFlow",
+            "tid": 7,
+            "ph": "s",
+            "id": 201
+        },
+        {
+            "name": "Sum_1",
+            "pid": 1,
+            "ts": 1554124652357612,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 201
+        },
+        {
+            "name": "Sum_2",
+            "pid": 1,
+            "ts": 1554124652357471,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 202
+        },
+        {
+            "name": "Sum_2",
+            "pid": 1,
+            "ts": 1554124652357612,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 202
+        },
+        {
+            "name": "Sum_4",
+            "pid": 1,
+            "ts": 1554124652357519,
+            "cat": "DataFlow",
+            "tid": 5,
+            "ph": "s",
+            "id": 203
+        },
+        {
+            "name": "Sum_4",
+            "pid": 1,
+            "ts": 1554124652357612,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 203
+        },
+        {
+            "name": "ConcatV2",
+            "args": {
+                "input2": "concat/axis",
+                "input0": "Const",
+                "input1": "stack",
+                "name": "concat",
+                "op": "ConcatV2"
+            },
+            "pid": 1,
+            "ts": 1554124652357633,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 8
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "Select_22",
+                "input1": "Const_15",
+                "name": "Sum_14",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554124652355701,
+            "cat": "Op",
+            "tid": 7,
+            "ph": "X",
+            "dur": 2589
+        },
+        {
+            "name": "Select_22",
+            "pid": 1,
+            "ts": 1554124652355688,
+            "cat": "DataFlow",
+            "tid": 32,
+            "ph": "s",
+            "id": 204
+        },
+        {
+            "name": "Select_22",
+            "pid": 1,
+            "ts": 1554124652355701,
+            "cat": "DataFlow",
+            "tid": 7,
+            "ph": "t",
+            "id": 204
+        },
+        {
+            "name": "Pack",
+            "args": {
+                "input2": "Sum_13",
+                "input3": "Sum_14",
+                "input0": "Sum_11",
+                "input1": "Sum_12",
+                "input6": "div_5",
+                "name": "stack_1",
+                "input4": "div_3",
+                "input5": "div_4",
+                "input7": "Sum_15",
+                "op": "Pack"
+            },
+            "pid": 1,
+            "ts": 1554124652358297,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 22
+        },
+        {
+            "name": "Sum_11",
+            "pid": 1,
+            "ts": 1554124652337158,
+            "cat": "DataFlow",
+            "tid": 6,
+            "ph": "s",
+            "id": 205
+        },
+        {
+            "name": "Sum_11",
+            "pid": 1,
+            "ts": 1554124652358297,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 205
+        },
+        {
+            "name": "Sum_12",
+            "pid": 1,
+            "ts": 1554124652350728,
+            "cat": "DataFlow",
+            "tid": 12,
+            "ph": "s",
+            "id": 206
+        },
+        {
+            "name": "Sum_12",
+            "pid": 1,
+            "ts": 1554124652358297,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 206
+        },
+        {
+            "name": "Sum_13",
+            "pid": 1,
+            "ts": 1554124652355680,
+            "cat": "DataFlow",
+            "tid": 16,
+            "ph": "s",
+            "id": 207
+        },
+        {
+            "name": "Sum_13",
+            "pid": 1,
+            "ts": 1554124652358297,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 207
+        },
+        {
+            "name": "Sum_14",
+            "pid": 1,
+            "ts": 1554124652358290,
+            "cat": "DataFlow",
+            "tid": 7,
+            "ph": "s",
+            "id": 208
+        },
+        {
+            "name": "Sum_14",
+            "pid": 1,
+            "ts": 1554124652358297,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 208
+        },
+        {
+            "name": "Sum_15",
+            "pid": 1,
+            "ts": 1554124652354720,
+            "cat": "DataFlow",
+            "tid": 27,
+            "ph": "s",
+            "id": 209
+        },
+        {
+            "name": "Sum_15",
+            "pid": 1,
+            "ts": 1554124652358297,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 209
+        },
+        {
+            "name": "ConcatV2",
+            "args": {
+                "input2": "concat_1/axis",
+                "input0": "concat",
+                "input1": "stack_1",
+                "name": "concat_1",
+                "op": "ConcatV2"
+            },
+            "pid": 1,
+            "ts": 1554124652358322,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 9
+        },
+        {
+            "name": "ConcatV2",
+            "args": {
+                "input2": "concat_2/axis",
+                "input0": "concat_1",
+                "input1": "stack_2",
+                "name": "concat_2",
+                "op": "ConcatV2"
+            },
+            "pid": 1,
+            "ts": 1554124652358334,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 7
+        },
+        {
+            "name": "ConcatV2",
+            "args": {
+                "input2": "concat_3/axis",
+                "input0": "concat_2",
+                "input1": "stack_3",
+                "name": "concat_3",
+                "op": "ConcatV2"
+            },
+            "pid": 1,
+            "ts": 1554124652358344,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 5
+        },
+        {
+            "name": "ConcatV2",
+            "args": {
+                "input2": "concat_4/axis",
+                "input0": "concat_3",
+                "input1": "stack_4",
+                "name": "concat_4",
+                "op": "ConcatV2"
+            },
+            "pid": 1,
+            "ts": 1554124652358352,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 6
+        },
+        {
+            "name": "ConcatV2",
+            "args": {
+                "input2": "concat_5/axis",
+                "input0": "concat_4",
+                "input1": "stack_5",
+                "name": "concat_5",
+                "op": "ConcatV2"
+            },
+            "pid": 1,
+            "ts": 1554124652358361,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4
+        },
+        {
+            "name": "Reshape",
+            "args": {
+                "input0": "concat_5",
+                "input1": "Reshape/shape",
+                "name": "Reshape",
+                "op": "Reshape"
+            },
+            "pid": 1,
+            "ts": 1554124652358368,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 4
+        },
+        {
+            "name": "_Retval",
+            "args": {
+                "input0": "Reshape",
+                "name": "_retval_Reshape_0_0",
+                "op": "_Retval"
+            },
+            "pid": 1,
+            "ts": 1554124652358376,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 9
+        }
+    ]
+}

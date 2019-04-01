@@ -1,0 +1,287 @@
+{
+    "traceEvents": [
+        {
+            "ph": "M",
+            "args": {
+                "name": "Allocators"
+            },
+            "pid": 0,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Compute"
+            },
+            "pid": 1,
+            "name": "process_name"
+        },
+        {
+            "ph": "M",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Tensors"
+            },
+            "pid": 2,
+            "name": "process_name"
+        },
+        {
+            "name": "NoOp",
+            "args": {
+                "name": "_SOURCE",
+                "op": "NoOp"
+            },
+            "pid": 1,
+            "ts": 1554121102206398,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 15
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "Const",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ts": 1554121102206445,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 31
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "LEQ/y",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ts": 1554121102206483,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 5
+        },
+        {
+            "name": "Const",
+            "args": {
+                "name": "GEQ/y",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ts": 1554121102206491,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 6
+        },
+        {
+            "name": "_Arg",
+            "args": {
+                "name": "_arg_quantity_0_0",
+                "op": "_Arg"
+            },
+            "pid": 1,
+            "ts": 1554121102206501,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 20
+        },
+        {
+            "name": "GreaterEqual",
+            "args": {
+                "input0": "_arg_quantity_0_0",
+                "input1": "GEQ/y",
+                "name": "GEQ",
+                "op": "GreaterEqual"
+            },
+            "pid": 1,
+            "ts": 1554121102206637,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 24356
+        },
+        {
+            "name": "LessEqual",
+            "args": {
+                "input0": "_arg_quantity_0_0",
+                "input1": "LEQ/y",
+                "name": "LEQ",
+                "op": "LessEqual"
+            },
+            "pid": 1,
+            "ts": 1554121102206705,
+            "cat": "Op",
+            "tid": 1,
+            "ph": "X",
+            "dur": 25072
+        },
+        {
+            "name": "_arg_quantity_0_0",
+            "pid": 1,
+            "ts": 1554121102206521,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 0
+        },
+        {
+            "name": "_arg_quantity_0_0",
+            "pid": 1,
+            "ts": 1554121102206705,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 0
+        },
+        {
+            "name": "LEQ/y",
+            "pid": 1,
+            "ts": 1554121102206488,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 1
+        },
+        {
+            "name": "LEQ/y",
+            "pid": 1,
+            "ts": 1554121102206705,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "t",
+            "id": 1
+        },
+        {
+            "name": "ZerosLike",
+            "args": {
+                "input0": "_arg_quantity_0_0",
+                "name": "zero",
+                "op": "ZerosLike"
+            },
+            "pid": 1,
+            "ts": 1554121102206669,
+            "cat": "Op",
+            "tid": 2,
+            "ph": "X",
+            "dur": 26926
+        },
+        {
+            "name": "_arg_quantity_0_0",
+            "pid": 1,
+            "ts": 1554121102206521,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "s",
+            "id": 2
+        },
+        {
+            "name": "_arg_quantity_0_0",
+            "pid": 1,
+            "ts": 1554121102206669,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "t",
+            "id": 2
+        },
+        {
+            "name": "LogicalAnd",
+            "args": {
+                "input0": "GEQ",
+                "input1": "LEQ",
+                "name": "AND",
+                "op": "LogicalAnd"
+            },
+            "pid": 1,
+            "ts": 1554121102231796,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 5809
+        },
+        {
+            "name": "LEQ",
+            "pid": 1,
+            "ts": 1554121102231777,
+            "cat": "DataFlow",
+            "tid": 1,
+            "ph": "s",
+            "id": 3
+        },
+        {
+            "name": "LEQ",
+            "pid": 1,
+            "ts": 1554121102231796,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 3
+        },
+        {
+            "name": "Select",
+            "args": {
+                "input2": "zero",
+                "input0": "AND",
+                "input1": "_arg_quantity_0_0",
+                "name": "FILTER",
+                "op": "Select"
+            },
+            "pid": 1,
+            "ts": 1554121102237614,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 13302
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554121102233595,
+            "cat": "DataFlow",
+            "tid": 2,
+            "ph": "s",
+            "id": 4
+        },
+        {
+            "name": "zero",
+            "pid": 1,
+            "ts": 1554121102237614,
+            "cat": "DataFlow",
+            "tid": 0,
+            "ph": "t",
+            "id": 4
+        },
+        {
+            "name": "Sum",
+            "args": {
+                "input0": "FILTER",
+                "input1": "Const",
+                "name": "SUM",
+                "op": "Sum"
+            },
+            "pid": 1,
+            "ts": 1554121102250930,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 17135
+        },
+        {
+            "name": "_Retval",
+            "args": {
+                "input0": "SUM",
+                "name": "_retval_SUM_0_0",
+                "op": "_Retval"
+            },
+            "pid": 1,
+            "ts": 1554121102268079,
+            "cat": "Op",
+            "tid": 0,
+            "ph": "X",
+            "dur": 10
+        }
+    ]
+}
