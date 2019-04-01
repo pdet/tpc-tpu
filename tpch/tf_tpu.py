@@ -159,8 +159,8 @@ def q6():
 
 def run_tpch(scale):
     load_input(scale)
-    Popen('capture_tpu_profile --tpu=pedroholanda --logdir=${STORAGE_BUCKET}/res --num_tracing_attempts=10', shell=True,stdin=None, stdout=None, stderr=None, close_fds=True)
-    time.sleep(5)
+    # Popen('capture_tpu_profile --tpu=$TPU_NAME --logdir=${STORAGE_BUCKET}/res --duration_ms=60000 --num_tracing_attempts=10', shell=True,stdin=None, stdout=None, stderr=None, close_fds=True)
+    # time.sleep(5)
     q1()
     # q6()
 

@@ -199,12 +199,12 @@ def join():
 
 def run_micro(scale):
     load_input(scale)
-    filter_sum()
-    filter()
-    aggregation()
+    # filter_sum()
+    # filter()
+    # aggregation()
     order_by_limit()
-    group_by()
-    join()
+    # group_by()
+    # join()
 
 
 if __name__ == "__main__":
