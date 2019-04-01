@@ -5,6 +5,9 @@ import tensorflow as tf
 from tensorflow.contrib import tpu
 from tensorflow.contrib.cluster_resolver import TPUClusterResolver
 import sys
+from subprocess import Popen
+import time
+
 
 l_shipdate = 0
 l_discount = 0
@@ -63,7 +66,6 @@ def load_input(scale):
 
     vfunc = np.vectorize(date_to_integer)
     l_shipdate = vfunc(l_shipdate)
-    os.chdir('/home/pedroholanda/result/')
 
 
 def q1_computation(shipdate, returnflag, linestatus, quantity, extendedprice, discount, tax, returnflag_groups_tensors,
@@ -157,8 +159,10 @@ def q6():
 
 def run_tpch(scale):
     load_input(scale)
+    Popen('capture_tpu_profile --tpu=pedroholanda --logdir=${STORAGE_BUCKET}/res --num_tracing_attempts=10', shell=True,stdin=None, stdout=None, stderr=None, close_fds=True)
+    time.sleep(5)
     q1()
-    q6()
+    # q6()
 
 
 if __name__ == "__main__":

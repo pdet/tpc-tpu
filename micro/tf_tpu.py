@@ -47,7 +47,6 @@ def load_input(scale):
     l_returnflag[l_returnflag == "N"] = "2"
     l_returnflag[l_returnflag == "R"] = "3"
     l_returnflag = l_returnflag.astype(np.float32, copy=False)
-    os.chdir('/home/pedroholanda/result/')
 
 
 # This is not implemented on TPUs, which means returning a list of elements would have to be performed on CPUs

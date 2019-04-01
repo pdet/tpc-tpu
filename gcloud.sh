@@ -48,7 +48,7 @@ psql -p 7483 -h localhost -U pedroholanda
 # gsutil cp -r  ./ ${STORAGE_BUCKET}
 
 setsid tensorboard --logdir=${STORAGE_BUCKET}/res 
-capture_tpu_profile --tpu=pedroholanda --logdir=${STORAGE_BUCKET}/res
+capture_tpu_profile --tpu=pedroholanda --logdir=${STORAGE_BUCKET}/res --num_tracing_attempts=100
 
 pip install pandas
 
